@@ -1,5 +1,5 @@
 <div  align="center">
-<img title="" src="Logo.png" alt="" width="500">
+<h1>Chemistry Notes</h1>
 
 ![Alt](https://repobeats.axiom.co/api/embed/976ca5c08883e25f9e4a0a5c29f15ffc0c87d2d2.svg "Repobeats analytics image")
 
@@ -30,9 +30,8 @@
 > 现阶段以各版本的选择性必修二为更新起点
 
 ## ✨最近更新
-    23.3.11:
-    1. 更新了《3.3 共价键 共价晶体》的内容
-    2. 更新了《3.7 晶体结构考点归纳》(的一半)
+    23.3.12:
+    1. 更新了第三章的很多内容
 
 
 ## 📌代办
