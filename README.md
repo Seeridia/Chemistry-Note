@@ -30,8 +30,8 @@
 
 
 ## 📌代办
-1. 总结第一章 考点的梳理
-2. 完善第二章 分子结构的内容
+1. 总结第二章 考点的梳理
+2. 完善第三章 分子结构的内容
 > 按照优先级排序
 
 
@@ -46,3 +46,9 @@
   4.  [维基百科](https://zh.wikipedia.org/)
   5.  [维基教科书 《高中化学》](https://zh.wikibooks.org/wiki/%E9%AB%98%E4%B8%AD%E5%8C%96%E5%AD%A6)
   6.  高考必刷题 [*众望教育*](https://www.lxzwedu.com/)
+  7.  一本涂书
+  8.  [Khan Academy](https://zh.khanacademy.org/)
+
+> 部分内容使用了 **Chat-GPT** 辅助书写以及检查内容的正确性
+
+![Alt](https://github-readme-stats.vercel.app/api?username=Anyayay&include_all_commits=true&count_private-true&custom_title=Anyayay'%20GitHub%20Stats&line_height=30&show_icons=true&hide_border=true&bg_color=192133&title_color=efb752&icon_color=efb752&text_color=70bed9)
