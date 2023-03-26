@@ -1,8 +1,8 @@
 <div  align="center">
 
-<h1>Chemistry Notes</h1>
+<h1>Anyayay's Chemistry Note</h1>
 
-![Alt](https://repobeats.axiom.co/api/embed/976ca5c08883e25f9e4a0a5c29f15ffc0c87d2d2.svg "Repobeats analytics image")
+![](https://repobeats.axiom.co/api/embed/976ca5c08883e25f9e4a0a5c29f15ffc0c87d2d2.svg)
 
 </div>
 
@@ -22,7 +22,9 @@
   - 04 [金属键 金属晶体](02%20微粒间作用力与物质性质/04%20金属键%20金属晶体.md)
   - 05 [离子键 离子晶体](02%20微粒间作用力与物质性质/05%20离子键%20离子晶体.md)
   - 06 [配位键 配合物](02%20微粒间作用力与物质性质/06%20配位键%20配合物.md)
-- 03 分子空间结构与物质性质（未完成）
+  - 07 [晶体结构考点归纳](02%20微粒间作用力与物质性质/07%20晶体结构考点归纳.md)
+  - 08 [共价键的极性与分子的极性](02%20微粒间作用力与物质性质/08%20共价键的极性与分子的极性.md)
+- 03 分子空间结构与物质性质
   - 01 [价层电子对互斥模型($V\!SEPR$)](03%20分子空间结构与物质性质/01%20价层电子对互斥模型(VSEPR).md)
   - 02 [杂化轨道理论](03%20分子空间结构与物质性质/02%20杂化轨道理论.md)
 
@@ -31,7 +33,6 @@
 
 ## 📌代办
 1. 总结第二章 考点的梳理
-2. 完善第三章 分子结构的内容
 > 按照优先级排序
 
 
@@ -51,4 +52,6 @@
 
 > 部分内容使用了 **Chat-GPT** 辅助书写以及检查内容的正确性
 
-![Alt](https://github-readme-stats.vercel.app/api?username=Anyayay&include_all_commits=true&count_private-true&custom_title=Anyayay'%20GitHub%20Stats&line_height=30&show_icons=true&hide_border=true&bg_color=192133&title_color=efb752&icon_color=efb752&text_color=70bed9)
+![](https://github-readme-stats.vercel.app/api?username=Anyayay&include_all_commits=true&count_private-true&custom_title=Anyayay'%20GitHub%20Stats&line_height=30&show_icons=true&hide_border=true&bg_color=192133&title_color=efb752&icon_color=efb752&text_color=70bed9)
+
+![](/background.png)
