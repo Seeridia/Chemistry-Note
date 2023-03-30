@@ -49,6 +49,7 @@
   5.  [维基教科书 《高中化学》](https://zh.wikibooks.org/wiki/%E9%AB%98%E4%B8%AD%E5%8C%96%E5%AD%A6)
   6.  高考必刷题 [*众望教育*](https://www.lxzwedu.com/)
   7.  一本涂书
-  8.  [Khan Academy](https://zh.khanacademy.org/)
+  8.  教材划重点
+  9.  [Khan Academy](https://zh.khanacademy.org/)
 
 > 部分内容使用了 **Chat-GPT** 辅助书写以及检查内容的正确性
