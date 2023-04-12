@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="325" height="345">
+  <g stroke="black" stroke-width="4">
+    <line x1="118" y1="63" x2="118" y2="95" />
+    <line x1="212" y1="63" x2="212" y2="95" />
+    <line x1="274" y1="129" x2="242" y2="129" />
+    <line x1="118" y1="159" x2="118" y2="191" />
+    <line x1="212" y1="159" x2="212" y2="191" />
+    <line x1="149" y1="129" x2="181" y2="129" />
+    <line x1="118" y1="253" x2="118" y2="285" />
+    <line x1="212" y1="253" x2="212" y2="285" />
+    <line x1="86" y1="129" x2="54" y2="129" />
+    <line x1="274" y1="223" x2="242" y2="223" />
+    <line x1="149" y1="223" x2="181" y2="223" />
+    <line x1="86" y1="223" x2="54" y2="223" />
+  </g>
+  <g font-family="Arial" font-size="48">
+    <text x="100" y="46">H</text>
+    <text x="194" y="46">H</text>
+    <text x="286" y="145">H</text>
+    <text x="286" y="239">H</text>
+    <text x="100" y="145">C</text>
+    <text x="194" y="145">C</text>
+    <text x="100" y="239">C</text>
+    <text x="194" y="239">C</text>
+    <text x="100" y="335">H</text>
+    <text x="194" y="335">H</text>
+    <text x="6" y="145">H</text>
+    <text x="6" y="239">H</text>
+  </g>
+</svg>
