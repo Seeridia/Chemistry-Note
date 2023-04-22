@@ -1,3 +1,4 @@
+#! https://zhuanlan.zhihu.com/p/624050089
 <div  align="center">
 
 ![Anyayay's Chemistry Note](Logo.png)
@@ -47,10 +48,10 @@
             > 内容实时更新 但化学符号可能存在渲染错误
       3. 你可以克隆或直接下载本项目到本地
             > 内容实时更新 可编辑（但需要对 markdown 文件的支持）
-      4. 你可以前往 [OneDrive](https://zywoffice-my.sharepoint.com/:f:/g/personal/wjh_zywoffice_onmicrosoft_com/ErAT0ahkFjhKmM7Y05guNkEBPLKndGDOHbM9CrduEZqoxQ?e=h5jFK0) 下载到所有的 markdown 原笔记文件和 pdf 文件
+      4. 你可以前往 [OneDrive](https://zywoffice-my.sharepoint.com/:f:/g/personal/wjh_zywoffice_onmicrosoft_com/ErAT0ahkFjhKmM7Y05guNkEBPLKndGDOHbM9CrduEZqoxQ?e=h5jFK0) 下载到所有的 markdown 原笔记文件和 pdf 文件 **【推荐】**
             > 内容大概一周更新一次 可编辑（但需要对 markdown 文件的支持） 公式可以正常渲染 下载速度较快
       5. 你可以前往 [Releases](https://github.com/Anyayay/Chemistry-Note/releases) 下载 pdf 文件 
-            > 内容大概一周更新一次 公式可以正常渲染 下载速度较快
+            > 内容大概一周更新一次 公式可以正常渲染
 
 2. 共建项目
 
