@@ -1,10 +1,7 @@
-<div  align="center">
-
 ![Anyayay's Chemistry Note](Logo.png)
 
 ![](https://repobeats.axiom.co/api/embed/976ca5c08883e25f9e4a0a5c29f15ffc0c87d2d2.svg)
 
-</div>
 
 ---
 
@@ -67,9 +64,11 @@
 
 ## ❔说明
 
-目前项目的第一章到第四章第三节主要由 [@Anyayay](https://github.com/Anyayay) 完成，后续部分内容目前由 [@Shirley Amika](https://github.com/Twinsherry) 于2020年夏季在知乎发表的 [璎晴宫·霁月台·芳兰亭](https://www.zhihu.com/column/c_1266657933414342656) 内容代替，该部分的书写风格等可能存在差异，内容可能不够完整甚至可能过时，在用语措辞上亦有不恰当的地方，后续会逐步完善，现暂将由 [@Shirley Amika](https://github.com/Twinsherry) 独立完成的章节后加上 *(Shirley Amika)* 的字样。
+目前项目的第一章到第四章第三节主要由 [@Anyayay](https://github.com/Anyayay) 完成，后续部分内容目前由 [@Shirley Amika](https://github.com/Twinsherry) 于2020年夏季在知乎发表的 [璎晴宫·霁月台·芳兰亭](https://www.zhihu.com/column/c_1266657933414342656) 内容代替，该部分的书写风格等可能存在差异，内容可能不够完整甚至可能过时，在用语措辞上亦有不恰当的地方，后续会逐步完善，现暂将由 [@Shirley Amika](https://github.com/Twinsherry) 独立完成的章节后加上 *(Shirley Amika)* 的字样
 
-由于作者水平一般，一定会存在很多错误，你可以在 [Issues](https://github.com/Anyayay/Chemistry/issues) 中向我反馈
+推荐搭配 Typora 主题 [lapis](https://github.com/Anyayay/typora-theme-lapis) 查看（修改自原 [lapis](https://github.com/YiNNx/typora-theme-lapis) 主题）
+
+由于作者水平一般，一定会存在很多错误，你可以在 [Issues](https://github.com/Anyayay/Chemistry/issues) 中向我反馈 或 通过 [邮箱](anyayay520@gmail.com) 联系我
 
 **主要参考文献或资源**：
   1.  Bilibili Up主 [@一化儿](https://space.bilibili.com/1526560679/)
