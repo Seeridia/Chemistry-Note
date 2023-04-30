@@ -1,7 +1,6 @@
 ![Anyayay's Chemistry Note](Logo.png)
 
-![](https://repobeats.axiom.co/api/embed/976ca5c08883e25f9e4a0a5c29f15ffc0c87d2d2.svg)
-
+![Anyayay's Chemistry Note](https://repobeats.axiom.co/api/embed/7fb7b6c3c43b757655dc9bb5b6207950dbda3442.svg "Repobeats analytics image")
 
 ---
 
