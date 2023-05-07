@@ -71,6 +71,23 @@
 ## 👏Contributors
 
 <!-- readme: collaborators,contributors -start -->
+<table>
+<tr>
+    <td align="center">
+        <a href="https://github.com/Anyayay">
+            <img src="https://avatars.githubusercontent.com/u/37764175?v=4" width="100;" alt="Anyayay"/>
+            <br />
+            <sub><b>Anyayay</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Twinsherry">
+            <img src="https://avatars.githubusercontent.com/u/110149558?v=4" width="100;" alt="Twinsherry"/>
+            <br />
+            <sub><b>Shirley Amika</b></sub>
+        </a>
+    </td></tr>
+</table>
 <!-- readme: collaborators,contributors -end -->
 
 目前项目的第一章到第四章第三节主要由 [@Anyayay](https://github.com/Anyayay) 完成，后续部分内容目前由 [@Shirley Amika](https://github.com/Twinsherry) 于2020年夏季在知乎发表的 [璎晴宫·霁月台·芳兰亭](https://www.zhihu.com/column/c_1266657933414342656) 内容代替，该部分的书写风格等可能存在差异，内容可能不够完整甚至可能过时，在用语措辞上亦有不恰当的地方，后续会逐步完善，现暂将由 [@Shirley Amika](https://github.com/Twinsherry) 独立完成的章节后加上 *(Shirley Amika)* 的字样
