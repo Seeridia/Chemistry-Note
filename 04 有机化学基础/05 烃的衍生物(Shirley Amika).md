@@ -224,7 +224,7 @@ $\ce{2CH3CH2OH +2Na -> 2CH3CH2ONa + H2 ^}$
 
 - 苯酚结构
 
-  <img src="./images/5.8.png" alt="苯酚的结构" style="zoom: 33%;" />
+  <img src="./images/5.8.png"  style="zoom: 33%;" />
 
   > 至少有 12 个原子共平面，最多有 13 个原子共平面
   >
@@ -290,7 +290,7 @@ $\ce{2CH3CH2OH +2Na -> 2CH3CH2ONa + H2 ^}$
 
 实验现象：立即产生**白色沉淀**（该反应很灵敏，可用于苯酚的定性检验和定量测定）
 
-<img src="./images/5.13.svg" alt="" style="zoom: 60%;" />
+<img src="./images/5.13.svg"  style="zoom: 60%;" />
 
 羟基对苯环的影响，**使苯环上羟基邻、对位氢原子更活泼，易被取代**
 
@@ -621,7 +621,7 @@ $$\ce{6C6H5OH + Fe^{3+} -> [Fe(C6H5O)6]^{3-} + 6H+}$$
 
 **乙酸、碳酸 和 苯酚 的酸性比较**
 
-<img src="./images/5.25.png" alt="image-20230528113344639" style="zoom: 33%;" />
+<img src="./images/5.25.png"  style="zoom: 33%;" />
 
 1. A 装置：有无色气体产生，说明酸性：乙酸 $>$ 碳酸;
    方程式：$\ce{2CH3COOH +Na2CO3→2CH3COONa +CO2 ^ +H2O}$
