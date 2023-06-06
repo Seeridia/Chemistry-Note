@@ -104,7 +104,7 @@ $\ce{RONa + R'X ->[无水条件] ROR' + NaX}$
 如果尝试使用课本内的方法合成不对称醚将会形成两种对称醚副产物。
 
 反应示例：
-<img title="" src="images/9.1.svg" alt="" height="200" width="450"> 
+<img title="" src="images/9.1.svg"  height="200" width="450"> 
 
 
 ### 通过傅列德尔-克拉夫茨反应(Friedel-Crafts反应)实现苯环上的取代
