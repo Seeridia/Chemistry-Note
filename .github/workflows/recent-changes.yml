@@ -1,0 +1,41 @@
+name: Recent changes
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update_readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Update README with recent changes
+        run: |
+          # Fetch the latest 3 commits
+          recent_changes=$(git log -3 --pretty=format:"%h %s" --name-only)
+
+          # Extract changed filenames from the recent_changes
+          changed_files=$(echo "$recent_changes" | grep -P '^(?=\S)(?!\d+\s)' | uniq)
+
+          # Format the changed files with numbering
+          formatted_changes=""
+          counter=1
+          while read -r line; do
+            formatted_changes+="$counter. $line\n"
+            counter=$((counter+1))
+          done <<< "$changed_files"
+
+          # Update the README.md file
+          sed -i '/<!-- readme: recent-changes -start -->/,/<!-- readme: recent-changes -end -->/c\<!-- readme: recent-changes -start -->\n'"$formatted_changes"'<!-- readme: recent-changes -end -->' README.md
+        
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "Update README with recent changes" || echo "No changes to commit"
+          git push
+          
