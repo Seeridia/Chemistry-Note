@@ -43,16 +43,6 @@
 
 ## 📄最近改动
 <!-- readme: recent-changes -start -->
-<table>
-<tr>
-    <td align="center">
-        <a href="https://github.com/recent-changes">
-            <img src="" width="100;" alt="recent-changes"/>
-            <br />
-            <sub><b>Recent-changes</b></sub>
-        </a>
-    </td></tr>
-</table>
 <!-- readme: recent-changes -end -->
 
 ## 📂使用
