@@ -4,13 +4,18 @@ on:
             - master
   
 name: Contributes
-  
+
 jobs:
-    contrib-readme-en-job:
-        runs-on: ubuntu-latest
-        name: A job to automate contrib in readme
-        steps:
-            - name: Contribute List
-              uses: akhilmhdh/contributors-readme-action@v2.3.6
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run update script
+        run: node .github/scripts/update-readme.js
+      - name: Commit and push if changed
+        run: |
+          git diff
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git commit -am "Update README" -a || echo "No changes to commit"
+          git push
