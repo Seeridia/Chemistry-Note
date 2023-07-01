@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_2" data-name="图层 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 868.21 628.21">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3, .cls-6, .cls-7, .cls-10, .cls-11, .cls-14 {
+        stroke-width: 2.25px;
+      }
+
+      .cls-2, .cls-12 {
+        stroke: #ffad36;
+      }
+
+      .cls-3, .cls-8 {
+        stroke: #b7c82b;
+      }
+
+      .cls-4, .cls-5, .cls-8, .cls-9, .cls-12, .cls-13 {
+        stroke-width: 1.5px;
+      }
+
+      .cls-4, .cls-14 {
+        stroke: #fa8155;
+      }
+
+      .cls-5, .cls-6 {
+        stroke: #7574bc;
+      }
+
+      .cls-7, .cls-13 {
+        stroke: #0098b9;
+      }
+
+      .cls-15 {
+        font-size: 13.51px;
+      }
+
+      .cls-15, .cls-16, .cls-17 {
+        font-family: SourceHanSansSC-Regular-GBpc-EUC-H, 'Source Han Sans SC';
+      }
+
+      .cls-16 {
+        font-size: 10.51px;
+      }
+
+      .cls-17 {
+        font-size: 21.01px;
+      }
+
+      .cls-9, .cls-10 {
+        stroke: #a165a8;
+      }
+
+      .cls-11 {
+        stroke: #1f2766;
+      }
+    </style>
+  </defs>
+  <g id="_图层_1-2" data-name="图层 1">
+    <g>
+      <path class="cls-14" d="m495.04,272.49c13.34-108.43,46.68-162.65,100.03-162.65"/>
+      <path class="cls-2" d="m530.91,272.49c8.55,35.39,29.94,53.09,64.16,53.09"/>
+      <path class="cls-3" d="m495.04,272.49c13.34,108.43,46.68,162.65,100.03,162.65"/>
+      <path class="cls-7" d="m467.36,272.49c-14.29,169.15-50.01,253.73-107.17,253.73"/>
+      <path class="cls-6" d="m424.35,272.49c-8.55,44.34-29.94,66.5-64.16,66.5"/>
+      <path class="cls-10" d="m444.58,272.49c-11.25-67.35-39.38-101.02-84.39-101.02"/>
+      <path class="cls-14" d="m461.15,272.49c-13.46-113.37-47.12-170.06-100.96-170.06"/>
+      <path class="cls-2" d="m467.36,272.49c-14.29-169.15-50.01-253.73-107.17-253.73"/>
+      <path class="cls-1" d="m425.1,298.75c-14.51,0-26.26-11.76-26.26-26.26s11.76-26.26,26.26-26.26h105.06c14.51,0,26.26,11.76,26.26,26.26s-11.76,26.26-26.26,26.26h-105.06Z"/>
+      <path class="cls-11" d="m425.1,298.75c-14.51,0-26.26-11.76-26.26-26.26s11.76-26.26,26.26-26.26h105.06c14.51,0,26.26,11.76,26.26,26.26s-11.76,26.26-26.26,26.26h-105.06Z"/>
+      <text class="cls-17" transform="translate(425.1 281.12)"><tspan x="0" y="0">烃的衍生物</tspan></text>
+      <path class="cls-4" d="m646.09,109.84c31.52,0,24.01-90.05,39.02-90.05"/>
+      <path class="cls-4" d="m646.09,109.84c31.52,0,24.01-30.02,39.02-30.02"/>
+      <path class="cls-4" d="m646.09,109.84c31.52,0,24.01,30.02,39.02,30.02"/>
+      <path class="cls-4" d="m646.09,109.84c31.52,0,24.01,90.05,39.02,90.05"/>
+      <path class="cls-14" d="m613.83,127.47c-9.74,0-17.63-7.9-17.63-17.63s7.9-17.63,17.63-17.63h13.51c9.74,0,17.63,7.9,17.63,17.63s-7.9,17.63-17.63,17.63h-13.51Z"/>
+      <text class="cls-15" transform="translate(613.83 115.09)"><tspan x="0" y="0">醇</tspan></text>
+      <line class="cls-4" x1="685.11" y1="19.79" x2="820.18" y2="19.79"/>
+      <text class="cls-16" transform="translate(689.61 11.54)"><tspan x="0" y="0">与活泼金属单质的置换反应</tspan></text>
+      <path class="cls-4" d="m736.14,79.82c31.52,0,24.01-30.77,39.02-30.77"/>
+      <path class="cls-4" d="m736.14,79.82h39.02"/>
+      <path class="cls-4" d="m736.14,79.82c31.52,0,24.01,30.77,39.02,30.77"/>
+      <line class="cls-4" x1="685.11" y1="79.82" x2="736.14" y2="79.82"/>
+      <text class="cls-16" transform="translate(689.61 71.57)"><tspan x="0" y="0">取代反应</tspan></text>
+      <line class="cls-4" x1="775.16" y1="49.06" x2="857.7" y2="49.06"/>
+      <text class="cls-16" transform="translate(779.66 40.8)"><tspan x="0" y="0">醇与浓的氢卤酸</tspan></text>
+      <line class="cls-4" x1="775.16" y1="79.82" x2="826.19" y2="79.82"/>
+      <text class="cls-16" transform="translate(779.66 71.57)"><tspan x="0" y="0">酯化反应</tspan></text>
+      <line class="cls-4" x1="775.16" y1="110.59" x2="868.21" y2="110.59"/>
+      <text class="cls-16" transform="translate(779.66 102.34)"><tspan x="0" y="0">醇分子间脱水成醚</tspan></text>
+      <line class="cls-4" x1="685.11" y1="139.86" x2="736.14" y2="139.86"/>
+      <text class="cls-16" transform="translate(689.61 131.6)"><tspan x="0" y="0">消去反应</tspan></text>
+      <path class="cls-4" d="m736.14,199.89c31.52,0,24.01-30.77,39.02-30.77"/>
+      <path class="cls-4" d="m736.14,199.89h39.02"/>
+      <path class="cls-4" d="m736.14,199.89c31.52,0,24.01,30.77,39.02,30.77"/>
+      <line class="cls-4" x1="685.11" y1="199.89" x2="736.14" y2="199.89"/>
+      <text class="cls-16" transform="translate(689.61 191.63)"><tspan x="0" y="0">氧化反应</tspan></text>
+      <line class="cls-4" x1="775.16" y1="169.12" x2="805.18" y2="169.12"/>
+      <text class="cls-16" transform="translate(779.66 160.87)"><tspan x="0" y="0">燃烧</tspan></text>
+      <line class="cls-4" x1="775.16" y1="199.89" x2="826.19" y2="199.89"/>
+      <text class="cls-16" transform="translate(779.66 191.63)"><tspan x="0" y="0">催化氧化</tspan></text>
+      <line class="cls-4" x1="775.16" y1="230.65" x2="868.21" y2="230.65"/>
+      <text class="cls-16" transform="translate(779.66 222.4)"><tspan x="0" y="0">醇与酸性重铬酸钾</tspan></text>
+      <path class="cls-12" d="m646.09,325.58c31.52,0,24.01-43.9,39.02-43.9"/>
+      <path class="cls-12" d="m646.09,325.58c31.52,0,24.01-14.63,39.02-14.63"/>
+      <path class="cls-12" d="m646.09,325.58c31.52,0,24.01,14.63,39.02,14.63"/>
+      <path class="cls-12" d="m646.09,325.58c31.52,0,24.01,43.9,39.02,43.9"/>
+      <path class="cls-2" d="m613.83,343.21c-9.74,0-17.63-7.9-17.63-17.63s7.9-17.63,17.63-17.63h13.51c9.74,0,17.63,7.9,17.63,17.63s-7.9,17.63-17.63,17.63h-13.51Z"/>
+      <text class="cls-15" transform="translate(613.83 330.83)"><tspan x="0" y="0">酚</tspan></text>
+      <line class="cls-12" x1="685.11" y1="281.68" x2="736.14" y2="281.68"/>
+      <text class="cls-16" transform="translate(689.61 273.43)"><tspan x="0" y="0">取代反应</tspan></text>
+      <line class="cls-12" x1="685.11" y1="310.95" x2="736.14" y2="310.95"/>
+      <text class="cls-16" transform="translate(689.61 302.69)"><tspan x="0" y="0">显色反应</tspan></text>
+      <line class="cls-12" x1="685.11" y1="340.21" x2="736.14" y2="340.21"/>
+      <text class="cls-16" transform="translate(689.61 331.96)"><tspan x="0" y="0">氧化反应</tspan></text>
+      <line class="cls-12" x1="685.11" y1="369.48" x2="778.16" y2="369.48"/>
+      <text class="cls-16" transform="translate(689.61 361.22)"><tspan x="0" y="0">由酸性发生的反应</tspan></text>
+      <path class="cls-8" d="m646.09,435.14c31.52,0,24.01-14.63,39.02-14.63"/>
+      <path class="cls-8" d="m646.09,435.14c31.52,0,24.01,14.63,39.02,14.63"/>
+      <path class="cls-3" d="m613.83,452.77c-9.74,0-17.63-7.9-17.63-17.63s7.9-17.63,17.63-17.63h13.51c9.74,0,17.63,7.9,17.63,17.63s-7.9,17.63-17.63,17.63h-13.51Z"/>
+      <text class="cls-15" transform="translate(613.83 440.39)"><tspan x="0" y="0">酮</tspan></text>
+      <line class="cls-8" x1="685.11" y1="420.5" x2="736.14" y2="420.5"/>
+      <text class="cls-16" transform="translate(689.61 412.25)"><tspan x="0" y="0">加成反应</tspan></text>
+      <line class="cls-8" x1="685.11" y1="449.77" x2="757.15" y2="449.77"/>
+      <text class="cls-16" transform="translate(689.61 441.52)"><tspan x="0" y="0">催化加氢反应</tspan></text>
+      <path class="cls-13" d="m309.16,526.22c-31.52,0-24.01-53.09-39.02-53.09"/>
+      <path class="cls-13" d="m309.16,526.22c-31.52,0-24.01,53.09-39.02,53.09"/>
+      <path class="cls-7" d="m327.92,543.85c-9.74,0-17.63-7.9-17.63-17.63s7.9-17.63,17.63-17.63h13.51c9.74,0,17.63,7.9,17.63,17.63s-7.9,17.63-17.63,17.63h-13.51Z"/>
+      <text class="cls-15" transform="translate(327.92 531.47)"><tspan x="0" y="0">醛</tspan></text>
+      <path class="cls-13" d="m219.12,473.13c-31.52,0-24.01-30.77-39.02-30.77"/>
+      <path class="cls-13" d="m219.12,473.13h-39.02"/>
+      <path class="cls-13" d="m219.12,473.13c-31.52,0-24.01,30.77-39.02,30.77"/>
+      <line class="cls-13" x1="219.12" y1="473.13" x2="270.14" y2="473.13"/>
+      <text class="cls-16" transform="translate(223.62 464.87)"><tspan x="0" y="0">加成反应</tspan></text>
+      <line class="cls-13" x1="129.07" y1="442.36" x2="180.1" y2="442.36"/>
+      <text class="cls-16" transform="translate(133.57 434.1)"><tspan x="0" y="0">催化加氢</tspan></text>
+      <line class="cls-13" x1="109.56" y1="473.13" x2="180.1" y2="473.13"/>
+      <text class="cls-16" transform="translate(114.06 464.87)"><tspan x="0" y="0">与</tspan></text>
+      <text class="cls-16" transform="translate(124.57 464.87)"><tspan x="0" y="0"> </tspan></text>
+      <text class="cls-16" transform="translate(127.32 464.87)"><tspan x="0" y="0">H</tspan></text>
+      <text class="cls-16" transform="translate(135.65 464.87)"><tspan x="0" y="0">C</tspan></text>
+      <text class="cls-16" transform="translate(142.99 464.87)"><tspan x="0" y="0">N</tspan></text>
+      <text class="cls-16" transform="translate(151.33 464.87)"><tspan x="0" y="0"> </tspan></text>
+      <text class="cls-16" transform="translate(154.09 464.87)"><tspan x="0" y="0">加成</tspan></text>
+      <line class="cls-13" x1="108.06" y1="503.89" x2="180.1" y2="503.89"/>
+      <text class="cls-16" transform="translate(112.56 495.64)"><tspan x="0" y="0">羟醛缩合反应</tspan></text>
+      <path class="cls-13" d="m219.12,579.31c-31.52,0-24.01-46.15-39.02-46.15"/>
+      <path class="cls-13" d="m219.12,579.31c-31.52,0-24.01-15.38-39.02-15.38"/>
+      <path class="cls-13" d="m219.12,579.31c-31.52,0-24.01,15.38-39.02,15.38"/>
+      <path class="cls-13" d="m219.12,579.31c-31.52,0-24.01,46.15-39.02,46.15"/>
+      <line class="cls-13" x1="219.12" y1="579.31" x2="270.14" y2="579.31"/>
+      <text class="cls-16" transform="translate(223.62 571.05)"><tspan x="0" y="0">氧化反应</tspan></text>
+      <line class="cls-13" x1="129.07" y1="533.16" x2="180.1" y2="533.16"/>
+      <text class="cls-16" transform="translate(133.57 524.9)"><tspan x="0" y="0">银镜反应</tspan></text>
+      <line class="cls-13" x1="74.29" y1="563.92" x2="180.1" y2="563.92"/>
+      <text class="cls-16" transform="translate(78.79 555.67)"><tspan x="0" y="0">与新制</tspan></text>
+      <text class="cls-16" transform="translate(110.31 555.67)"><tspan x="0" y="0">C</tspan></text>
+      <text class="cls-16" transform="translate(117.65 555.67)"><tspan x="0" y="0">u</tspan></text>
+      <text class="cls-16" transform="translate(124.47 555.67)"><tspan x="0" y="0">(</tspan></text>
+      <text class="cls-16" transform="translate(128.2 555.67)"><tspan x="0" y="0">O</tspan></text>
+      <text class="cls-16" transform="translate(136.73 555.67)"><tspan x="0" y="0">H</tspan></text>
+      <text class="cls-16" transform="translate(145.06 555.67)"><tspan x="0" y="0">)</tspan></text>
+      <text class="cls-16" transform="translate(148.25 555.67)"><tspan x="0" y="0">2</tspan></text>
+      <text class="cls-16" transform="translate(154.33 555.67)"><tspan x="0" y="0">反应</tspan></text>
+      <line class="cls-13" x1="97.55" y1="594.69" x2="180.1" y2="594.69"/>
+      <text class="cls-16" transform="translate(102.05 586.44)"><tspan x="0" y="0">被强氧化剂氧化</tspan></text>
+      <line class="cls-13" x1="150.08" y1="625.46" x2="180.1" y2="625.46"/>
+      <text class="cls-16" transform="translate(154.58 617.2)"><tspan x="0" y="0">燃烧</tspan></text>
+      <path class="cls-5" d="m295.66,338.99c-31.52,0-24.01-52.34-39.02-52.34"/>
+      <path class="cls-5" d="m295.66,338.99c-31.52,0-24.01,23.07-39.02,23.07"/>
+      <path class="cls-5" d="m295.66,338.99c-31.52,0-24.01,52.34-39.02,52.34"/>
+      <path class="cls-6" d="m314.42,356.63c-9.74,0-17.63-7.9-17.63-17.63s7.9-17.63,17.63-17.63h27.01c9.74,0,17.63,7.9,17.63,17.63s-7.9,17.63-17.63,17.63h-27.01Z"/>
+      <text class="cls-15" transform="translate(314.42 344.24)"><tspan x="0" y="0">羧酸</tspan></text>
+      <path class="cls-5" d="m163.59,286.65c-31.52,0-24.01-46.15-39.02-46.15"/>
+      <path class="cls-5" d="m163.59,286.65c-31.52,0-24.01-15.38-39.02-15.38"/>
+      <path class="cls-5" d="m163.59,286.65c-31.52,0-24.01,15.38-39.02,15.38"/>
+      <path class="cls-5" d="m163.59,286.65c-31.52,0-24.01,46.15-39.02,46.15"/>
+      <line class="cls-5" x1="163.59" y1="286.65" x2="256.64" y2="286.65"/>
+      <text class="cls-16" transform="translate(168.09 278.4)"><tspan x="0" y="0">由酸性发生的反应</tspan></text>
+      <line class="cls-5" y1="240.5" x2="124.57" y2="240.5"/>
+      <text class="cls-16" transform="translate(4.5 232.25)"><tspan x="0" y="0">与活泼金属发生置换反应</tspan></text>
+      <line class="cls-5" x1="73.54" y1="271.27" x2="124.57" y2="271.27"/>
+      <text class="cls-16" transform="translate(78.04 263.01)"><tspan x="0" y="0">中和反应</tspan></text>
+      <line class="cls-5" x1="52.53" y1="302.03" x2="124.57" y2="302.03"/>
+      <text class="cls-16" transform="translate(57.03 293.78)"><tspan x="0" y="0">与某些盐反应</tspan></text>
+      <line class="cls-5" x1="31.52" y1="332.8" x2="124.57" y2="332.8"/>
+      <text class="cls-16" transform="translate(36.02 324.55)"><tspan x="0" y="0">与碱性氧化物反应</tspan></text>
+      <line class="cls-5" x1="205.61" y1="362.07" x2="256.64" y2="362.07"/>
+      <text class="cls-16" transform="translate(210.11 353.81)"><tspan x="0" y="0">取代反应</tspan></text>
+      <line class="cls-5" x1="205.61" y1="391.33" x2="256.64" y2="391.33"/>
+      <text class="cls-16" transform="translate(210.11 383.08)"><tspan x="0" y="0">还原反应</tspan></text>
+      <path class="cls-9" d="m309.16,171.47h-39.02"/>
+      <path class="cls-10" d="m327.92,189.1c-9.74,0-17.63-7.9-17.63-17.63s7.9-17.63,17.63-17.63h13.51c9.74,0,17.63,7.9,17.63,17.63s-7.9,17.63-17.63,17.63h-13.51Z"/>
+      <text class="cls-15" transform="translate(327.92 176.72)"><tspan x="0" y="0">酯</tspan></text>
+      <line class="cls-9" x1="219.12" y1="171.47" x2="270.14" y2="171.47"/>
+      <text class="cls-16" transform="translate(223.62 163.21)"><tspan x="0" y="0">水解反应</tspan></text>
+      <path class="cls-4" d="m282.15,102.43c-31.52,0-24.01-14.63-39.02-14.63"/>
+      <path class="cls-4" d="m282.15,102.43c-31.52,0-24.01,14.63-39.02,14.63"/>
+      <path class="cls-14" d="m300.91,120.06c-9.74,0-17.63-7.9-17.63-17.63s7.9-17.63,17.63-17.63h40.52c9.74,0,17.63,7.9,17.63,17.63s-7.9,17.63-17.63,17.63h-40.52Z"/>
+      <text class="cls-15" transform="translate(300.91 107.68)"><tspan x="0" y="0">卤代烃</tspan></text>
+      <line class="cls-4" x1="192.1" y1="87.8" x2="243.13" y2="87.8"/>
+      <text class="cls-16" transform="translate(196.6 79.54)"><tspan x="0" y="0">水解反应</tspan></text>
+      <line class="cls-4" x1="192.1" y1="117.06" x2="243.13" y2="117.06"/>
+      <text class="cls-16" transform="translate(196.6 108.81)"><tspan x="0" y="0">消去反应</tspan></text>
+      <path class="cls-12" d="m295.66,18.76h-39.02"/>
+      <path class="cls-2" d="m314.42,36.39c-9.74,0-17.63-7.9-17.63-17.63s7.9-17.63,17.63-17.63h27.01c9.74,0,17.63,7.9,17.63,17.63s-7.9,17.63-17.63,17.63h-27.01Z"/>
+      <text class="cls-15" transform="translate(314.42 24.01)"><tspan x="0" y="0">酰胺</tspan></text>
+      <line class="cls-12" x1="205.61" y1="18.76" x2="256.64" y2="18.76"/>
+      <text class="cls-16" transform="translate(210.11 10.51)"><tspan x="0" y="0">水解反应</tspan></text>
+    </g>
+  </g>
+</svg>
