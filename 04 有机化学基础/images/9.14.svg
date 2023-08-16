@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_2" data-name="图层 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 675 497.25">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: MicrosoftYaHei-Bold, 'Microsoft YaHei';
+        font-size: 21px;
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #000229;
+      }
+
+      .cls-4 {
+        stroke: #000229;
+      }
+
+      .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14 {
+        fill: none;
+      }
+
+      .cls-4, .cls-6, .cls-7, .cls-8, .cls-9, .cls-13 {
+        stroke-width: 2.25px;
+      }
+
+      .cls-2 {
+        font-size: 10.5px;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: MicrosoftYaHei, 'Microsoft YaHei';
+      }
+
+      .cls-5, .cls-10, .cls-11, .cls-14 {
+        stroke-width: 1.5px;
+      }
+
+      .cls-5, .cls-13 {
+        stroke: #f3d321;
+      }
+
+      .cls-6, .cls-14 {
+        stroke: #f9423a;
+      }
+
+      .cls-7 {
+        stroke-linecap: round;
+      }
+
+      .cls-7, .cls-9, .cls-11 {
+        stroke: #00bc7b;
+      }
+
+      .cls-8, .cls-10 {
+        stroke: #f6a04d;
+      }
+
+      .cls-15 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-3 {
+        font-size: 13.5px;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-12" width="675" height="497.25"/>
+    </clipPath>
+  </defs>
+  <g id="_图层_1-2" data-name="图层 1">
+    <g class="cls-15">
+      <line class="cls-7" x1="191.26" y1="236.25" x2="637.09" y2="236.25"/>
+      <line class="cls-6" x1="254.74" y1="236.25" x2="317.09" y2="128.25"/>
+      <line class="cls-8" x1="280.99" y1="236.25" x2="359.36" y2="372"/>
+      <line class="cls-13" x1="431.67" y1="236.25" x2="526.06" y2="72.75"/>
+      <line class="cls-9" x1="493.16" y1="236.25" x2="555.51" y2="344.25"/>
+      <path class="cls-4" d="m178.5,210.75h8.64v51h-8.64m-127.5-51h-8.64v51h8.64"/>
+      <text class="cls-1" transform="translate(72.75 244.5)"><tspan x="0" y="0">有机合成</tspan></text>
+      <line class="cls-14" x1="299.12" y1="159.38" x2="325.33" y2="159.38"/>
+      <line class="cls-14" x1="283.1" y1="187.13" x2="309.31" y2="187.13"/>
+      <path class="cls-6" d="m387.79,94.13l13.5,16.5-13.5,16.5m-141.4-33l-13.5,16.5,13.5,16.5"/>
+      <text class="cls-3" transform="translate(256.34 115.87)"><tspan x="0" y="0">对比原料和目标产物</tspan></text>
+      <text class="cls-2" transform="translate(329.83 163.5)"><tspan x="0" y="0">碳骨架结构</tspan></text>
+      <text class="cls-2" transform="translate(313.81 191.25)"><tspan x="0" y="0">官能团的变化</tspan></text>
+      <line class="cls-10" x1="341.39" y1="340.88" x2="367.6" y2="340.88"/>
+      <line class="cls-10" x1="325.37" y1="313.13" x2="351.58" y2="313.13"/>
+      <line class="cls-10" x1="309.35" y1="285.38" x2="335.56" y2="285.38"/>
+      <path class="cls-8" d="m430.06,373.13l13.5,16.5-13.5,16.5m-141.4-33l-13.5,16.5,13.5,16.5"/>
+      <text class="cls-3" transform="translate(298.61 394.87)"><tspan x="0" y="0">采用正确的方法分析</tspan></text>
+      <text class="cls-2" transform="translate(372.1 345)"><tspan x="0" y="0">逆向思维</tspan></text>
+      <text class="cls-2" transform="translate(356.08 317.25)"><tspan x="0" y="0">正向思维</tspan></text>
+      <text class="cls-2" transform="translate(340.06 289.5)"><tspan x="0" y="0">正逆结合</tspan></text>
+      <line class="cls-5" x1="508.09" y1="103.88" x2="534.3" y2="103.88"/>
+      <line class="cls-5" x1="492.07" y1="131.63" x2="518.28" y2="131.63"/>
+      <line class="cls-5" x1="476.05" y1="159.38" x2="502.26" y2="159.38"/>
+      <line class="cls-5" x1="460.03" y1="187.13" x2="486.24" y2="187.13"/>
+      <path class="cls-13" d="m596.76,38.63l13.5,16.5-13.5,16.5m-141.4-33l-13.5,16.5,13.5,16.5"/>
+      <text class="cls-3" transform="translate(465.31 60.37)"><tspan x="0" y="0">官能团的引入和消除</tspan></text>
+      <text class="cls-2" transform="translate(538.8 108)"><tspan x="0" y="0">先后顺序</tspan></text>
+      <text class="cls-2" transform="translate(522.78 135.75)"><tspan x="0" y="0">反应条件</tspan></text>
+      <text class="cls-2" transform="translate(506.76 163.5)"><tspan x="0" y="0">反应类型</tspan></text>
+      <text class="cls-2" transform="translate(490.74 191.25)"><tspan x="0" y="0">官能团的保护</tspan></text>
+      <line class="cls-11" x1="537.54" y1="313.13" x2="563.75" y2="313.13"/>
+      <line class="cls-11" x1="521.52" y1="285.38" x2="547.73" y2="285.38"/>
+      <path class="cls-9" d="m619.46,345.38l13.5,16.5-13.5,16.5m-127.9-33l-13.5,16.5,13.5,16.5"/>
+      <text class="cls-3" transform="translate(501.51 367.12)"><tspan x="0" y="0">设计合理合成路线</tspan></text>
+      <text class="cls-2" transform="translate(568.25 317.25)"><tspan x="0" y="0">环境保护</tspan></text>
+      <text class="cls-2" transform="translate(552.23 289.5)"><tspan x="0" y="0">绿色化学</tspan></text>
+    </g>
+  </g>
+</svg>
