@@ -1,0 +1,28 @@
+name: Push to Repo B
+
+on:
+  push:
+    branches:
+      - main # 更改为你要监视的分支
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+        env:
+          REPO_B_URL: ${{ secrets.REPO_B_URL }}
+
+      - name: Push to Repo B
+        run: |
+          git remote add repo-b $REPO_B_URL
+          git push repo-b main
+        env:
+          REPO_B_URL: ${{ secrets.REPO_B_URL }}
