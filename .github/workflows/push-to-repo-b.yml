@@ -15,8 +15,8 @@ jobs:
 
       - name: Set up Git
         run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
+          git config --global user.email "anyayay520@gmail.com"
+          git config --global user.name "Anyayay"
         env:
           REPO_B_URL: ${{ secrets.REPO_B_URL }}
 
