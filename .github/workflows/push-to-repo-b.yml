@@ -3,7 +3,7 @@ name: Push to Repo B
 on:
   push:
     branches:
-      - main # 更改为你要监视的分支
+      - main
 
 jobs:
   push:
