@@ -1,4 +1,4 @@
-# 化学物质基本概念 · 七 · 「化学与 STSE 」
+# 化学物质基本概念 · 七 · 「 化学与 STSE 」
 
 $\text{STSE = Science + Technology + Society + Environment}$
 
@@ -48,9 +48,9 @@ $\text{STSE = Science + Technology + Society + Environment}$
 
 | 污染名称     | 主要污染物及形成原理                                         |
 | ------------ | ------------------------------------------------------------ |
-| PM2.5        | 大气中直径小于或等于2.5微米的颗粒物，也称为可入肺颗粒物      |
+| PM2.5        | 大气中直径小于或等于 2.5 微米的颗粒物，也称为可入肺颗粒物      |
 | 雾霾         | 混合了 $\ce{SO2}$、 $\ce{NO}$ 和可吸入颗粒物的雾气           |
-| 酸雨         | 主要形成原理：<br>$\ce{SO2 + H2O \xlongequal{} H2SO3}$, $2\ce{H2SO3 + O2 \xlongequal{} 2H2SO4}$; $\ce{2NO + O2 \xlongequal{} 2NO2}$, $3\ce{3NO2 + H2O \xlongequal{} 2HNO3 + NO}$ |
+| 酸雨         | 主要形成原理：<br> $\ce{SO2 + H2O \xlongequal{} H2SO3}$, $2\ce{H2SO3 + O2 \xlongequal{} 2H2SO4}$; $\ce{2NO + O2 \xlongequal{} 2NO2}$, $3\ce{3NO2 + H2O \xlongequal{} 2HNO3 + NO}$ |
 | 光化学烟雾   | 机动车尾气中的碳氢化合物和氮氧化物在光照条件下生成复杂的污染物 |
 | 臭氧空洞     | $\ce{NO2}$、氟氯代烷等与臭氧发生作用，导致了臭氧层的损耗     |
 | 水体污染     | 过度施用化肥和农药，工业“三废”和生活污水的随意排放，富营养化可引起“水华”或“赤潮” |
