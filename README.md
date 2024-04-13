@@ -69,13 +69,15 @@
 
 1. 在线查看
 
-      1. 你可以在上面的目录中选择需要阅读的章节，点击即可
+      1. 你可前往 [知乎专栏](https://www.zhihu.com/column/c_1633012543521390594) 在线阅读笔记
+
+            > 内容**随性更新** ，已在文档中放入图片以保证化学符号的查看
+
+      2. 你可以在上面的目录中选择需要阅读的章节，点击即可
+
             > 内容实时更新 但化学符号可能存在渲染错误
 
-      2. 你可以前往 [GitBook](https://anyayays-organization.gitbook.io/chemistry-note/) 在线阅读笔记
-            > 内容实时更新 但化学符号可能存在渲染错误
-
-      3. 你可以前往 [Gitee](https://gitee.com/Anyayay/Chemistry-Note) 的镜像站或获得访问速度更快的体验
+      3. 你可以前往 [GitBook](https://anyayays-organization.gitbook.io/chemistry-note/) 在线阅读笔记
 
             > 内容实时更新 但化学符号可能存在渲染错误
 
@@ -83,23 +85,19 @@
 
       1. 你可以前往 [OneDrive](https://zywoffice-my.sharepoint.com/:f:/g/personal/wjh_zywoffice_onmicrosoft_com/Eu3TiqJ0or5Ls2w32zL7u6EBXeh7pROhCuGqLQP-j-PbwQ?e=gb6yZF) 下载到所有的 markdown 原笔记文件和 PDF 文件 **【推荐】**
 
-            > 内容大概一周更新一次 可编辑（但需要对 markdown 文件的支持） 公式可以正常渲染 下载速度较快
+            > 内容实时更新 可编辑（但需要对 markdown 文件的支持） 公式可以正常渲染 下载速度较快
 
-      2. 你可以克隆或直接下载本项目到本地
+      2. 你可以前往 [阿里云盘](https://www.alipan.com/s/aU66F4xRH2w) 下载到所有的 markdown 原笔记文件和 PDF 文件 **【推荐】**
 
-            > 内容实时更新 可编辑（但需要对 markdown 文件的支持）
+            > 内容延后一周更新 可编辑（但需要对 markdown 文件的支持） 公式可以正常渲染 下载速度较快
 
-      3. 你可以在目录中的 Chemistry-Notes-Version X.X.X 文件夹中下载 PDF 文件 
+      3. 你可以在目录中的 PDF 文件夹中直接下载 PDF 文件 
 
             > 内容更新较快，可以直接下载到特定的所需文件
 
-      4. 你可以前往 [Releases](https://github.com/Anyayay/Chemistry-Note/releases) 下载 PDF文件 
+      4. 你可以克隆或直接下载本项目到本地
 
-            > 内容大概一周更新一次 公式可以正常渲染
-
-      5. 你可以前往 [Gitee-Releases](https://gitee.com/Anyayay/Chemistry-Note/releases) 下载 PDF 文件 
-
-            > 速度较快，内容大概一周更新一次 公式可以正常渲染
+            > 内容实时更新 可编辑（但需要对 markdown 文件的支持）
 
 3. 共建项目
 
@@ -130,11 +128,9 @@
 </table>
 <!-- readme: collaborators,contributors -end -->
 
-目前项目的第一章到第四章前半部分主要由 [@Anyayay](https://github.com/Anyayay) 完成，后续部分内容目前由 [@Shirley Amika](https://github.com/Twinsherry) 于2020年夏季在知乎发表的 [璎晴宫·霁月台·芳兰亭](https://www.zhihu.com/column/c_1266657933414342656) 内容代替，该部分的书写风格等可能存在差异，内容可能不够完整甚至可能过时，在用语措辞上亦有不恰当的地方，后续会逐步完善，现暂将由 [@Shirley Amika](https://github.com/Twinsherry) 独立完成的章节后加上 *(Shirley Amika)* 的字样
-
 ## ❔说明
 
-Releases 中的 PDF 使用 Typora 主题 [lapis-print](https://github.com/Anyayay/typora-theme-lapis) （修改自原 [lapis](https://github.com/YiNNx/typora-theme-lapis) 主题）
+发布的 PDF 文件使用 Typora 下的 [lapis](https://github.com/YiNNx/typora-theme-lapis) 主题
 
 **主要参考文献或资源**：
 
