@@ -119,6 +119,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/cn-ryh">
+            <img src="https://avatars.githubusercontent.com/u/93967737?v=4" width="100;" alt="cn-ryh"/>
+            <br />
+            <sub><b>任宇航</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/Twinsherry">
             <img src="https://avatars.githubusercontent.com/u/110149558?v=4" width="100;" alt="Twinsherry"/>
             <br />
