@@ -13,6 +13,8 @@ for (var _i = 0, content_1 = content; _i < content_1.length; _i++) {
     var dirname = content_1[_i];
     var files = (0, fs_extra_1.readdirSync)(path.join(process.execPath, "..", "../".concat(dirname)));
     (0, fs_extra_1.mkdirSync)(path.join(process.execPath, "..", "./tmp/".concat(dirname)));
+    if ((0, fs_extra_1.existsSync)(path.join(process.execPath, "..", "../".concat(dirname, "/images"))))
+        (0, fs_extra_1.copySync)(path.join(process.execPath, "..", "../".concat(dirname, "/images")), path.join(process.execPath, "..", "./tmp/".concat(dirname, "/images/")));
     for (var _a = 0, files_1 = files; _a < files_1.length; _a++) {
         var filename = files_1[_a];
         if (!filename.endsWith(".md")) {
