@@ -168,7 +168,7 @@ MathJax uses several permanent branches in the [MathJax source repository](https
 
 - **[master](https://github.com/mathjax/MathJax-src)** contains the latest
   release of MathJax. This branch may be used in production. Do 
-  **NOT** use this branch to work on MathJax's source.
+ **NOT** use this branch to work on MathJax's source.
 
 These branches reflect version 3 of MathJax, which is substantially
 different from the version 2 codebase.  Version 2 will continue to be
@@ -179,7 +179,7 @@ repository](https://github.com/mathjax/MathJax):
 - **[legacy-v2-develop](https://github.com/mathjax/MathJax/tree/legacy-v2-develop)**
   is the development branch for changes to the legacy version 2 code.
   Any pull requests for version 2 should be branched from here.  Do
-  **NOT** use this branch for a production site.
+ **NOT** use this branch for a production site.
 
 - **[legacy-v2](https://github.com/mathjax/MathJax/tree/legacy-v2)**
   is the branch that contains any updates to version 2 following
