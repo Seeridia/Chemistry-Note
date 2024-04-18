@@ -52037,7 +52037,7 @@ var config = {
    *| --- | --- | --- | --- | --- |
    *| Theme |Built in Themes| String | Optional | Values include, default, forest, dark, neutral, null|
    *
-   ***Notes:**To disable any pre-defined mermaid theme, use "null".
+  ***Notes:**To disable any pre-defined mermaid theme, use "null".
    * <pre>
    *  "theme": "forest",
    *  "themeCSS": ".node rect { fill: red; }"
@@ -52055,7 +52055,7 @@ var config = {
    *| --- | --- | --- | --- | --- |
    *|fontFamily | specifies the font to be used in the rendered diagrams| String | Required | Trebuchet MS, Verdana, Arial, Sans-Serif |
    *
-   ***notes: Default value is \\"trebuchet ms\\".
+  ***notes: Default value is \\"trebuchet ms\\".
    */
   fontFamily: '"trebuchet ms", verdana, arial, sans-serif;',
 
@@ -52065,7 +52065,7 @@ var config = {
    *| logLevel |This option decides the amount of logging to be used.| String | Required | 1, 2, 3, 4, 5 |
    *
    *
-   ***Notes:**
+  ***Notes:**
    *-   debug: 1.
    *-   info: 2.
    *-   warn: 3.
@@ -52079,10 +52079,10 @@ var config = {
    *| --- | --- | --- | --- | --- |
    *| securitylevel | Level of trust for parsed diagram|String | Required | Strict, Loose, antiscript |
    *
-   ***Notes:
-   *-   **strict**: (**default**) tags in text are encoded, click functionality is disabeled
-   *-   **loose**: tags in text are allowed, click functionality is enabled
-   *-   **antiscript**: html tags in text are allowed, (only script element is removed), click functionality is enabled
+  ***Notes:
+   *-  **strict**: (**default**) tags in text are encoded, click functionality is disabeled
+   *-  **loose**: tags in text are allowed, click functionality is enabled
+   *-  **antiscript**: html tags in text are allowed, (only script element is removed), click functionality is enabled
    */
   securityLevel: 'strict',
 
@@ -52091,8 +52091,8 @@ var config = {
    *| --- | --- | --- | --- | --- |
    *| startOnLoad| Dictates whether mermaind starts on Page load | Boolean | Required | True, False |
    *
-   ***Notes:**
-   ***Default value: true**
+  ***Notes:**
+  ***Default value: true**
    */
   startOnLoad: true,
 
@@ -52103,7 +52103,7 @@ var config = {
    *
    *
    *## Notes**: This matters if you are using base tag settings.
-   ***Default value: false**.
+  ***Default value: false**.
    */
   arrowMarkerAbsolute: false,
 
@@ -52120,7 +52120,7 @@ var config = {
    * If set to false, the IDs are generated based on the current date and thus are not deterministic. This is the default behaviour.
    *
    *## Notes**: This matters if your files are checked into sourcecontrol e.g. git and should not change unless content is changed.
-   ***Default value: false**
+  ***Default value: false**
    */
   deterministicIds: false,
 
@@ -52139,8 +52139,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| diagramPadding | amount of padding around the diagram as a whole | Integer | Required | Any Positive Value |
      *
-     ***Notes:**The amount of padding around the diagram as a whole so that embedded diagrams have margins, expressed in pixels
-     ***Default value: 8**.
+    ***Notes:**The amount of padding around the diagram as a whole so that embedded diagrams have margins, expressed in pixels
+    ***Default value: 8**.
      */
     diagramPadding: 8,
 
@@ -52149,7 +52149,7 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| htmlLabels | Flag for setting whether or not a html tag should be used for rendering labels on the edges. | Boolean| Required | True, False|
      *
-     ***Notes: Default value: true**.
+    ***Notes: Default value: true**.
      */
     htmlLabels: true,
 
@@ -52158,9 +52158,9 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| nodeSpacing | Defines the spacing between nodes on the same level | Integer| Required | Any positive Numbers |
      *
-     ***Notes:
+    ***Notes:
      *Pertains to horizontal spacing for TB (top to bottom) or BT (bottom to top) graphs, and the vertical spacing for LR as well as RL graphs.**
-     ***Default value 50**.
+    ***Default value 50**.
      */
     nodeSpacing: 50,
 
@@ -52169,8 +52169,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| rankSpacing | Defines the spacing between nodes on different levels | Integer | Required| Any Positive Numbers |
      *
-     ***Notes: pertains to vertical spacing for TB (top to bottom) or BT (bottom to top), and the horizontal spacing for LR as well as RL graphs.
-     ***Default value 50**.
+    ***Notes: pertains to vertical spacing for TB (top to bottom) or BT (bottom to top), and the horizontal spacing for LR as well as RL graphs.
+    ***Default value 50**.
      */
     rankSpacing: 50,
 
@@ -52179,7 +52179,7 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| curve | Defines how mermaid renders curves for flowcharts. | String | Required | Basis, Linear, Cardinal|
      *
-     ***Notes:
+    ***Notes:
      *Default Vaue: Linear**
      */
     curve: 'linear',
@@ -52192,10 +52192,10 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| useMaxWidth | See notes | Boolean | 4 | True, False |
      *
-     ***Notes:**when this flag is set the height and width is set to 100% and is then scaling with the
+    ***Notes:**when this flag is set the height and width is set to 100% and is then scaling with the
      *available space if not the absolute space required is used.
      *
-     ***Default value true**.
+    ***Default value true**.
      */
     useMaxWidth: true
   },
@@ -52215,8 +52215,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| diagramMarginX | margin to the right and left of the sequence diagram | Integer | Required | Any Positive Values |
      *
-     ***Notes:**
-     ***Default value 50**.
+    ***Notes:**
+    ***Default value 50**.
      */
     diagramMarginX: 50,
 
@@ -52225,8 +52225,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| diagramMarginY | Margin to the over and under the sequence diagram | Integer | Required | Any Positive Values|
      *
-     ***Notes:**
-     ***Default value 10**.
+    ***Notes:**
+    ***Default value 10**.
      */
     diagramMarginY: 10,
 
@@ -52235,8 +52235,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| actorMargin | Margin between actors. | Integer | Required | Any Positive Value |
      *
-     ***Notes:**
-     ***Default value 50**.
+    ***Notes:**
+    ***Default value 50**.
      */
     actorMargin: 50,
 
@@ -52245,8 +52245,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| width | Width of actor boxes | Integer | Required | Any Positive Value |
      *
-     ***Notes:**
-     ***Default value 150**.
+    ***Notes:**
+    ***Default value 150**.
      */
     width: 150,
 
@@ -52255,8 +52255,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| height | Height of actor boxes | Integer | Required | Any Positive Value|
      *
-     ***Notes:**
-     ***Default value 65**..
+    ***Notes:**
+    ***Default value 65**..
      */
     height: 65,
 
@@ -52265,9 +52265,9 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| boxMargin | Margin around loop boxes | Integer | Required | Any Positive Value |
      *
-     ***Notes:**
+    ***Notes:**
      *
-     ***Default value 10**.
+    ***Default value 10**.
      */
     boxMargin: 10,
 
@@ -52276,9 +52276,9 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| boxTextMargin| margin around the text in loop/alt/opt boxes | Integer | Required| Any Positive Value|
      *
-     ***Notes:**
+    ***Notes:**
      *
-     ***Default value 5**.
+    ***Default value 5**.
      */
     boxTextMargin: 5,
 
@@ -52287,9 +52287,9 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| noteMargin | margin around notes. | Integer | Required | Any Positive Value |
      *
-     ***Notes:**
+    ***Notes:**
      *
-     ***Default value 10**.
+    ***Default value 10**.
      */
     noteMargin: 10,
 
@@ -52298,10 +52298,10 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| messageMargin | Space between messages. | Integer | Required | Any Positive Value |
      *
-     ***Notes:**
+    ***Notes:**
      *
      *Space between messages.
-     ***Default value 35**.
+    ***Default value 35**.
      */
     messageMargin: 35,
 
@@ -52310,7 +52310,7 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| messageAlign | Multiline message alignment | Integer | Required | left, center, right |
      *
-     ***Notes:**center **default**
+    ***Notes:**center **default**
      */
     messageAlign: 'center',
 
@@ -52319,9 +52319,9 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| mirrorActors | mirror actors under diagram. | Boolean| Required | True, False |
      *
-     ***Notes:**
+    ***Notes:**
      *
-     ***Default value true**.
+    ***Default value true**.
      */
     mirrorActors: true,
 
@@ -52330,8 +52330,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| bottomMarginAdj | Prolongs the edge of the diagram downwards. | Integer | Required | Any Positive Value |
      *
-     ***Notes:**Depending on css styling this might need adjustment.
-     ***Default value 1**.
+    ***Notes:**Depending on css styling this might need adjustment.
+    ***Default value 1**.
      */
     bottomMarginAdj: 1,
 
@@ -52340,10 +52340,10 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| useMaxWidth | See Notes | Boolean | Required | True, False |
      *
-     ***Notes:**
+    ***Notes:**
      *when this flag is set to true, the height and width is set to 100% and is then scaling with the
      *available space. If set to false, the absolute space required is used.
-     ***Default value: True**.
+    ***Default value: True**.
      */
     useMaxWidth: true,
 
@@ -52352,10 +52352,10 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| rightAngles | display curve arrows as right angles| Boolean | Required | True, False |
      *
-     ***Notes:**
+    ***Notes:**
      *
      *This will display arrows that start and begin at the same node as right angles, rather than a curve
-     ***Default value false**.
+    ***Default value false**.
      */
     rightAngles: false,
 
@@ -52364,8 +52364,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| showSequenceNumbers | This will show the node numbers | Boolean | Required | True, False |
      *
-     ***Notes:**
-     ***Default value false**.
+    ***Notes:**
+    ***Default value false**.
      */
     showSequenceNumbers: false,
 
@@ -52374,8 +52374,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| actorFontSize| This sets the font size of the actor's description | Integer | Require | Any Positive Value |
      *
-     ***Notes:**
-     ***Default value 14**..
+    ***Notes:**
+    ***Default value 14**..
      */
     actorFontSize: 14,
 
@@ -52384,8 +52384,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| actorFontFamily |This sets the font family of the actor's description | 3 | 4 | Open-Sans, Sans-Serif |
      *
-     ***Notes:**
-     ***Default value "Open-Sans", "sans-serif"**.
+    ***Notes:**
+    ***Default value "Open-Sans", "sans-serif"**.
      */
     actorFontFamily: '"Open-Sans", "sans-serif"',
 
@@ -52400,8 +52400,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| noteFontSize |This sets the font size of actor-attached notes. | Integer | Required | Any Positive Value |
      *
-     ***Notes:**
-     ***Default value 14**..
+    ***Notes:**
+    ***Default value 14**..
      */
     noteFontSize: 14,
 
@@ -52410,8 +52410,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| noteFontFamily| This sets the font family of actor-attached notes. | String | Required |  trebuchet ms, verdana, arial, sans-serif |
      *
-     ***Notes:**
-     ***Default value: trebuchet ms **.
+    ***Notes:**
+    ***Default value: trebuchet ms **.
      */
     noteFontFamily: '"trebuchet ms", verdana, arial, sans-serif',
 
@@ -52426,8 +52426,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| noteAlign | This sets the text alignment of actor-attached notes. | string | required | left, center, right|
      *
-     ***Notes:**
-     ***Default value center**.
+    ***Notes:**
+    ***Default value center**.
      */
     noteAlign: 'center',
 
@@ -52436,8 +52436,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| messageFontSize | This sets the font size of actor messages. | Integer | Required | Any Positive Number |
      *
-     ***Notes:**
-     ***Default value 16**.
+    ***Notes:**
+    ***Default value 16**.
      */
     messageFontSize: 16,
 
@@ -52446,8 +52446,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| messageFontFamily | This sets the font family of actor messages. | String| Required | trebuchet ms", verdana, arial, sans-serif |
      *
-     ***Notes:**
-     ***Default value: "trebuchet ms**.
+    ***Notes:**
+    ***Default value: "trebuchet ms**.
      */
     messageFontFamily: '"trebuchet ms", verdana, arial, sans-serif',
 
@@ -52514,8 +52514,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| titleTopMargin | Margin top for the text over the gantt diagram | Integer | Required | Any Positive Value |
      *
-     ***Notes:**
-     ***Default value 25**.
+    ***Notes:**
+    ***Default value 25**.
      */
     titleTopMargin: 25,
 
@@ -52524,8 +52524,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| barHeight | The height of the bars in the graph | Integer | Required | Any Positive Value |
      *
-     ***Notes:**
-     ***Default value 20**.
+    ***Notes:**
+    ***Default value 20**.
      */
     barHeight: 20,
 
@@ -52534,8 +52534,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| barGap | The margin between the different activities in the gantt diagram. | Integer | Optional |Any Positive Value |
      *
-     ***Notes:**
-     ***Default value 4**.
+    ***Notes:**
+    ***Default value 4**.
      */
     barGap: 4,
 
@@ -52544,8 +52544,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| topPadding | Margin between title and gantt diagram and between axis and gantt diagram. | Integer | Required | Any Positive Value |
      *
-     ***Notes:**
-     ***Default value 50**.
+    ***Notes:**
+    ***Default value 50**.
      */
     topPadding: 50,
 
@@ -52554,8 +52554,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| leftPadding | The space allocated for the section name to the left of the activities. | Integer| Required | Any Positive Value |
      *
-     ***Notes:**
-     ***Default value 75**.
+    ***Notes:**
+    ***Default value 75**.
      */
     leftPadding: 75,
 
@@ -52564,8 +52564,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| gridLineStartPadding | Vertical starting position of the grid lines. | Integer | Required | Any Positive Value |
      *
-     ***Notes:**
-     ***Default value 35**.
+    ***Notes:**
+    ***Default value 35**.
      */
     gridLineStartPadding: 35,
 
@@ -52574,8 +52574,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| fontSize | Font size| Integer | Required | Any Positive Value |
      *
-     ***Notes:**
-     ***Default value 11**.
+    ***Notes:**
+    ***Default value 11**.
      */
     fontSize: 11,
 
@@ -52584,9 +52584,9 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| fontFamily | font Family | string | required |"Open-Sans", "sans-serif" |
      *
-     ***Notes:**
+    ***Notes:**
      *
-     ***Default value '"Open-Sans", "sans-serif"'**.
+    ***Default value '"Open-Sans", "sans-serif"'**.
      */
     fontFamily: '"Open-Sans", "sans-serif"',
 
@@ -52595,8 +52595,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| numberSectionStyles | The number of alternating section styles | Integer | 4 | Any Positive Value |
      *
-     ***Notes:**
-     ***Default value 4**.
+    ***Notes:**
+    ***Default value 4**.
      */
     numberSectionStyles: 4,
 
@@ -52605,10 +52605,10 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| axisFormat | Datetime format of the axis. | 3 | Required | Date in yy-mm-dd |
      *
-     ***Notes:**
+    ***Notes:**
      *
      * This might need adjustment to match your locale and preferences
-     ***Default value '%Y-%m-%d'**.
+    ***Default value '%Y-%m-%d'**.
      */
     axisFormat: '%Y-%m-%d',
 
@@ -52617,10 +52617,10 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| useMaxWidth | See notes | Boolean | 4 | True, False |
      *
-     ***Notes:**when this flag is set the height and width is set to 100% and is then scaling with the
+    ***Notes:**when this flag is set the height and width is set to 100% and is then scaling with the
      *available space if not the absolute space required is used.
      *
-     ***Default value true**.
+    ***Default value true**.
      */
     useMaxWidth: true,
     useWidth: undefined
@@ -52635,8 +52635,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| diagramMarginX | margin to the right and left of the sequence diagram | Integer | Required | Any Positive Value |
      *
-     ***Notes:**
-     ***Default value 50**.
+    ***Notes:**
+    ***Default value 50**.
      */
     diagramMarginX: 50,
 
@@ -52645,8 +52645,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| diagramMarginY | margin to the over and under the sequence diagram. | Integer | Required | Any Positive Value|
      *
-     ***Notes:**
-     ***Default value 10**..
+    ***Notes:**
+    ***Default value 10**..
      */
     diagramMarginY: 10,
 
@@ -52655,8 +52655,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| actorMargin | Margin between actors. | Integer | Required | Any Positive Value|
      *
-     ***Notes:**
-     ***Default value 50**.
+    ***Notes:**
+    ***Default value 50**.
      */
     actorMargin: 50,
 
@@ -52665,8 +52665,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| width | Width of actor boxes | Integer | Required | Any Positive Value |
      *
-     ***Notes:**
-     ***Default value 150**.
+    ***Notes:**
+    ***Default value 150**.
      */
     width: 150,
 
@@ -52675,8 +52675,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| height | Height of actor boxes | Integer | Required | Any Positive Value |
      *
-     ***Notes:**
-     ***Default value 65**.
+    ***Notes:**
+    ***Default value 65**.
      */
     height: 65,
 
@@ -52685,8 +52685,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| boxMargin | Margin around loop boxes | Integer | Required | Any Positive Value |
      *
-     ***Notes:**
-     ***Default value 10**.
+    ***Notes:**
+    ***Default value 10**.
      */
     boxMargin: 10,
 
@@ -52695,7 +52695,7 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| boxTextMargin | margin around the text in loop/alt/opt boxes | Integer | Required | Any Positive Value |
      *
-     ***Notes:**
+    ***Notes:**
      */
     boxTextMargin: 5,
 
@@ -52704,8 +52704,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| noteMargin | margin around notes. | Integer | Required | Any Positive Value |
      *
-     ***Notes:**
-     ***Default value 10**.
+    ***Notes:**
+    ***Default value 10**.
      */
     noteMargin: 10,
 
@@ -52714,10 +52714,10 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| messageMargin |Space between messages. | Integer | Required | Any Positive Value |
      *
-     ***Notes:**
+    ***Notes:**
      *
      *Space between messages.
-     ***Default value 35**.
+    ***Default value 35**.
      */
     messageMargin: 35,
 
@@ -52726,7 +52726,7 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| messageAlign |Multiline message alignment | 3 | 4 | left, center, right |
      *
-     ***Notes:**default:center**
+    ***Notes:**default:center**
      */
     messageAlign: 'center',
 
@@ -52735,8 +52735,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| bottomMarginAdj | Prolongs the edge of the diagram downwards. | Integer | 4 | Any Positive Value |
      *
-     ***Notes:**Depending on css styling this might need adjustment.
-     ***Default value 1**.
+    ***Notes:**Depending on css styling this might need adjustment.
+    ***Default value 1**.
      */
     bottomMarginAdj: 1,
 
@@ -52745,10 +52745,10 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| useMaxWidth | See notes | Boolean | 4 | True, False |
      *
-     ***Notes:**when this flag is set the height and width is set to 100% and is then scaling with the
+    ***Notes:**when this flag is set the height and width is set to 100% and is then scaling with the
      *available space if not the absolute space required is used.
      *
-     ***Default value true**.
+    ***Default value true**.
      */
     useMaxWidth: true,
 
@@ -52757,8 +52757,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| rightAngles | Curved Arrows become Right Angles,  | 3 | 4 | True, False |
      *
-     ***Notes:**This will display arrows that start and begin at the same node as right angles, rather than a curves
-     ***Default value false**.
+    ***Notes:**This will display arrows that start and begin at the same node as right angles, rather than a curves
+    ***Default value false**.
      */
     rightAngles: false
   },
@@ -52770,10 +52770,10 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| useMaxWidth | See notes | Boolean | 4 | True, False |
      *
-     ***Notes:**when this flag is set the height and width is set to 100% and is then scaling with the
+    ***Notes:**when this flag is set the height and width is set to 100% and is then scaling with the
      *available space if not the absolute space required is used.
      *
-     ***Default value true**.
+    ***Default value true**.
      */
     useMaxWidth: true
   },
@@ -52786,10 +52786,10 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| useMaxWidth | See notes | Boolean | 4 | True, False |
      *
-     ***Notes:**when this flag is set the height and width is set to 100% and is then scaling with the
+    ***Notes:**when this flag is set the height and width is set to 100% and is then scaling with the
      *available space if not the absolute space required is used.
      *
-     ***Default value true**.
+    ***Default value true**.
      */
     useMaxWidth: true
   },
@@ -52818,10 +52818,10 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| useMaxWidth | See notes | Boolean | 4 | True, False |
      *
-     ***Notes:**when this flag is set the height and width is set to 100% and is then scaling with the
+    ***Notes:**when this flag is set the height and width is set to 100% and is then scaling with the
      *available space if not the absolute space required is used.
      *
-     ***Default value true**.
+    ***Default value true**.
      */
     useMaxWidth: true
   },
@@ -52835,8 +52835,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| diagramPadding | amount of padding around the diagram as a whole | Integer | Required | Any Positive Value |
      *
-     ***Notes:**The amount of padding around the diagram as a whole so that embedded diagrams have margins, expressed in pixels
-     ***Default value: 20**.
+    ***Notes:**The amount of padding around the diagram as a whole so that embedded diagrams have margins, expressed in pixels
+    ***Default value: 20**.
      */
     diagramPadding: 20,
 
@@ -52845,10 +52845,10 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| layoutDirection | Directional bias for layout of entities. | String | Required | "TB", "BT","LR","RL" |
      *
-     ***Notes:**
+    ***Notes:**
      *'TB' for Top-Bottom, 'BT'for Bottom-Top, 'LR' for Left-Right, or 'RL' for Right to Left.
      * T = top, B = bottom, L = left, and R = right.
-     ***Default value: TB **.
+    ***Default value: TB **.
      */
     layoutDirection: 'TB',
 
@@ -52857,8 +52857,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| minEntityWidth | The mimimum width of an entity box, | Integer | Required| Any Positive Value  |
      *
-     ***Notes:**expressed in pixels
-     ***Default value: 100**.
+    ***Notes:**expressed in pixels
+    ***Default value: 100**.
      */
     minEntityWidth: 100,
 
@@ -52867,8 +52867,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| minEntityHeight| The minimum height of an entity box, | Integer | 4 | Any Positive Value |
      *
-     ***Notes:**expressed in pixels
-     ***Default value: 75 **
+    ***Notes:**expressed in pixels
+    ***Default value: 75 **
      */
     minEntityHeight: 75,
 
@@ -52877,8 +52877,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| entityPadding|minimum internal padding betweentext in box and  box borders| Integer | 4 | Any Positive Value |
      *
-     ***Notes:**The minimum internal padding betweentext in an entity box and the enclosing box borders, expressed in pixels.
-     ***Default value: 15 **
+    ***Notes:**The minimum internal padding betweentext in an entity box and the enclosing box borders, expressed in pixels.
+    ***Default value: 15 **
      */
     entityPadding: 15,
 
@@ -52886,7 +52886,7 @@ var config = {
      *| Parameter | Description |Type | Required | Values|
      *| --- | --- | --- | --- | --- |
      *| stroke | Stroke color of box edges and lines | String | 4 | Any recognized color |
-     ***Default value: gray **
+    ***Default value: gray **
      */
     stroke: 'gray',
 
@@ -52895,8 +52895,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| fill | Fill color of entity boxes | String | 4 | Any recognized color |
      *
-     ***Notes:**
-     ***Default value:'honeydew'**
+    ***Notes:**
+    ***Default value:'honeydew'**
      */
     fill: 'honeydew',
 
@@ -52905,8 +52905,8 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| fontSize| Font Size in pixels| Integer |  | Any Positive Value |
      *
-     ***Notes:**Font size (expressed as an integer representing a number of pixels)
-     ***Default value: 12 **
+    ***Notes:**Font size (expressed as an integer representing a number of pixels)
+    ***Default value: 12 **
      */
     fontSize: 12,
 
@@ -52915,11 +52915,11 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| useMaxWidth | See Notes | Boolean | Required | true, false |
      *
-     ***Notes:**
+    ***Notes:**
      *When this flag is set to true, the diagram width is locked to 100% and
      *scaled based on available space. If set to false, the diagram reserves its
      *absolute width.
-     ***Default value: true**.
+    ***Default value: true**.
      */
     useMaxWidth: true
   },
@@ -52935,11 +52935,11 @@ var config = {
      *| --- | --- | --- | --- | --- |
      *| useMaxWidth | See Notes | Boolean | Required | true, false |
      *
-     ***Notes:**
+    ***Notes:**
      *When this flag is set to true, the diagram width is locked to 100% and
      *scaled based on available space. If set to false, the diagram reserves its
      *absolute width.
-     ***Default value: true**.
+    ***Default value: true**.
      */
     useMaxWidth: true
   }
