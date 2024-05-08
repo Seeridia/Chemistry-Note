@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>使用mdout转换的html</title>
+    <!-- 添加页面样式 -->
+    <link rel="stylesheet" href="{{.ThemePath}}/css/page.css">
+    <!-- 添加hljs样式 -->
+    <link rel="stylesheet" href="{{.ThemePath}}/css/hljs.css">
+    <!-- 在 hljs 和 page 之后以实现样式覆盖 -->
+    <link rel="stylesheet" href="{{.ThemePath}}/css/wrap.css">
+
+    <!-- 添加HLJS代码段语法高亮库 -->
+    <script type="text/javascript" src="{{.ThemePath}}/lib/Highlight/highlight.pack.js"></script>
+
+    <!-- JabinGP：这个必须放在HLJS后面，不然会导致数学公式失效 -->
+    <!-- 添加 mermaid.js 库-->
+    <script src="{{.ThemePath}}/lib/mermaid/mermaid.js"></script>
+</head>
+
+<body>
+    <div id="jabingp" style="display: none;">渲染开始</div>
+    <div class="markdown-body">
+        {{.MarkdownBody}}
+    </div>
+    <!-- 调用mermaid.js -->
+    <script type="text/javascript">
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <!-- 调用hljs -->
+    <script type="text/javascript">
+        hljs.initHighlightingOnLoad();
+    </script>
+    <script type="text/javascript">
+        let jabingpDiv = document.getElementById("jabingp");
+        let mathJaxFlagDiv;
+        let waitTimer = setInterval(() => {
+            mathJaxFlagDiv = document.getElementById("MathJax_Message");
+            if (mathJaxFlagDiv != null) {
+                clearInterval(waitTimer);
+                copyMessage();
+            }
+        }, 50);
+
+        let waitTimeOut = setTimeout(() => {
+            clearInterval(waitTimer);
+            jabingpDiv.textContent = "";
+            setTimeout(() => {
+                jabingpDiv.textContent = "渲染完成！";
+            }, 200)
+        }, 0)
+
+        function copyMessage() {
+            let getDataTime = setInterval(() => {
+                jabingpDiv.textContent = mathJaxFlagDiv.textContent;
+                console.log(mathJaxFlagDiv.textContent);
+                console.log(jabingpDiv.textContent);
+                if (mathJaxFlagDiv.style.cssText == "display: none;") {
+                    jabingpDiv.textContent = "渲染完成！";
+                    clearInterval(getDataTime);
+                }
+            }, 100);
+        }
+    </script>
+    <script type="text/javascript">
+        const todoElePatt = /\[(?<status>[ xX]?)\](?<content> [\s\S]*)/
+        const isDisableEdit = true  // 不允许编辑
+        function execReplaceElement(ele) {
+            let match = ele.innerHTML.match(todoElePatt)
+            if (!match) { return }
+            let inputEle = document.createElement("input")
+            inputEle.type = "checkbox"
+            inputEle.disabled = isDisableEdit
+            if (match.groups.status.toLowerCase() == "x") {
+                inputEle.setAttribute("checked", "")
+            }
+            ele.innerHTML = `${inputEle.outerHTML}${match.groups.content}`
+        }
+        function replaceTodoElement(ele) {
+            // 每次处理相邻的ul和li
+            let targets = ele.querySelectorAll("ul>li")
+            if (!targets) { return }
+            new Array(...targets).forEach((e) => {
+                // 先修改子元素
+                replaceTodoElement(e)
+                // 再修改父元素
+                execReplaceElement(e)
+            })
+        }
+        // 从根开始替换元素
+        replaceTodoElement(document.body)
+    </script>
+</body>
+
+</html>
