@@ -1,0 +1,5 @@
+/*让代码块能够换行 */
+.markdown-body pre>code {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
