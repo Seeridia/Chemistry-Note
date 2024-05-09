@@ -19,5 +19,5 @@ disqus:
 		}
 		return dft;
 	}
-	document.getElementById("btn-startedit").href = "https://github.com/cn-ryh/Chemistry-Note-Build/edit/master/docs" + getQueryVariable("ref", "");
+	document.getElementById("btn-startedit").href = "https://github.com/Anyayay/Chemistry-Note/edit/docs" + getQueryVariable("ref", "");
 </script>
