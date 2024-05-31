@@ -2,34 +2,34 @@
 <svg width="600" height="515.45" version="1.1" viewBox="0 0 600 515.45" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <radialGradient id="d" cx="725.53" cy="483.73" r="343.22" gradientTransform="scale(.54545)" gradientUnits="userSpaceOnUse">
-   <stop stop-color="#fff" offset="0"/>
-   <stop stop-color="#FDFDFD" offset=".25"/>
-   <stop stop-color="#D9D9D9" offset=".5"/>
-   <stop stop-color="#B4B4B4" offset=".7"/>
-   <stop stop-color="#9C9C9C" offset=".8"/>
-   <stop stop-color="#7E7E7E" offset=".9"/>
-   <stop stop-color="#6C6C6C" offset=".95"/>
-   <stop stop-color="#5B5B5B" offset="1"/>
+    <stop stop-color="#fff" offset="0"/>
+    <stop stop-color="#FDFDFD" offset=".25"/>
+    <stop stop-color="#D9D9D9" offset=".5"/>
+    <stop stop-color="#B4B4B4" offset=".7"/>
+    <stop stop-color="#9C9C9C" offset=".8"/>
+    <stop stop-color="#7E7E7E" offset=".9"/>
+    <stop stop-color="#6C6C6C" offset=".95"/>
+    <stop stop-color="#5B5B5B" offset="1"/>
   </radialGradient>
   <radialGradient id="e" cx="736.25" cy="411.34" r="319.81" gradientTransform="matrix(.72295 0 0 -.66758 -278.5 449.38)" gradientUnits="userSpaceOnUse">
-   <stop stop-color="#FF1212" offset="0"/>
-   <stop stop-color="#E40202" offset=".25"/>
-   <stop stop-color="#C40000" offset=".5"/>
-   <stop stop-color="#A00000" offset=".7"/>
-   <stop stop-color="#870000" offset=".8034"/>
-   <stop stop-color="#650000" offset=".9045"/>
-   <stop stop-color="#4F0000" offset=".95"/>
-   <stop stop-color="#3F0000" offset="1"/>
+    <stop stop-color="#FF1212" offset="0"/>
+    <stop stop-color="#E40202" offset=".25"/>
+    <stop stop-color="#C40000" offset=".5"/>
+    <stop stop-color="#A00000" offset=".7"/>
+    <stop stop-color="#870000" offset=".8034"/>
+    <stop stop-color="#650000" offset=".9045"/>
+    <stop stop-color="#4F0000" offset=".95"/>
+    <stop stop-color="#3F0000" offset="1"/>
   </radialGradient>
   <radialGradient id="f" cx="272.53" cy="489.91" r="382.12" gradientTransform="scale(.54545)" gradientUnits="userSpaceOnUse">
-   <stop stop-color="#fff" offset="0"/>
-   <stop stop-color="#FDFDFD" offset=".25"/>
-   <stop stop-color="#D9D9D9" offset=".5"/>
-   <stop stop-color="#B4B4B4" offset=".7"/>
-   <stop stop-color="#9C9C9C" offset=".8"/>
-   <stop stop-color="#7E7E7E" offset=".9"/>
-   <stop stop-color="#6C6C6C" offset=".95"/>
-   <stop stop-color="#5B5B5B" offset="1"/>
+    <stop stop-color="#fff" offset="0"/>
+    <stop stop-color="#FDFDFD" offset=".25"/>
+    <stop stop-color="#D9D9D9" offset=".5"/>
+    <stop stop-color="#B4B4B4" offset=".7"/>
+    <stop stop-color="#9C9C9C" offset=".8"/>
+    <stop stop-color="#7E7E7E" offset=".9"/>
+    <stop stop-color="#6C6C6C" offset=".95"/>
+    <stop stop-color="#5B5B5B" offset="1"/>
   </radialGradient>
  </defs>
  <g stroke-width=".54545">
