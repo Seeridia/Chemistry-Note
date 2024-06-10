@@ -7,6 +7,7 @@ console.log(__dirname);
 if (existsSync(path.join(__dirname, `./tmp`))) {
     removeSync(path.join(__dirname, `./tmp`));
 }
+execSync(`bash ./getMathjax.sh`)
 mkdirSync(path.join(__dirname, `./tmp`));
 for (let dirname of content) {
     let files = readdirSync(path.join(__dirname, `../${dirname}`));
