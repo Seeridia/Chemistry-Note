@@ -119,10 +119,10 @@
 <table>
 <tr>
     <td align="center">
-        <a href="https://github.com/Anyayay">
-            <img src="https://avatars.githubusercontent.com/u/37764175?v=4" width="100;" alt="Anyayay"/>
+        <a href="https://github.com/Seeridia">
+            <img src="https://avatars.githubusercontent.com/u/37764175?v=4" width="100;" alt="Seeridia"/>
             <br />
-            <sub><b>Anyayay</b></sub>
+            <sub><b>Seeridia</b></sub>
         </a>
     </td>
     <td align="center">
