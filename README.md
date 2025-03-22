@@ -85,6 +85,10 @@
     4. 你可以前往 [GitBook](https://anyayays-organization.gitbook.io/chemistry-note/) 在线阅读笔记
 
         > 内容实时更新 但化学符号可能存在渲染错误
+        
+    5. 如果你是Windows/Mac用户，可以下载软件 [Typora](https://typoraio.cn/) 离线阅读笔记
+
+        > 不支持手机访问，内容需手动下载，且软件仅支持免费试用，正版需购买
 
 2. 下载
 
