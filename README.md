@@ -143,7 +143,7 @@
         <a href="https://github.com/xiaozhi-boy">
             <img src="https://avatars.githubusercontent.com/u/121842440?v=4" width="100;" alt="xiaozhi-boy"/>
             <br />
-            <sub><b>Null</b></sub>
+            <sub><b>Xiaozhi Boy</b></sub>
         </a>
     </td></tr>
 </table>
