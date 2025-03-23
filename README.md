@@ -92,23 +92,23 @@
 
 2. 下载
 
-    1. 你可以前往 [OneDrive](https://zywoffice-my.sharepoint.com/:f:/g/personal/wjh_zywoffice_onmicrosoft_com/Eu3TiqJ0or5Ls2w32zL7u6EBXeh7pROhCuGqLQP-j-PbwQ?e=gb6yZF) 下载到所有的 markdown 原笔记文件和 PDF 文件 **【推荐】**
+    1. 你可以前往 [夸克网盘](https://pan.quark.cn/s/7cafe5dfd9a2) 下载到所有的 markdown 原笔记文件和 PDF 文件 **【推荐】**
 
-        > 内容实时更新 可编辑（但需要对 markdown 文件的支持） 公式可以正常渲染 下载速度较快
+    2. > 内容实时 可编辑（但需要对 markdown 文件的支持） 公式可以正常渲染 下载速度较快
 
-    2. 你可以前往 [阿里云盘](https://www.alipan.com/s/aU66F4xRH2w) 下载到所有的 markdown 原笔记文件和 PDF 文件 **【推荐】**
+    3. ~~你可以前往 [OneDrive](https://zywoffice-my.sharepoint.com/:f:/g/personal/wjh_zywoffice_onmicrosoft_com/Eu3TiqJ0or5Ls2w32zL7u6EBXeh7pROhCuGqLQP-j-PbwQ?e=gb6yZF) 下载到所有的 markdown 原笔记文件和 PDF 文件 ****~~
 
-        > 内容延后一周更新 可编辑（但需要对 markdown 文件的支持） 公式可以正常渲染 下载速度较快
+        > 内容停止更新 可编辑（但需要对 markdown 文件的支持） 公式可以正常渲染 下载速度较快
 
-    3. 你可以前往 [夸克网盘](https://pan.quark.cn/s/7cafe5dfd9a2) 下载到所有的 markdown 原笔记文件和 PDF 文件 **【推荐】**
+    4. ~~你可以前往 [阿里云盘](https://www.alipan.com/s/aU66F4xRH2w) 下载到所有的 markdown 原笔记文件和 PDF 文件 ****~~
 
-        > 内容实时 可编辑（但需要对 markdown 文件的支持） 公式可以正常渲染 下载速度较快
+        > 内容停止更新 可编辑（但需要对 markdown 文件的支持） 公式可以正常渲染 下载速度较快
 
-    4. 你可以在目录中的 PDF 文件夹中直接下载 PDF 文件 
+    5. 你可以在目录中的 PDF 文件夹中直接下载 PDF 文件 
 
         > 内容更新较快，可以直接下载到特定的所需文件
 
-    5. 你可以克隆或直接下载本项目到本地
+    6. 你可以克隆或直接下载本项目到本地
 
         > 内容实时更新 可编辑（但需要对 markdown 文件的支持）
 
@@ -124,6 +124,7 @@
 ## 👏Contributors
 
 <!-- readme: collaborators,contributors -start -->
+
 <table>
 <tr>
     <td align="center">
@@ -164,25 +165,25 @@
 **主要参考文献或资源**：
 
     1.  Bilibili Up主 [@一化儿](https://space.bilibili.com/1526560679/)
-
+    
     2.  普通高中教科书 化学（人教版、鲁科版、苏教版、沪科技版）[*国家中小学智慧教育平台*](https://www.zxx.edu.cn/elecEdu)
-
+    
     3.  解题觉醒-化学 [天星教育](https://www.tesoon.com/)
-
+    
     4.  [璎晴宫·霁月台·芳兰亭](https://www.zhihu.com/column/c_1266657933414342656)
-
+    
     5.  [维基百科](https://zh.wikipedia.org/)
-
+    
     6.  [维基教科书 《高中化学》](https://zh.wikibooks.org/wiki/%E9%AB%98%E4%B8%AD%E5%8C%96%E5%AD%A6)
-
+    
     7.  高考必刷题 [*众望教育*](https://www.lxzwedu.com/)
-
+    
     8.  一本涂书
-
+    
     9.  教材划重点
-
+    
     10.  [Khan Academy](https://zh.khanacademy.org/)
-
+    
     11. 邢其毅等.基础有机化学:第4版[M].北京:北京大学出版社,2016.
 
 > 部分内容使用了 **Chat-GPT** 辅助书写以及检查内容的正确性
