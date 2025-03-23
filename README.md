@@ -96,7 +96,7 @@
 
     1. 你可以前往 [夸克网盘](https://pan.quark.cn/s/7cafe5dfd9a2) 下载到所有的 markdown 原笔记文件和 PDF 文件 **【推荐】**
 
-     > 内容实时 可编辑（但需要对 markdown 文件的支持） 公式可以正常渲染 下载速度较快
+        > 内容实时 可编辑（但需要对 markdown 文件的支持） 公式可以正常渲染 下载速度较快
 
     2. ~~你可以前往 [OneDrive](https://zywoffice-my.sharepoint.com/:f:/g/personal/wjh_zywoffice_onmicrosoft_com/Eu3TiqJ0or5Ls2w32zL7u6EBXeh7pROhCuGqLQP-j-PbwQ?e=gb6yZF) 下载到所有的 markdown 原笔记文件和 PDF 文件 ****~~
 
