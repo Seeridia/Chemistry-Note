@@ -124,7 +124,6 @@
 ## 👏Contributors
 
 <!-- readme: collaborators,contributors -start -->
-
 <table>
 <tr>
     <td align="center">
