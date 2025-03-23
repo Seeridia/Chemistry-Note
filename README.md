@@ -94,21 +94,21 @@
 
     1. 你可以前往 [夸克网盘](https://pan.quark.cn/s/7cafe5dfd9a2) 下载到所有的 markdown 原笔记文件和 PDF 文件 **【推荐】**
 
-    2. > 内容实时 可编辑（但需要对 markdown 文件的支持） 公式可以正常渲染 下载速度较快
+     > 内容实时 可编辑（但需要对 markdown 文件的支持） 公式可以正常渲染 下载速度较快
 
-    3. ~~你可以前往 [OneDrive](https://zywoffice-my.sharepoint.com/:f:/g/personal/wjh_zywoffice_onmicrosoft_com/Eu3TiqJ0or5Ls2w32zL7u6EBXeh7pROhCuGqLQP-j-PbwQ?e=gb6yZF) 下载到所有的 markdown 原笔记文件和 PDF 文件 ****~~
-
-        > 内容停止更新 可编辑（但需要对 markdown 文件的支持） 公式可以正常渲染 下载速度较快
-
-    4. ~~你可以前往 [阿里云盘](https://www.alipan.com/s/aU66F4xRH2w) 下载到所有的 markdown 原笔记文件和 PDF 文件 ****~~
+    2. ~~你可以前往 [OneDrive](https://zywoffice-my.sharepoint.com/:f:/g/personal/wjh_zywoffice_onmicrosoft_com/Eu3TiqJ0or5Ls2w32zL7u6EBXeh7pROhCuGqLQP-j-PbwQ?e=gb6yZF) 下载到所有的 markdown 原笔记文件和 PDF 文件 ****~~
 
         > 内容停止更新 可编辑（但需要对 markdown 文件的支持） 公式可以正常渲染 下载速度较快
 
-    5. 你可以在目录中的 PDF 文件夹中直接下载 PDF 文件 
+    3. ~~你可以前往 [阿里云盘](https://www.alipan.com/s/aU66F4xRH2w) 下载到所有的 markdown 原笔记文件和 PDF 文件 ****~~
+
+        > 内容停止更新 可编辑（但需要对 markdown 文件的支持） 公式可以正常渲染 下载速度较快
+
+    4. 你可以在目录中的 PDF 文件夹中直接下载 PDF 文件 
 
         > 内容更新较快，可以直接下载到特定的所需文件
 
-    6. 你可以克隆或直接下载本项目到本地
+    5. 你可以克隆或直接下载本项目到本地
 
         > 内容实时更新 可编辑（但需要对 markdown 文件的支持）
 
