@@ -5,9 +5,11 @@
 <!-- > ![Anyayay's Chemistry Note](https://repobeats.axiom.co/api/embed/7fb7b6c3c43b757655dc9bb5b6207950dbda3442.svg "Repobeats analytics image") -->
 
 [![Gitee star](https://gitee.com/xiaozhi_boy/Chemistry-Note/badge/star.svg?theme=dark)](https://gitee.com/xiaozhi_boy/Chemistry-Note)
+[![Gitee fork](https://gitee.com/xiaozhi_boy/Chemistry-Note/badge/fork.svg?theme=dark)](https://gitee.com/xiaozhi_boy/Chemistry-Note)
 [![GitHub Repo stars](https://img.shields.io/github/stars/Seeridia/Chemistry-Note)](https://github.com/Seeridia/Chemistry-Note)
 [![GitHub forks](https://img.shields.io/github/forks/Seeridia/Chemistry-Note)](https://github.com/Seeridia/Chemistry-Note)
 
+[Github仓库](https://github.com/Seeridia/Chemistry-Note) | [Gitee仓库(大陆推荐)](https://gitee.com/xiaozhi_boy/Chemistry-Note)
 
 ---
 
