@@ -9,7 +9,7 @@
 [![GitHub Repo stars](https://img.shields.io/github/stars/Seeridia/Chemistry-Note)](https://github.com/Seeridia/Chemistry-Note)
 [![GitHub forks](https://img.shields.io/github/forks/Seeridia/Chemistry-Note)](https://github.com/Seeridia/Chemistry-Note)
 
-[Github](https://github.com/Seeridia/Chemistry-Note) | [Gitee(大陆推荐)](https://gitee.com/xiaozhi_boy/Chemistry-Note)
+[Github](https://github.com/Seeridia/Chemistry-Note) | [Gitee(大陆推荐)](https://gitee.com/xiaozhi_boy/Chemistry-Note) | [GitCode(大陆推荐)](https://gitcode.com/xiaozhi_boy/Chemistry-Note)
 
 ---
 
