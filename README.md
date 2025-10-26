@@ -182,6 +182,8 @@
 
 发布的 PDF 文件使用 Typora 下的 [lapis](https://github.com/YiNNx/typora-theme-lapis) 主题
 
+该仓库预计在2029年更新完整
+
 **主要参考文献或资源**：
 
     1.  Bilibili Up主 [@一化儿](https://space.bilibili.com/1526560679/)
