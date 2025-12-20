@@ -1,4 +1,4 @@
-<!-- > 当前该笔记项目正在寻找继承人！（有意者与我联系anyayay520@gmail.com） -->
+<!-- > 当前该笔记项目正在寻找继承人！（有意者与我联系 seeridia@gmail.com ） -->
 
 ![Anyayay's Chemistry Note](Logo.png)
 
@@ -10,6 +10,8 @@
 [![GitHub forks](https://img.shields.io/github/forks/Seeridia/Chemistry-Note)](https://github.com/Seeridia/Chemistry-Note)
 
 [Github](https://github.com/Seeridia/Chemistry-Note) | [Gitee(大陆推荐)](https://gitee.com/xiaozhi_boy/Chemistry-Note) | [GitCode(大陆推荐)](https://gitcode.com/xiaozhi_boy/Chemistry-Note)
+
+另附一个小小的 QQ 群：[1074161116](https://qm.qq.com/q/rwnIAEuAAE)
 
 ---
 
