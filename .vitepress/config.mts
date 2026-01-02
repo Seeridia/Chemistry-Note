@@ -288,6 +288,16 @@ export default defineConfig({
   title: "Anyayay's Chemistry Note",
   description:
     "一个基于中国普通高中教科书的化学笔记项目🧪A chemistry note project based on Chinese high school textbooks",
+  head: [
+    [
+      "script",
+      {
+        defer: "",
+        src: "https://cloud.umami.is/script.js",
+        "data-website-id": "8da19a41-3612-4a93-b54e-c53af8df497b",
+      },
+    ],
+  ],
   themeConfig: {
     nav: navItems.map(encodeNavItem),
     sidebar: encodeLinks({ "/": sidebarItems }),
