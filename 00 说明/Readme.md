@@ -12,6 +12,13 @@
 
 加油！
 
+> [!NOTE]
+> 下面是一个小的 QQ 群，欢迎加入交流学习，不过目前还没啥人 QwQ
+> 
+> 群号：[1074161116](https://qm.qq.com/q/CljGJy9p8Q)
+> 
+> <img src="./images/qq-group.jpg" style="width:200px;"/>
+
 ## 共建者
 
 <script setup>
