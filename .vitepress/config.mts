@@ -284,10 +284,10 @@ const sidebarItems: DefaultTheme.Sidebar = [
 ];
 
 export default defineConfig({
-  srcExclude: ["export/**/*", "PDF文件/**/*"],
   title: "Anyayay's Chemistry Note",
   description:
     "一个基于中国普通高中教科书的化学笔记项目🧪A chemistry note project based on Chinese high school textbooks",
+  lang: "zh-CN",
   head: [
     [
       "script",
@@ -307,8 +307,17 @@ export default defineConfig({
     search: {
       provider: "local",
     },
+    footer: {
+      message: "Released under the MIT License.",
+      copyright: "Copyright © 2023-present Seeridia",
+    },
+    editLink: {
+      pattern: "https://github.com/Seeridia/Chemistry-Note/edit/master/:path",
+    },
   },
   markdown: {
     math: true,
   },
+  srcExclude: ["export/**/*", "PDF文件/**/*"],
+  lastUpdated: true,
 });
