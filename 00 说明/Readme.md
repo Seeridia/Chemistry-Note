@@ -12,6 +12,55 @@
 
 加油！
 
+## 共建者
+
+<script setup>
+import { VPTeamMembers } from 'vitepress/theme'
+
+const members = [
+  {
+    avatar: 'https://www.github.com/Seeridia.png',
+    name: 'Seeridia',
+    title: 'Creator',
+    links: [
+      { icon: 'github', link: 'https://github.com/Seeridia' },
+      { icon: 'qq', link: 'https://qm.qq.com/q/RhaAYLyT2a' }
+    ]
+  },
+  {
+    avatar: 'https://www.github.com/cn-ryh.png',
+    name: 'cn-ryh',
+    title: 'Contributor',
+    links: [
+      { icon: 'github', link: 'https://github.com/cn-ryh' }
+    ]
+  },
+  {
+    avatar: 'https://www.github.com/Twinsherry.png',
+    name: 'Twinsherry',
+    title: 'Contributor',
+    links: [
+      { icon: 'github', link: 'https://github.com/Twinsherry' }
+    ]
+  },
+  {
+    avatar: 'https://www.github.com/xiaozhi-boy.png',
+    name: 'xiaozhi-boy',
+    title: 'Contributor',
+    links: [
+      { icon: 'github', link: 'https://github.com/xiaozhi-boy' }
+    ]
+  }
+]
+</script>
+
+如果有空？欢迎加入我们，一起完善这个项目！
+
+<VPTeamMembers size="small" :members />
+
+> [!NOTE]
+> 当前该笔记项目正在寻找共建者！（有意者与我联系 seeridia@gmail.com ）
+
 ## 参考资料
 
 1.  Bilibili Up主 [@一化儿](https://space.bilibili.com/1526560679/)
@@ -35,9 +84,6 @@
 10.  [Khan Academy](https://zh.khanacademy.org/)
     
 11. 邢其毅等.基础有机化学:第4版[M].北京:北京大学出版社,2016.
-
-> [!NOTE]
-> 当前该笔记项目正在寻找共建者！（有意者与我联系 seeridia@gmail.com ）
 
 ## 以及...
 
