@@ -3,7 +3,7 @@ name: Deploy to Production Server
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build-and-deploy:
