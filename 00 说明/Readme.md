@@ -4,7 +4,7 @@
 
 欢迎来到 Anyayay's Chemistry Note！
 
-这是一个基于中国普通高中教科书的化学笔记项目，主要围绕 Bilibili Up主 [@一化儿](https://space.bilibili.com/1526560679/) 的视频展开的，也或许是你见过的最完整的免费的最真实的高中化学笔记。
+这是一个基于中国普通高中教科书的化学笔记项目，主要围绕 Bilibili Up主 [@一化儿](https://space.bilibili.com/1526560679/) 的视频展开的，也或许是你见过的 **免费的 最完整的 最真实的** 高中化学笔记，不仅仅是知识点的笔记，也有超多的实战解题技巧，以及我自己总结出来的经验，或一个盲猜技巧，或一个口诀。
 
 多的不说了，学习更重要，左侧有目录（移动设备是顶上有一个 Menu 可以展开），上面有搜索。
 
@@ -13,7 +13,7 @@
 加油！
 
 > [!NOTE]
-> 下面是一个小的 QQ 群，欢迎加入交流学习，不过目前还没啥人 QwQ
+> 下面是一个小小的 QQ 群，欢迎加入交流学习，不过目前还没啥人 QwQ
 > 
 > 群号：[1074161116](https://qm.qq.com/q/CljGJy9p8Q)
 > 
@@ -23,42 +23,8 @@
 
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'
-
-const members = [
-  {
-    avatar: 'https://www.github.com/Seeridia.png',
-    name: 'Seeridia',
-    title: 'Creator',
-    links: [
-      { icon: 'github', link: 'https://github.com/Seeridia' },
-      { icon: 'qq', link: 'https://qm.qq.com/q/RhaAYLyT2a' }
-    ]
-  },
-  {
-    avatar: 'https://www.github.com/cn-ryh.png',
-    name: 'cn-ryh',
-    title: 'Contributor',
-    links: [
-      { icon: 'github', link: 'https://github.com/cn-ryh' }
-    ]
-  },
-  {
-    avatar: 'https://www.github.com/Twinsherry.png',
-    name: 'Twinsherry',
-    title: 'Contributor',
-    links: [
-      { icon: 'github', link: 'https://github.com/Twinsherry' }
-    ]
-  },
-  {
-    avatar: 'https://www.github.com/xiaozhi-boy.png',
-    name: 'xiaozhi-boy',
-    title: 'Contributor',
-    links: [
-      { icon: 'github', link: 'https://github.com/xiaozhi-boy' }
-    ]
-  }
-]
+import VPAppreciators from '../.vitepress/theme/components/VPAppreciators.vue'
+import { members, appreciators } from '../.vitepress/data/team'
 </script>
 
 如果有空？欢迎加入我们，一起完善这个项目！
@@ -94,9 +60,16 @@ const members = [
 
 ## 以及...
 
-本项目从你所看到的这个在线网站到 PDF 文件，都是完全免费的，可以自由下载和使用的。全程没有任何广告和付费墙。
+本项目从你所看到的这个在线网站到 PDF 文件，都是完全免费的，可以自由下载和使用的，全程没有任何广告和付费墙。
 
-如果这份材料对你的帮助很大，可以考虑下赞赏吗？
+如果这份材料对你的帮助很大，可以考虑下赞赏吗？赞赏也将是支持网站和这份笔记的维护工作。
 
 <img src="./images/wechat-pay.jpg" style="width:50%; display:inline-block;"/>
 <img src="./images/alipay.jpg" style="width:50%; display:inline-block;"/>
+
+> [!NOTE]
+> 如果您选择赞赏，希望能在备注中留下您的名字或昵称，也可以带上一句话，以便我们在项目的感谢名单中提及您！谢谢您的支持！😊
+
+感谢下面这些朋友对本项目的赞赏支持：
+
+<VPAppreciators :items="appreciators" />
