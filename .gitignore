@@ -5,3 +5,5 @@ export/tmp/
 export/mathjax/
 export/mathjax.tgz
 output/
+.vitepress/dist
+.vitepress/cache
