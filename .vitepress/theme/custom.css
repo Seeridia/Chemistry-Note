@@ -1,0 +1,3 @@
+.dark img:not([alt*="&keep-color"]) {
+    filter: invert(100%) hue-rotate(180deg) contrast(80%);
+}
