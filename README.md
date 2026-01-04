@@ -1,7 +1,7 @@
 > [!NOTE]
 > 当前该笔记项目正在寻找共建者！（有意者与我联系 seeridia@gmail.com ）
 
-![Anyayay's Chemistry Note](Logo.png)
+![Anyayay's Chemistry Note](./public/images/Logo.png)
 
 1. 在线阅读: [https://Chemistry-Note.seeridia.top](https://Chemistry-Note.seeridia.top)
 2. 下载 PDF: [https://www.alipan.com/s/aU66F4xRH2w](https://www.alipan.com/s/aU66F4xRH2w)

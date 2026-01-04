@@ -1,0 +1,52 @@
+{
+    "members": [
+        {
+            "avatar": "https://www.github.com/Seeridia.png",
+            "name": "Seeridia",
+            "title": "Creator",
+            "links": [
+                {
+                    "icon": "github",
+                    "link": "https://github.com/Seeridia"
+                },
+                {
+                    "icon": "qq",
+                    "link": "https://qm.qq.com/q/RhaAYLyT2a"
+                }
+            ]
+        },
+        {
+            "avatar": "https://www.github.com/cn-ryh.png",
+            "name": "cn-ryh",
+            "title": "Contributor",
+            "links": [
+                {
+                    "icon": "github",
+                    "link": "https://github.com/cn-ryh"
+                }
+            ]
+        },
+        {
+            "avatar": "https://www.github.com/Twinsherry.png",
+            "name": "Twinsherry",
+            "title": "Contributor",
+            "links": [
+                {
+                    "icon": "github",
+                    "link": "https://github.com/Twinsherry"
+                }
+            ]
+        },
+        {
+            "avatar": "https://www.github.com/xiaozhi-boy.png",
+            "name": "xiaozhi-boy",
+            "title": "Contributor",
+            "links": [
+                {
+                    "icon": "github",
+                    "link": "https://github.com/xiaozhi-boy"
+                }
+            ]
+        }
+    ]
+}

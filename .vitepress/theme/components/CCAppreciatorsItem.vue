@@ -12,7 +12,7 @@ defineProps<{
 </script>
 
 <template>
-  <article class="VPAppreciatorsItem">
+  <article class="CCAppreciatorsItem">
     <div class="header">
       <h1 class="name">{{ item.name }}</h1>
       <span class="amount">{{ item.amount }}</span>
@@ -23,7 +23,7 @@ defineProps<{
 </template>
 
 <style scoped>
-.VPAppreciatorsItem {
+.CCAppreciatorsItem {
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -35,7 +35,7 @@ defineProps<{
   transition: border-color 0.25s, background-color 0.25s;
 }
 
-.VPAppreciatorsItem:hover {
+.CCAppreciatorsItem:hover {
   border-color: var(--vp-c-brand-1);
 }
 

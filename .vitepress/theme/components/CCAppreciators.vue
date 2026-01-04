@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import VPAppreciatorsItem from "./VPAppreciatorsItem.vue";
+import CCAppreciatorsItem from "./CCAppreciatorsItem.vue";
 
 interface Appreciator {
   amount: string;
@@ -14,17 +14,17 @@ defineProps<{
 </script>
 
 <template>
-  <div class="VPAppreciators">
+  <div class="CCAppreciators">
     <div class="container">
       <div v-for="(item, index) in items" :key="index" class="item">
-        <VPAppreciatorsItem :item="item" />
+        <CCAppreciatorsItem :item="item" />
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.VPAppreciators {
+.CCAppreciators {
   margin-top: 24px;
 }
 

@@ -1,6 +1,6 @@
-# 项目说明
+# Readme
 
-![Anyayay's Chemistry Note](./images/Logo.png)
+![Anyayay's Chemistry Note](/images/Logo.png)
 
 欢迎来到 Anyayay's Chemistry Note！
 
@@ -23,13 +23,31 @@
 
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'
-import VPAppreciators from '../.vitepress/theme/components/VPAppreciators.vue'
-import { members, appreciators } from '../.vitepress/data/team'
+import { CCAppreciators, CCAppreciatePayments } from '/.vitepress/theme/components'
+
+import appreciators from "/data/appreciators.json"
+import members from '/data/members.json'
+
+const appreciatorsList = appreciators.appreciators
+const membersList = members.members
+
+const appreciatePayments = [
+  {
+    type: 'WeChat',
+    qrCodeSrc: '/images/wechat-pay.jpg',
+    altText: 'WeChat Pay QR Code',
+  },
+  {
+    type: 'Alipay',
+    qrCodeSrc: '/images/alipay.jpg',
+    altText: 'Alipay QR Code',
+  },
+]
 </script>
 
 如果有空？欢迎加入我们，一起完善这个项目！
 
-<VPTeamMembers size="small" :members />
+<VPTeamMembers size="small" :members="membersList"/>
 
 > [!NOTE]
 > 当前该笔记项目正在寻找共建者！（有意者与我联系 seeridia@gmail.com ）
@@ -64,12 +82,11 @@ import { members, appreciators } from '../.vitepress/data/team'
 
 如果这份材料对你的帮助很大，可以考虑下赞赏吗？赞赏也将是支持网站和这份笔记的维护工作。
 
-<img src="./images/wechat-pay.jpg" style="width:50%; display:inline-block;"/>
-<img src="./images/alipay.jpg" style="width:50%; display:inline-block;"/>
+<CCAppreciatePayments :items="appreciatePayments" />
 
 > [!NOTE]
 > 如果您选择赞赏，希望能在备注中留下您的名字或昵称，也可以带上一句话，以便我们在项目的感谢名单中提及您！谢谢您的支持！😊
 
 感谢下面这些朋友对本项目的赞赏支持：
 
-<VPAppreciators :items="appreciators" />
+<CCAppreciators :items="appreciatorsList" />
