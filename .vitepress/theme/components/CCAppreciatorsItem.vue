@@ -12,14 +12,14 @@ defineProps<{
 </script>
 
 <template>
-  <article class="CCAppreciatorsItem">
+  <div class="CCAppreciatorsItem">
     <div class="header">
       <h1 class="name">{{ item.name }}</h1>
       <span class="amount">{{ item.amount }}</span>
     </div>
     <p class="message">{{ item.message }}</p>
     <p class="date">{{ item.date }}</p>
-  </article>
+  </div>
 </template>
 
 <style scoped>
