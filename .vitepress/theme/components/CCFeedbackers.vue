@@ -1,12 +1,7 @@
 <script setup lang="ts">
 interface Feedbacker {
   name: string;
-  link: Link;
-}
-
-interface Link {
-  platform: string;
-  account: string;
+  email: string;
 }
 
 defineProps<{
@@ -19,7 +14,7 @@ defineProps<{
     <div
       v-for="item in items"
       :key="item.name"
-      :title="item.link.platform + ': ' + item.link.account"
+      :title="item.email"
       class="CCFeedbackersItem"
     >
       {{ item.name }}
