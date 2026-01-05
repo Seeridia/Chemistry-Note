@@ -19,14 +19,15 @@
 > 
 > <img src="./images/qq-group.jpg" style="width:200px;"/>
 
-## 共建者
+## 共建者名录
 
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'
-import { CCAppreciators, CCAppreciatePayments } from '/.vitepress/theme/components'
+import { CCAppreciators, CCAppreciatePayments, CCFeedbackers } from '/.vitepress/theme/components'
 
 import appreciators from "/data/appreciators.json"
 import members from '/data/members.json'
+import feedbackers from '/data/feedbackers.json'
 
 const appreciatorsList = appreciators.appreciators
 const membersList = members.members
@@ -51,6 +52,19 @@ const appreciatePayments = [
 
 > [!NOTE]
 > 当前该笔记项目正在寻找共建者！（有意者与我联系 seeridia@gmail.com ）
+
+## 反馈者名录
+
+感谢下面这些朋友对本项目中存在的问题进行反馈：
+
+<CCFeedbackers :items="feedbackers.feedbackers" />
+
+> 目前收录的反馈者名单较新（2026 年后），对于之前反馈过问题的朋友，如果没有出现在名单中，请及时与我联系，我会补充上去的！
+
+如果你在使用过程中发现了任何问题，或者有任何建议，欢迎通过以下方式与我联系：
+
+1. seeridia@gmail.com
+2. QQ 群：[1074161116](https://qm.qq.com/q/CljGJy9p8Q)
 
 ## 参考资料
 
