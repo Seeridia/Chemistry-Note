@@ -47,6 +47,17 @@
                     "link": "https://github.com/xiaozhi-boy"
                 }
             ]
+        },
+        {
+            "avatar": "https://www.github.com/zhenmunse.png",
+            "name": "zhenmunse",
+            "title": "Contributor",
+            "links": [
+                {
+                    "icon": "github",
+                    "link": "https://github.com/zhenmunse"
+                }
+            ]
         }
     ]
 }
