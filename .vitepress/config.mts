@@ -90,6 +90,7 @@ const sidebarItems: DefaultTheme.Sidebar = [
     items: [
       { text: "Readme", link: "/00 说明/Readme" },
       { text: "目录", link: "/00 说明/目录" },
+      { text: "错误反馈", link: "/00 说明/错误反馈" },
     ],
   },
   {
