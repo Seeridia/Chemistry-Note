@@ -12,6 +12,8 @@
 
 加油！
 
+以及，如果在使用中发现任何问题，欢迎通过 [错误反馈](./错误反馈.md) 来帮助我们改善。
+
 > [!NOTE]
 > 下面是一个小小的 QQ 群，欢迎加入交流学习，不过目前还没啥人 QwQ
 > 
@@ -60,11 +62,6 @@ const appreciatePayments = [
 <CCFeedbackers :items="feedbackers.feedbackers" />
 
 > 目前收录的反馈者名单较新（2026 年后），对于之前反馈过问题的朋友，如果没有出现在名单中，请及时与我联系，我会补充上去的！
-
-如果你在使用过程中发现了任何问题，或者有任何建议，欢迎通过以下方式与我联系：
-
-1. seeridia@gmail.com
-2. QQ 群：[1074161116](https://qm.qq.com/q/CljGJy9p8Q)
 
 ## 参考资料
 
