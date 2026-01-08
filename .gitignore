@@ -7,4 +7,3 @@ export/mathjax.tgz
 output/
 .vitepress/dist
 .vitepress/cache
-package-lock.json
