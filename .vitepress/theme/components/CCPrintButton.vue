@@ -1,4 +1,19 @@
 <script setup lang="ts">
+import { computed } from "vue";
+import { useData } from "vitepress";
+
+const { page } = useData();
+
+const PDF_BASE_URL =
+  "https://cnb.cool/Seeridia/Chemistry-Note-File/-/git/raw/master";
+
+const pdfUrl = computed(() => {
+  const filePath = page.value.filePath ?? "";
+  if (!filePath.endsWith(".md")) return "";
+  const pdfPath = filePath.replace(/\.md$/i, ".pdf");
+  return `${PDF_BASE_URL}${encodeURI(pdfPath)}?download=true`;
+});
+
 const handlePrint = () => {
   if (typeof window === "undefined") return;
   window.print();
@@ -8,8 +23,17 @@ const handlePrint = () => {
 <template>
   <div class="CCPrintButton">
     <button type="button" class="CCPrintButtonBtn" @click="handlePrint">
-      打印 / 导出为 PDF
+      打印
     </button>
+    <a
+      v-if="pdfUrl"
+      class="CCPrintButtonBtn"
+      :href="pdfUrl"
+      target="_blank"
+      rel="noopener"
+    >
+      下载 PDF
+    </a>
   </div>
 </template>
 
@@ -18,6 +42,7 @@ const handlePrint = () => {
   margin-top: 20px;
   display: flex;
   justify-content: flex-start;
+  gap: 10px;
 }
 
 .CCPrintButtonBtn {

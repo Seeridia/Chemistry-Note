@@ -7,7 +7,21 @@ import url from 'url'
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
 const distDir = path.resolve(__dirname, '../.vitepress/dist')
-const outDir = path.resolve(__dirname, '../pdf')
+
+const args = process.argv.slice(2)
+const listIndex = args.indexOf('--list')
+const outIndex = args.indexOf('--out-dir')
+const listPath = listIndex >= 0 ? args[listIndex + 1] : null
+const outDirArg = outIndex >= 0 ? args[outIndex + 1] : null
+if (listIndex >= 0 && !listPath) {
+    throw new Error('Missing value for --list')
+}
+if (outIndex >= 0 && !outDirArg) {
+    throw new Error('Missing value for --out-dir')
+}
+const outDir = outDirArg
+    ? path.resolve(process.cwd(), outDirArg)
+    : path.resolve(__dirname, '../pdf')
 
 fs.mkdirSync(outDir, { recursive: true })
 
@@ -60,17 +74,33 @@ const server = http.createServer((req, res) => {
     })
 })
 
+let files = []
+if (listPath) {
+    const raw = fs.readFileSync(listPath, 'utf8')
+    files = raw
+        .split('\n')
+        .map((line) => line.trim())
+        .filter((line) => line && line !== '404.html')
+    files = Array.from(new Set(files))
+    files = files.filter((file) => fs.existsSync(path.join(distDir, file)))
+} else {
+    files = await fg('**/*.html', {
+        cwd: distDir,
+        ignore: ['404.html']
+    })
+}
+
+if (files.length === 0) {
+    console.log('No pages to export.')
+    process.exit(0)
+}
+
 const serverPort = await new Promise((resolve) => {
     server.listen(0, '127.0.0.1', () => resolve(server.address().port))
 })
 
 const browser = await chromium.launch()
 const page = await browser.newPage()
-
-const files = await fg('**/*.html', {
-    cwd: distDir,
-    ignore: ['404.html']
-})
 
 for (const file of files) {
     const inputPath = path.join(distDir, file)

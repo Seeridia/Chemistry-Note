@@ -7,3 +7,5 @@ export/mathjax.tgz
 output/
 .vitepress/dist
 .vitepress/cache
+*.pdf
+.github/changed-pages/
