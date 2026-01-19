@@ -47,12 +47,9 @@ export default defineConfig({
         indexName: "Chemistry Note",
       },
     },
-    footer: {
-      message: "Released under the MIT License.",
-      copyright: "Copyright © 2023-present Seeridia",
-    },
     editLink: {
       pattern: "https://github.com/Seeridia/Chemistry-Note/edit/master/:path",
+      text: "在 GitHub 上查看此页",
     },
   },
   markdown: {
