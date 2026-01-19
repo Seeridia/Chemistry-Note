@@ -5,7 +5,7 @@ import { useData } from "vitepress";
 const { page } = useData();
 
 const PDF_BASE_URL =
-  "https://cnb.cool/Seeridia/Chemistry-Note-File/-/git/raw/master";
+  "https://cnb.cool/Seeridia/Chemistry-Note-File/-/git/raw/main/";
 
 const pdfUrl = computed(() => {
   const filePath = page.value.filePath ?? "";
