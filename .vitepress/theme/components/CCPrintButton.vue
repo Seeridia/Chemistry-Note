@@ -22,7 +22,11 @@ const handlePrint = () => {
 
 <template>
   <div class="CCPrintButton">
-    <button type="button" class="CCPrintButtonBtn" @click="handlePrint">
+    <button
+      type="button"
+      class="CCPrintButtonBtn CCPrintButtonBtn--print"
+      @click="handlePrint"
+    >
       打印
     </button>
     <a
@@ -39,7 +43,6 @@ const handlePrint = () => {
 
 <style scoped>
 .CCPrintButton {
-  margin-top: 20px;
   display: flex;
   justify-content: flex-start;
   gap: 10px;
@@ -64,6 +67,18 @@ const handlePrint = () => {
   border-color: var(--vp-c-brand-1);
   background: var(--vp-c-bg-soft-hover);
   color: var(--vp-c-brand-1);
+}
+
+@media (max-width: 768px) {
+  .CCPrintButtonBtn--print {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .CCPrintButton {
+    margin-top: 20px;
+  }
 }
 
 @media print {
