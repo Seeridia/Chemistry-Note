@@ -1,0 +1,102 @@
+import { chromium } from 'playwright'
+import fg from 'fast-glob'
+import http from 'http'
+import fs from 'fs'
+import path from 'path'
+import url from 'url'
+
+const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
+const distDir = path.resolve(__dirname, '../.vitepress/dist')
+const outDir = path.resolve(__dirname, '../pdf')
+
+fs.mkdirSync(outDir, { recursive: true })
+
+const mimeTypes = {
+    '.css': 'text/css; charset=utf-8',
+    '.gif': 'image/gif',
+    '.html': 'text/html; charset=utf-8',
+    '.jpeg': 'image/jpeg',
+    '.jpg': 'image/jpeg',
+    '.js': 'application/javascript; charset=utf-8',
+    '.json': 'application/json; charset=utf-8',
+    '.png': 'image/png',
+    '.svg': 'image/svg+xml',
+    '.webp': 'image/webp',
+    '.woff': 'font/woff',
+    '.woff2': 'font/woff2'
+}
+
+// 用本地 HTTP 服务替代 file:// 访问，确保 CSS/JS/图片/字体等资源按正常 URL 规则加载
+// 同时避免浏览器对 file:// 的安全限制导致资源无法读取
+const server = http.createServer((req, res) => {
+    if (!req.url) {
+        res.writeHead(400)
+        res.end('Bad Request')
+        return
+    }
+
+    // 去掉查询参数后再做 decode，防止路径中包含中文或空格时无法访问
+    const decodedPath = decodeURIComponent(req.url.split('?')[0])
+    const safePath = decodedPath.replace(/^\/+/, '')
+    const filePath = path.resolve(distDir, safePath || 'index.html')
+
+    if (!filePath.startsWith(distDir)) {
+        res.writeHead(403)
+        res.end('Forbidden')
+        return
+    }
+
+    fs.stat(filePath, (err, stats) => {
+        if (err || !stats.isFile()) {
+            res.writeHead(404)
+            res.end('Not Found')
+            return
+        }
+
+        const ext = path.extname(filePath).toLowerCase()
+        const contentType = mimeTypes[ext] || 'application/octet-stream'
+        res.writeHead(200, { 'Content-Type': contentType })
+        fs.createReadStream(filePath).pipe(res)
+    })
+})
+
+const serverPort = await new Promise((resolve) => {
+    server.listen(0, '127.0.0.1', () => resolve(server.address().port))
+})
+
+const browser = await chromium.launch()
+const page = await browser.newPage()
+
+const files = await fg('**/*.html', {
+    cwd: distDir,
+    ignore: ['404.html']
+})
+
+for (const file of files) {
+    const inputPath = path.join(distDir, file)
+    const outputPath = path.join(outDir, file.replace(/\.html$/, '.pdf'))
+
+    fs.mkdirSync(path.dirname(outputPath), { recursive: true })
+
+    const urlPath = encodeURI(file.replace(/\\/g, '/'))
+    const fileUrl = `http://127.0.0.1:${serverPort}/${urlPath}`
+
+    console.log('Exporting:', file)
+
+    await page.goto(fileUrl, { waitUntil: 'networkidle' })
+
+    await page.pdf({
+        path: outputPath,
+        format: 'A4',
+        printBackground: true,
+        margin: {
+            top: '15mm',
+            bottom: '15mm',
+            left: '15mm',
+            right: '15mm'
+        }
+    })
+}
+
+await browser.close()
+await new Promise((resolve) => server.close(resolve))
