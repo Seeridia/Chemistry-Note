@@ -66,7 +66,7 @@ if (!base || zeroSha.test(base)) {
 } else {
     let diffOutput = ''
     try {
-        diffOutput = execFileSync('git', ['diff', '--name-status', `${base}..${head}`], {
+        diffOutput = execFileSync('git', ['diff', '--name-status', '-z', `${base}..${head}`], {
             encoding: 'utf8'
         }).trim()
     } catch (error) {
@@ -74,13 +74,16 @@ if (!base || zeroSha.test(base)) {
     }
 
     if (!outputs.forceAll && diffOutput) {
-        const lines = diffOutput.split('\n').filter(Boolean)
-        for (const line of lines) {
-            const parts = line.split('\t')
-            const status = parts[0]
+        const parts = diffOutput.split('\0').filter(Boolean)
+        for (let index = 0; index < parts.length; index += 1) {
+            const status = parts[index]
+            if (!status) {
+                continue
+            }
             if (status.startsWith('R')) {
-                const oldPath = parts[1]
-                const newPath = parts[2]
+                const oldPath = parts[index + 1]
+                const newPath = parts[index + 2]
+                index += 2
                 if (isGlobalChange(oldPath) || isGlobalChange(newPath)) {
                     outputs.forceAll = true
                 }
@@ -95,7 +98,8 @@ if (!base || zeroSha.test(base)) {
                 continue
             }
 
-            const filePath = parts[1]
+            const filePath = parts[index + 1]
+            index += 1
             if (isGlobalChange(filePath)) {
                 outputs.forceAll = true
             }
