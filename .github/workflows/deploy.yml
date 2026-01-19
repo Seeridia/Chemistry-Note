@@ -47,8 +47,8 @@ jobs:
         run: |
           bun scripts/changed-pages.js --base "${{ github.event.before }}" --head "${{ github.sha }}" --out-dir .github/changed-pages
           export_all=$(cat .github/changed-pages/export-all.txt)
-          changed_count=$(wc -l < .github/changed-pages/changed-pages.txt | tr -d ' ')
-          deleted_count=$(wc -l < .github/changed-pages/deleted-pages.txt | tr -d ' ')
+          changed_count=$(grep -c . .github/changed-pages/changed-pages.txt || true)
+          deleted_count=$(grep -c . .github/changed-pages/deleted-pages.txt || true)
           echo "export_all=$export_all" >> $GITHUB_OUTPUT
           echo "changed_count=$changed_count" >> $GITHUB_OUTPUT
           echo "deleted_count=$deleted_count" >> $GITHUB_OUTPUT
