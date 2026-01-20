@@ -8,7 +8,7 @@
 
 多的不说了，学习更重要，左侧有目录（移动设备是顶上有一个 Menu 可以展开），上面有搜索。
 
-以及一个 PDF 的下载链接：[https://www.alipan.com/s/aU66F4xRH2w](https://www.alipan.com/s/aU66F4xRH2w)
+顶部导航栏也可以直接下载本页的 PDF 文件。
 
 加油！
 
@@ -19,7 +19,7 @@
 > 
 > 群号：[1074161116](https://qm.qq.com/q/CljGJy9p8Q)
 > 
-> <img src="./images/qq-group.jpg" style="width:200px;"/>
+> <img src="./images/qq-group.webp" style="width:200px;"/>
 
 ## 共建者名录
 

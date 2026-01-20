@@ -14,24 +14,13 @@ const pdfUrl = computed(() => {
   return `${PDF_BASE_URL}${encodeURI(pdfPath)}?download=true`;
 });
 
-const handlePrint = () => {
-  if (typeof window === "undefined") return;
-  window.print();
-};
 </script>
 
 <template>
-  <div class="CCPrintButton">
-    <button
-      type="button"
-      class="CCPrintButtonBtn CCPrintButtonBtn--print"
-      @click="handlePrint"
-    >
-      打印
-    </button>
+  <div class="CCPdfDownloadButton">
     <a
       v-if="pdfUrl"
-      class="CCPrintButtonBtn"
+      class="CCPdfDownloadButtonBtn"
       :href="pdfUrl"
       target="_blank"
       rel="noopener"
@@ -42,13 +31,12 @@ const handlePrint = () => {
 </template>
 
 <style scoped>
-.CCPrintButton {
+.CCPdfDownloadButton {
   display: flex;
-  justify-content: flex-start;
-  gap: 10px;
+  align-items: center;
 }
 
-.CCPrintButtonBtn {
+.CCPdfDownloadButtonBtn {
   padding: 8px 14px;
   border-radius: 999px;
   border: 1px solid var(--vp-c-divider);
@@ -63,27 +51,9 @@ const handlePrint = () => {
   cursor: pointer;
 }
 
-.CCPrintButtonBtn:hover {
+.CCPdfDownloadButtonBtn:hover {
   border-color: var(--vp-c-brand-1);
   background: var(--vp-c-bg-soft-hover);
   color: var(--vp-c-brand-1);
-}
-
-@media (max-width: 768px) {
-  .CCPrintButtonBtn--print {
-    display: none;
-  }
-}
-
-@media (min-width: 769px) {
-  .CCPrintButton {
-    margin-top: 20px;
-  }
-}
-
-@media print {
-  .CCPrintButton {
-    display: none;
-  }
 }
 </style>

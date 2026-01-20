@@ -21,7 +21,7 @@ const getSections = (rootDir: string): string[] =>
       (dirent) =>
         dirent.isDirectory() &&
         sectionDirPattern.test(dirent.name) &&
-        !ignoredRootDirs.has(dirent.name)
+        !ignoredRootDirs.has(dirent.name),
     )
     .map((dirent) => dirent.name)
     .sort((a, b) => a.localeCompare(b, "zh-CN"));
@@ -35,14 +35,14 @@ const getSectionFiles = (sectionPath: string): string[] =>
 
 // Build sidebar from numbered top-level folders and their markdown files.
 export const buildSidebarItems = (
-  rootDir: string
+  rootDir: string,
 ): DefaultTheme.SidebarItem[] => {
   const sections = getSections(rootDir);
 
   return sections.map((sectionName) => {
     const sectionPath = path.join(rootDir, sectionName);
     const files = getSectionFiles(sectionPath).filter(
-      (name) => name.toLowerCase() !== "index.md"
+      (name) => name.toLowerCase() !== "index.md",
     );
 
     const items: DefaultTheme.SidebarItem[] = files.map((filename) => {
@@ -84,6 +84,9 @@ export const buildNavItems = (rootDir: string): DefaultTheme.NavItem[] => {
     {
       text: "目录",
       items,
+    },
+    {
+      component: "CCPdfDownloadButton",
     },
   ];
 };
