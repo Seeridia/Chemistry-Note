@@ -101,6 +101,10 @@ const serverPort = await new Promise((resolve) => {
 
 const browser = await chromium.launch()
 const page = await browser.newPage()
+await page.addStyleTag({
+    content:
+        'html, body { font-family: "Noto Sans CJK SC","Noto Sans SC","Source Han Sans SC","Microsoft YaHei","PingFang SC",sans-serif !important; }'
+})
 
 for (const file of files) {
     const inputPath = path.join(distDir, file)
@@ -114,6 +118,7 @@ for (const file of files) {
     console.log('Exporting:', file)
 
     await page.goto(fileUrl, { waitUntil: 'networkidle' })
+    await page.evaluate(() => (document.fonts ? document.fonts.ready : null))
 
     await page.pdf({
         path: outputPath,

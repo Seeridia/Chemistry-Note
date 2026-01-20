@@ -30,18 +30,7 @@ jobs:
       - name: Build Project
         run: bun run docs:build
 
-      # 第五步：部署到服务器
-      - name: Deploy to Server
-        uses: appleboy/scp-action@v1.0.0
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: ".vitepress/dist/*"
-          target: ${{ secrets.TARGET_DIR }}
-          strip_components: 2
-
-      # 第六步：检测变更页面
+      # 第五步：检测变更页面
       - name: Detect changed pages
         id: changed_pages
         run: |
@@ -53,48 +42,22 @@ jobs:
           echo "changed_count=$changed_count" >> $GITHUB_OUTPUT
           echo "deleted_count=$deleted_count" >> $GITHUB_OUTPUT
 
-      # 第七步：准备 PDF 仓库
-      - name: Clone CNB PDF Repository
-        if: steps.changed_pages.outputs.export_all == 'true' || steps.changed_pages.outputs.changed_count != '0' || steps.changed_pages.outputs.deleted_count != '0'
-        run: |
-          git clone https://cnb:${{ secrets.CNB_TOKEN }}@cnb.cool/Seeridia/Chemistry-Note-File.git pdf-repo
+      # 第六步：上传构建产物供 PDF 导出使用
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-dist
+          path: |
+            .vitepress/dist
+            .github/changed-pages
 
-      # 第八步：安装 Playwright 浏览器依赖（仅在需要导出时）
-      - name: Install Playwright Browsers
-        if: steps.changed_pages.outputs.export_all == 'true' || steps.changed_pages.outputs.changed_count != '0'
-        run: npx playwright install --with-deps chromium
-
-      # 第九步：导出 PDF（全量）
-      - name: Export PDFs (all)
-        if: steps.changed_pages.outputs.export_all == 'true'
-        run: bun scripts/export-pdf.js --out-dir pdf-repo
-
-      # 第十步：导出 PDF（增量）
-      - name: Export PDFs (changed)
-        if: steps.changed_pages.outputs.export_all != 'true' && steps.changed_pages.outputs.changed_count != '0'
-        run: bun scripts/export-pdf.js --list .github/changed-pages/changed-pages.txt --out-dir pdf-repo
-
-      # 第十一步：删除已移除页面的 PDF
-      - name: Remove deleted PDFs
-        if: steps.changed_pages.outputs.deleted_count != '0'
-        run: |
-          while IFS= read -r file; do
-            [ -z "$file" ] && continue
-            pdf="${file%.html}.pdf"
-            rm -f "pdf-repo/$pdf"
-          done < .github/changed-pages/deleted-pages.txt
-
-      # 第十二步：推送 PDF 仓库
-      - name: Push PDF updates
-        if: steps.changed_pages.outputs.export_all == 'true' || steps.changed_pages.outputs.changed_count != '0' || steps.changed_pages.outputs.deleted_count != '0'
-        run: |
-          cd pdf-repo
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          if [ -z "$(git status --porcelain)" ]; then
-            echo "No PDF changes to push."
-            exit 0
-          fi
-          git add -A
-          git commit -m "Sync PDFs from ${{ github.sha }}"
-          git push
+      # 第七步：部署到服务器
+      - name: Deploy to Server
+        uses: appleboy/scp-action@v1.0.0
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: ".vitepress/dist/*"
+          target: ${{ secrets.TARGET_DIR }}
+          strip_components: 2
