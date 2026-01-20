@@ -61,3 +61,82 @@ jobs:
           source: ".vitepress/dist/*"
           target: ${{ secrets.TARGET_DIR }}
           strip_components: 2
+
+  export-pdfs:
+    needs: build-and-deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: site-dist
+          path: .
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install Dependencies
+        run: bun install
+
+      - name: Install CJK fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk
+
+      - name: Read changed pages info
+        id: changed_pages
+        run: |
+          export_all=$(cat .github/changed-pages/export-all.txt 2>/dev/null || echo "false")
+          changed_count=$(grep -c . .github/changed-pages/changed-pages.txt 2>/dev/null || true)
+          deleted_count=$(grep -c . .github/changed-pages/deleted-pages.txt 2>/dev/null || true)
+          echo "export_all=$export_all" >> $GITHUB_OUTPUT
+          echo "changed_count=$changed_count" >> $GITHUB_OUTPUT
+          echo "deleted_count=$deleted_count" >> $GITHUB_OUTPUT
+
+      - name: Clone CNB PDF Repository
+        if: steps.changed_pages.outputs.export_all == 'true' || steps.changed_pages.outputs.changed_count != '0' || steps.changed_pages.outputs.deleted_count != '0'
+        run: |
+          git clone https://cnb:${{ secrets.CNB_TOKEN }}@cnb.cool/Seeridia/Chemistry-Note-File.git pdf-repo
+
+      - name: Install Playwright Browsers
+        if: steps.changed_pages.outputs.export_all == 'true' || steps.changed_pages.outputs.changed_count != '0'
+        run: npx playwright install --with-deps chromium
+
+      - name: Export PDFs (all)
+        if: steps.changed_pages.outputs.export_all == 'true'
+        run: bun scripts/export-pdf.js --out-dir pdf-repo
+
+      - name: Export PDFs (changed)
+        if: steps.changed_pages.outputs.export_all != 'true' && steps.changed_pages.outputs.changed_count != '0'
+        run: bun scripts/export-pdf.js --list .github/changed-pages/changed-pages.txt --out-dir pdf-repo
+
+      - name: Remove deleted PDFs
+        if: steps.changed_pages.outputs.deleted_count != '0'
+        run: |
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            pdf="${file%.html}.pdf"
+            rm -f "pdf-repo/$pdf"
+          done < .github/changed-pages/deleted-pages.txt
+
+      - name: Push PDF updates
+        if: steps.changed_pages.outputs.export_all == 'true' || steps.changed_pages.outputs.changed_count != '0' || steps.changed_pages.outputs.deleted_count != '0'
+        run: |
+          cd pdf-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No PDF changes to push."
+            exit 0
+          fi
+          git add -A
+          git commit -m "Sync PDFs from ${{ github.sha }}"
+          git push
