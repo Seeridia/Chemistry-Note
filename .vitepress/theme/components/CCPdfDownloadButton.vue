@@ -25,6 +25,7 @@ const shouldShow = computed(() => isDocPage.value && pdfUrl.value);
 <template>
   <div class="CCPdfDownloadButton">
     <a
+      v-if="shouldShow"
       class="CCPdfDownloadButtonBtn"
       :href="pdfUrl"
       target="_blank"
