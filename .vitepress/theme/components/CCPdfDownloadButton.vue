@@ -14,12 +14,17 @@ const pdfUrl = computed(() => {
   return `${PDF_BASE_URL}${encodeURI(pdfPath)}?download=true`;
 });
 
+// 只有在文档页面才显示下载 PDF 按钮
+const isDocPage = computed(
+  () => (page.value.frontmatter?.layout ?? "doc") === "doc",
+);
+const shouldShow = computed(() => isDocPage.value && pdfUrl.value);
+
 </script>
 
 <template>
   <div class="CCPdfDownloadButton">
     <a
-      v-if="pdfUrl"
       class="CCPdfDownloadButtonBtn"
       :href="pdfUrl"
       target="_blank"
