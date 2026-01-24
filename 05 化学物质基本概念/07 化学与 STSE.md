@@ -1,4 +1,4 @@
-# 化学物质基本概念 · 七 · 「 化学与 STSE 」
+# 07 · 化学与 STSE
 
 $\text{STSE = Science + Technology + Society + Environment}$
 

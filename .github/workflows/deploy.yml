@@ -137,6 +137,8 @@ jobs:
             echo "No PDF changes to push."
             exit 0
           fi
+          git checkout --orphan temp-sync
           git add -A
           git commit -m "Sync PDFs from ${{ github.sha }}"
-          git push
+          git branch -M main
+          git push --force origin main
