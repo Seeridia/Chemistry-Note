@@ -1,3 +1,18 @@
+/* 图片深色模式下反色 */
 .dark img:not([alt*="&keep-color"]):not(.avatar-img) {
     filter: invert(100%) hue-rotate(180deg) contrast(80%);
+}
+
+/* 打印下隐藏无关内容 */
+@media print {
+
+    .VPLocalNav,
+    .VPNav {
+        display: none;
+    }
+
+    .VPDocFooter .prev-next,
+    .VPDocFooter .edit-link {
+        display: none;
+    }
 }

@@ -76,48 +76,7 @@
 - 10 化学反应的热效应(未完成)
   - 01 [反应热与焓变](/10%20化学反应的热效应/01%20反应热与焓变.md)
 
-
-## 👏Contributors
-
-<!-- readme: collaborators,contributors -start -->
-<table>
-<tr>
-    <td align="center">
-        <a href="https://github.com/Seeridia">
-            <img src="https://avatars.githubusercontent.com/u/37764175?v=4" width="100;" alt="Seeridia"/>
-            <br />
-            <sub><b>Seeridia</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/cn-ryh">
-            <img src="https://avatars.githubusercontent.com/u/93967737?v=4" width="100;" alt="cn-ryh"/>
-            <br />
-            <sub><b>任宇航</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/Twinsherry">
-            <img src="https://avatars.githubusercontent.com/u/110149558?v=4" width="100;" alt="Twinsherry"/>
-            <br />
-            <sub><b>Shirley Amika</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/xiaozhi-boy">
-            <img src="https://avatars.githubusercontent.com/u/121842440?v=4" width="100;" alt="xiaozhi-boy"/>
-            <br />
-            <sub><b>Xiaozhi Boy</b></sub>
-        </a>
-    </td></tr>
-</table>
-<!-- readme: collaborators,contributors -end -->
-
 ## ❔说明
-
-发布的 PDF 文件使用 Typora 下的 [lapis](https://github.com/YiNNx/typora-theme-lapis) 主题
-
-该仓库预计在2029年更新完整
 
 **主要参考文献或资源**：
 
@@ -143,4 +102,4 @@
     
 11. 邢其毅等.基础有机化学:第4版[M].北京:北京大学出版社,2016.
 
-> 部分内容使用了 **Chat-GPT** 辅助书写以及检查内容的正确性
+> 部分内容使用了 **Chat-GPT** 等工具辅助书写以及检查内容的正确性

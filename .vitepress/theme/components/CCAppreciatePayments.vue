@@ -3,7 +3,7 @@
     <div v-for="item in items" :key="item.type">
       <img
         :src="item.qrCodeSrc"
-        :alt="item.altText || item.type"
+        :alt="`&keep-color ${item.altText || 'QR Code for ' + item.type}`"
         class="item"
         @error="handleImageError"
       />
@@ -38,7 +38,7 @@ const handleImageError = (event: Event) => {
 }
 
 .item {
-  height: 300px;
+  max-height: 300px;
   object-fit: contain;
   border: 1px solid transparent;
   border-radius: 8px;

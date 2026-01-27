@@ -6,27 +6,41 @@
 
 这是一个基于中国普通高中教科书的化学笔记项目，主要围绕 Bilibili Up主 [@一化儿](https://space.bilibili.com/1526560679/) 的视频展开的，也或许是你见过的 **免费的 最完整的 最真实的** 高中化学笔记，不仅仅是知识点的笔记，也有超多的实战解题技巧，以及我自己总结出来的经验，或一个盲猜技巧，或一个口诀。
 
-多的不说了，学习更重要，左侧有目录（移动设备是顶上有一个 Menu 可以展开），上面有搜索。
+## 如何使用？
 
-以及一个 PDF 的下载链接：[https://www.alipan.com/s/aU66F4xRH2w](https://www.alipan.com/s/aU66F4xRH2w)
+左侧有目录（移动设备是顶上有一个 Menu 可以展开），可以打开对应章节来查看
 
-加油！
+顶部有搜索栏，可以根据关键词来搜索内容
+
+## 如何下载 PDF？
+
+1. 顶部的「下载 PDF」可以直接下载本页的 PDF 文件
+2. 点此链接下载全部章节的 PDF 文件合集: [https://www.alipan.com/s/aU66F4xRH2w](https://www.alipan.com/s/aU66F4xRH2w)
+
+## 发现错误？
+
+如果在使用中发现任何问题，欢迎通过 [错误反馈](./错误反馈.md) 来帮助我们改善。我们会在下面的 [反馈者名录](#反馈者名录) 中列出所有帮助反馈问题的朋友。
+
+如果你懒得填错误反馈表单，你可以直接在下面的 QQ 群中直接发，也同样会受理的。
+
+---
 
 > [!NOTE]
 > 下面是一个小小的 QQ 群，欢迎加入交流学习，不过目前还没啥人 QwQ
 > 
 > 群号：[1074161116](https://qm.qq.com/q/CljGJy9p8Q)
 > 
-> <img src="./images/qq-group.jpg" style="width:200px;"/>
+> <img src="./images/qq-group.webp" style="width:200px;"/>
 
-## 共建者
+## 共建者名录
 
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'
-import { CCAppreciators, CCAppreciatePayments } from '/.vitepress/theme/components'
+import { CCAppreciators, CCAppreciatePayments, CCFeedbackers } from '/.vitepress/theme/components'
 
 import appreciators from "/data/appreciators.json"
 import members from '/data/members.json'
+import feedbackers from '/data/feedbackers.json'
 
 const appreciatorsList = appreciators.appreciators
 const membersList = members.members
@@ -51,6 +65,14 @@ const appreciatePayments = [
 
 > [!NOTE]
 > 当前该笔记项目正在寻找共建者！（有意者与我联系 seeridia@gmail.com ）
+
+## 反馈者名录
+
+感谢下面这些朋友对本项目中存在的问题进行反馈：
+
+<CCFeedbackers :items="feedbackers.feedbackers" />
+
+> 目前收录的反馈者名单较新（2026 年后），对于之前反馈过问题的朋友，如果没有出现在名单中，请及时与我联系，我会补充上去的！
 
 ## 参考资料
 

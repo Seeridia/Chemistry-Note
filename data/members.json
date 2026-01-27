@@ -18,7 +18,7 @@
         {
             "avatar": "https://www.github.com/cn-ryh.png",
             "name": "cn-ryh",
-            "title": "Contributor",
+            "title": "Collaborator",
             "links": [
                 {
                     "icon": "github",
@@ -29,7 +29,7 @@
         {
             "avatar": "https://www.github.com/Twinsherry.png",
             "name": "Twinsherry",
-            "title": "Contributor",
+            "title": "Collaborator",
             "links": [
                 {
                     "icon": "github",
@@ -40,11 +40,22 @@
         {
             "avatar": "https://www.github.com/xiaozhi-boy.png",
             "name": "xiaozhi-boy",
-            "title": "Contributor",
+            "title": "Collaborator",
             "links": [
                 {
                     "icon": "github",
                     "link": "https://github.com/xiaozhi-boy"
+                }
+            ]
+        },
+        {
+            "avatar": "https://www.github.com/zhenmunse.png",
+            "name": "zhenmunse",
+            "title": "Collaborator",
+            "links": [
+                {
+                    "icon": "github",
+                    "link": "https://github.com/zhenmunse"
                 }
             ]
         }
