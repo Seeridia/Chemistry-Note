@@ -89,6 +89,10 @@ const { serverURL, path } = useWalineBase();
         gap: 0.5rem;
       }
     }
+
+    .wl-quote {
+      border: none;
+    }
   }
 }
 </style>

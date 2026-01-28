@@ -1,6 +1,11 @@
 /* 图片深色模式下反色 */
-.dark img:not([alt*="&keep-color"]):not(.avatar-img) {
+.dark img:not([alt*="&keep-color"]) {
     filter: invert(100%) hue-rotate(180deg) contrast(80%);
+}
+
+.avatar-img,
+[data-waline] img {
+    filter: none !important;
 }
 
 /* 打印下隐藏无关内容 */
