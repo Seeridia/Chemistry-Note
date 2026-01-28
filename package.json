@@ -1,5 +1,7 @@
 {
-  "dependencies": {},
+  "dependencies": {
+    "@waline/client": "^3.8.0"
+  },
   "devDependencies": {
     "fast-glob": "^3.3.3",
     "markdown-it-mathjax3": "^4",

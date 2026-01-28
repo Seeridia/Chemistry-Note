@@ -2,6 +2,7 @@ import DefaultTheme from "vitepress/theme";
 import type { App } from "vue";
 import layout from "./layout.vue";
 import "./custom.css";
+import "@waline/client/style";
 
 import CCPdfDownloadButton from "./components/CCPdfDownloadButton.vue";
 

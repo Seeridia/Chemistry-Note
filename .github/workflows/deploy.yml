@@ -50,6 +50,7 @@ jobs:
           path: |
             .vitepress/dist
             .github/changed-pages
+          retention-days: 1
 
       # 第七步：部署到服务器
       - name: Deploy to Server
