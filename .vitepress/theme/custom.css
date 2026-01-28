@@ -3,7 +3,7 @@
     filter: invert(100%) hue-rotate(180deg) contrast(80%);
 }
 
-.avatar-img,
+.avatar-img img,
 [data-waline] img {
     filter: none !important;
 }
