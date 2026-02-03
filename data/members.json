@@ -58,6 +58,17 @@
                     "link": "https://github.com/zhenmunse"
                 }
             ]
+        },
+        {
+            "avatar": "https://www.github.com/MeowCata.png",
+            "name": "DingDang",
+            "title": "Collaborator",
+            "links": [
+                {
+                    "icon": "github",
+                    "link": "https://github.com/MeowCata"
+                }
+            ]
         }
     ]
 }
