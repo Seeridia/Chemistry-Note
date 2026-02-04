@@ -45,6 +45,9 @@ export default defineConfig({
         appId: "78SSXF876P",
         apiKey: "7d9417f0dc128971ed3eacc5f4fbb2e0",
         indexName: "Chemistry Note",
+        askAi: {
+          assistantId: "gGugAZCzGHst",
+        },
       },
     },
     editLink: {
