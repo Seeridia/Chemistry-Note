@@ -125,11 +125,29 @@ for (const file of files) {
         format: 'A4',
         printBackground: true,
         margin: {
-            top: '15mm',
-            bottom: '15mm',
-            left: '15mm',
-            right: '15mm'
-        }
+            top: '10mm',
+            bottom: '10mm',
+            left: '10mm',
+            right: '10mm'
+        },
+        displayHeaderFooter: true,
+        headerTemplate: '<div></div>',
+        footerTemplate: `
+            <style>
+                .pdf-footer {
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding-right: 12mm;
+                    display: flex;
+                    justify-content: flex-end;
+                    font-size: 10pt;
+                    font-family: "Noto Sans CJK SC","Noto Sans SC","Source Han Sans SC","Microsoft YaHei","PingFang SC",sans-serif;
+                }
+            </style>
+            <div class="pdf-footer">
+                <span class="pageNumber"></span> / <span class="totalPages"></span>
+            </div>
+        `
     })
 }
 

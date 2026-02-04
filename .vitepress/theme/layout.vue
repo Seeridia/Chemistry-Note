@@ -3,6 +3,7 @@ import DefaultTheme from "vitepress/theme";
 import Breadcrumb from "./components/CCBreadCrumb.vue";
 import PdfDownloadButton from "./components/CCPdfDownloadButton.vue";
 import { CCPageviews, CCWaline } from "./components/waline";
+import CCFooter from "./components/CCFooter.vue";
 
 const { Layout } = DefaultTheme;
 </script>
@@ -22,6 +23,11 @@ const { Layout } = DefaultTheme;
     <!-- 浏览量 -->
     <template #aside-bottom>
       <CCPageviews />
+    </template>
+
+    <!-- 页脚信息 -->
+    <template #doc-bottom>
+      <CCFooter />
     </template>
 
     <!-- PDF 下载按钮 -->
