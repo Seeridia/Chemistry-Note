@@ -17,12 +17,16 @@ const { Layout } = DefaultTheme;
 
     <!-- 评论区 -->
     <template #doc-after>
-      <CCWaline />
+      <ClientOnly>
+        <CCWaline />
+      </ClientOnly>
     </template>
 
     <!-- 浏览量 -->
     <template #aside-bottom>
-      <CCPageviews />
+      <ClientOnly>
+        <CCPageviews />
+      </ClientOnly>
     </template>
 
     <!-- 页脚信息 -->
