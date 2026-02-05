@@ -90,13 +90,18 @@ if (listPath) {
     files = raw
         .split('\n')
         .map((line) => line.trim())
-        .filter((line) => line && line !== '404.html')
+        .filter(
+            (line) =>
+                line &&
+                line !== '404.html' &&
+                !line.startsWith('hidePage/')
+        )
     files = Array.from(new Set(files))
     files = files.filter((file) => fs.existsSync(path.join(distDir, file)))
 } else {
     files = await fg('**/*.html', {
         cwd: distDir,
-        ignore: ['404.html']
+        ignore: ['404.html', 'hidePage/**']
     })
 }
 

@@ -60,7 +60,9 @@ export default defineConfig({
   markdown: {
     math: true,
   },
-  srcExclude: ["export/**/*", "PDF文件/**/*"],
+  rewrites: {
+    "hidePage/shortUrl.md": "s.md",
+  },
   lastUpdated: true,
   sitemap: {
     hostname: "https://chemistry-note.seeridia.top",

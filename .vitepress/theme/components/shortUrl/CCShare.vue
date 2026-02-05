@@ -48,8 +48,8 @@ const link = computed(() => {
   if (!baseUrl) return "";
   if (encodedPath.length < 10) return `${baseUrl}/${encodedPath}`;
 
-  // Must match scripts/short-link-hash.ts and hidePage/shortUrl.md route.
-  return `${baseUrl}/hidePage/shortUrl?q=${md5(normalizedPath).slice(0, 10)}`;
+  // Must match the short-link jump page route.
+  return `${baseUrl}/s?q=${md5(normalizedPath).slice(0, 10)}`;
 });
 
 function copyLink() {
