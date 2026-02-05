@@ -11,7 +11,7 @@ hero:
       link: /00%20说明/Readme
     - theme: alt
       text: 下载 PDF
-      link: https://www.alipan.com/s/aU66F4xRH2w
+      link: https://www.aliyundrive.com/s/aU66F4xRH2w
 
 features:
   - title: 01 原子结构与元素性质

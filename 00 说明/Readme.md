@@ -14,8 +14,8 @@
 
 ## 如何下载 PDF？
 
-1. 顶部的「下载 PDF」可以直接下载本页的 PDF 文件。
-2. 点此链接下载全部章节的 PDF 文件合集: [https://www.alipan.com/s/aU66F4xRH2w](https://www.alipan.com/s/aU66F4xRH2w)。
+1. 顶部的菜单展开后的「下载」可以直接下载本页的 PDF 文件。
+2. 点此链接下载全部章节的 PDF 文件合集: [https://www.aliyundrive.com/s/aU66F4xRH2w](https://www.aliyundrive.com/s/aU66F4xRH2w)。
 
 ## 发现错误？
 

@@ -4,7 +4,7 @@
 ![Anyayay's Chemistry Note](./public/images/Logo.png)
 
 1. 在线阅读: [https://Chemistry-Note.seeridia.top](https://Chemistry-Note.seeridia.top)
-2. 下载 PDF: [https://www.alipan.com/s/aU66F4xRH2w](https://www.alipan.com/s/aU66F4xRH2w)
+2. 下载 PDF: [https://www.aliyundrive.com/s/aU66F4xRH2w](https://www.aliyundrive.com/s/aU66F4xRH2w)
 
 另附一个小小的 QQ 群：[1074161116](https://qm.qq.com/q/rwnIAEuAAE)
 
