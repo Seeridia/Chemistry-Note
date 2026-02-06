@@ -12,9 +12,9 @@ const ignoredRootDirs = new Set([
   "PDF文件",
 ]);
 
-const encodeLink = (link: string): string => encodeURI(link);
+export const encodeLink = (link: string): string => encodeURI(link);
 
-const getSections = (rootDir: string): string[] =>
+export const getSections = (rootDir: string): string[] =>
   fs
     .readdirSync(rootDir, { withFileTypes: true })
     .filter(
@@ -26,7 +26,7 @@ const getSections = (rootDir: string): string[] =>
     .map((dirent) => dirent.name)
     .sort((a, b) => a.localeCompare(b, "zh-CN"));
 
-const getSectionFiles = (sectionPath: string): string[] =>
+export const getSectionFiles = (sectionPath: string): string[] =>
   fs
     .readdirSync(sectionPath, { withFileTypes: true })
     .filter((dirent) => dirent.isFile() && dirent.name.endsWith(".md"))
@@ -59,34 +59,4 @@ export const buildSidebarItems = (
       collapsed: true,
     };
   });
-};
-
-// Build nav items for top-level sections; prefer 目录.md as entry if present.
-export const buildNavItems = (rootDir: string): DefaultTheme.NavItem[] => {
-  const sections = getSections(rootDir);
-
-  const items: DefaultTheme.NavItemWithLink[] = sections.map((sectionName) => {
-    const sectionPath = path.join(rootDir, sectionName);
-    const files = getSectionFiles(sectionPath);
-    const entry =
-      files.find((name) => name === "目录.md") ??
-      files.find((name) => name.toLowerCase() !== "index.md") ??
-      files[0];
-
-    const link = entry
-      ? `/${sectionName}/${entry.slice(0, -3)}`
-      : `/${sectionName}/`;
-    return { text: sectionName, link: encodeLink(link) };
-  });
-
-  return [
-    { text: "首页", link: "/" },
-    {
-      text: "目录",
-      items,
-    },
-    {
-      component: "CCPdfDownloadButton",
-    },
-  ];
 };

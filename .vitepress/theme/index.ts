@@ -5,11 +5,13 @@ import "./custom.css";
 import "@waline/client/style";
 
 import CCPdfDownloadButton from "./components/CCPdfDownloadButton.vue";
+import CCShare from "./components/shortUrl/CCShare.vue";
 
 export default {
   extends: DefaultTheme,
   Layout: layout,
   enhanceApp({ app }: { app: App }) {
     app.component("CCPdfDownloadButton", CCPdfDownloadButton);
+    app.component("CCShare", CCShare);
   },
 };

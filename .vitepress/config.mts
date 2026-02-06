@@ -1,7 +1,9 @@
 import { defineConfig } from "vitepress";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { buildNavItems, buildSidebarItems } from "./sidebar";
+import { buildSidebarItems } from "./siteData/sidebar";
+import { buildNavItems } from "./siteData/nav";
+import mapShortUrl from "./theme/components/shortUrl/mapShortUrl";
 
 const configDir = path.dirname(fileURLToPath(import.meta.url));
 const contentRoot = path.resolve(configDir, "..");
@@ -45,6 +47,9 @@ export default defineConfig({
         appId: "78SSXF876P",
         apiKey: "7d9417f0dc128971ed3eacc5f4fbb2e0",
         indexName: "Chemistry Note",
+        askAi: {
+          assistantId: "gGugAZCzGHst",
+        },
       },
     },
     editLink: {
@@ -55,9 +60,16 @@ export default defineConfig({
   markdown: {
     math: true,
   },
-  srcExclude: ["export/**/*", "PDF文件/**/*"],
+  rewrites: {
+    "hidePage/shortUrl.md": "s.md",
+  },
   lastUpdated: true,
   sitemap: {
     hostname: "https://chemistry-note.seeridia.top",
+  },
+
+  // 生成哈希 - 路径对应表
+  buildEnd: (siteConfig) => {
+    mapShortUrl(siteConfig);
   },
 });

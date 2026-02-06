@@ -113,11 +113,19 @@ jobs:
 
       - name: Export PDFs (all)
         if: steps.changed_pages.outputs.export_all == 'true'
-        run: bun scripts/export-pdf.js --out-dir pdf-repo
+        run: |
+          cores=$(nproc)
+          concurrency=$(( cores * 2 ))
+          [ "$concurrency" -gt 8 ] && concurrency=8
+          bun scripts/export-pdf.js --out-dir pdf-repo --concurrency "$concurrency"
 
       - name: Export PDFs (changed)
         if: steps.changed_pages.outputs.export_all != 'true' && steps.changed_pages.outputs.changed_count != '0'
-        run: bun scripts/export-pdf.js --list .github/changed-pages/changed-pages.txt --out-dir pdf-repo
+        run: |
+          cores=$(nproc)
+          concurrency=$(( cores * 2 ))
+          [ "$concurrency" -gt 8 ] && concurrency=8
+          bun scripts/export-pdf.js --list .github/changed-pages/changed-pages.txt --out-dir pdf-repo --concurrency "$concurrency"
 
       - name: Remove deleted PDFs
         if: steps.changed_pages.outputs.deleted_count != '0'

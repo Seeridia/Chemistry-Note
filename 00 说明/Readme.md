@@ -10,12 +10,12 @@
 
 左侧有目录（移动设备是顶上有一个 Menu 可以展开），可以打开对应章节来查看。
 
-顶部有搜索栏，可以根据关键词来搜索内容。
+顶部有搜索栏，可以根据关键词来搜索内容，也内置了 AI 搜索功能，会基于本笔记内容来回答你的问题。
 
 ## 如何下载 PDF？
 
-1. 顶部的「下载 PDF」可以直接下载本页的 PDF 文件。
-2. 点此链接下载全部章节的 PDF 文件合集: [https://www.alipan.com/s/aU66F4xRH2w](https://www.alipan.com/s/aU66F4xRH2w)。
+1. 顶部的菜单展开后的「下载」可以直接下载本页的 PDF 文件。
+2. 点此链接下载全部章节的 PDF 文件合集: [https://www.aliyundrive.com/s/aU66F4xRH2w](https://www.aliyundrive.com/s/aU66F4xRH2w)。
 
 ## 发现错误？
 
