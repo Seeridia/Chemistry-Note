@@ -11,17 +11,27 @@ const distDir = path.resolve(__dirname, '../.vitepress/dist')
 const args = process.argv.slice(2)
 const listIndex = args.indexOf('--list')
 const outIndex = args.indexOf('--out-dir')
+const concurrencyIndex = args.indexOf('--concurrency')
 const listPath = listIndex >= 0 ? args[listIndex + 1] : null
 const outDirArg = outIndex >= 0 ? args[outIndex + 1] : null
+const concurrencyArg =
+    concurrencyIndex >= 0 ? Number(args[concurrencyIndex + 1]) : null
 if (listIndex >= 0 && !listPath) {
     throw new Error('Missing value for --list')
 }
 if (outIndex >= 0 && !outDirArg) {
     throw new Error('Missing value for --out-dir')
 }
+if (
+    concurrencyIndex >= 0 &&
+    (!concurrencyArg || Number.isNaN(concurrencyArg) || concurrencyArg <= 0)
+) {
+    throw new Error('Invalid value for --concurrency')
+}
 const outDir = outDirArg
     ? path.resolve(process.cwd(), outDirArg)
     : path.resolve(__dirname, '../pdf')
+const concurrency = Math.max(1, Math.min(8, concurrencyArg ?? 2))
 
 fs.mkdirSync(outDir, { recursive: true })
 
@@ -80,13 +90,18 @@ if (listPath) {
     files = raw
         .split('\n')
         .map((line) => line.trim())
-        .filter((line) => line && line !== '404.html')
+        .filter(
+            (line) =>
+                line &&
+                line !== '404.html' &&
+                !line.startsWith('hidePage/')
+        )
     files = Array.from(new Set(files))
     files = files.filter((file) => fs.existsSync(path.join(distDir, file)))
 } else {
     files = await fg('**/*.html', {
         cwd: distDir,
-        ignore: ['404.html']
+        ignore: ['404.html', 'hidePage/**']
     })
 }
 
@@ -100,56 +115,74 @@ const serverPort = await new Promise((resolve) => {
 })
 
 const browser = await chromium.launch()
-const page = await browser.newPage()
-await page.addStyleTag({
-    content:
-        'html, body { font-family: "Noto Sans CJK SC","Noto Sans SC","Source Han Sans SC","Microsoft YaHei","PingFang SC",sans-serif !important; }'
-})
-
-for (const file of files) {
-    const inputPath = path.join(distDir, file)
-    const outputPath = path.join(outDir, file.replace(/\.html$/, '.pdf'))
-
-    fs.mkdirSync(path.dirname(outputPath), { recursive: true })
-
-    const urlPath = encodeURI(file.replace(/\\/g, '/'))
-    const fileUrl = `http://127.0.0.1:${serverPort}/${urlPath}`
-
-    console.log('Exporting:', file)
-
-    await page.goto(fileUrl, { waitUntil: 'networkidle' })
-    await page.evaluate(() => (document.fonts ? document.fonts.ready : null))
-
-    await page.pdf({
-        path: outputPath,
-        format: 'A4',
-        printBackground: true,
-        margin: {
-            top: '10mm',
-            bottom: '10mm',
-            left: '10mm',
-            right: '10mm'
-        },
-        displayHeaderFooter: true,
-        headerTemplate: '<div></div>',
-        footerTemplate: `
-            <style>
-                .pdf-footer {
-                    box-sizing: border-box;
-                    width: 100%;
-                    padding-right: 12mm;
-                    display: flex;
-                    justify-content: flex-end;
-                    font-size: 10pt;
-                    font-family: "Noto Sans CJK SC","Noto Sans SC","Source Han Sans SC","Microsoft YaHei","PingFang SC",sans-serif;
-                }
-            </style>
-            <div class="pdf-footer">
-                <span class="pageNumber"></span> / <span class="totalPages"></span>
-            </div>
-        `
+const pagePool = []
+for (let i = 0; i < concurrency; i += 1) {
+    const page = await browser.newPage()
+    await page.addStyleTag({
+        content:
+            'html, body { font-family: "Noto Sans CJK SC","Noto Sans SC","Source Han Sans SC","Microsoft YaHei","PingFang SC",sans-serif !important; }'
     })
+    pagePool.push(page)
 }
 
+let cursor = 0
+const worker = async (page) => {
+    while (true) {
+        const index = cursor
+        if (index >= files.length) break
+        cursor += 1
+
+        const file = files[index]
+        const inputPath = path.join(distDir, file)
+        const outputPath = path.join(outDir, file.replace(/\.html$/, '.pdf'))
+
+        fs.mkdirSync(path.dirname(outputPath), { recursive: true })
+
+        const urlPath = encodeURI(file.replace(/\\/g, '/'))
+        const fileUrl = `http://127.0.0.1:${serverPort}/${urlPath}`
+
+        console.log('Exporting:', file)
+
+        await page.goto(fileUrl, { waitUntil: 'load', timeout: 120000 })
+        await page.evaluate(() => (document.fonts ? document.fonts.ready : null))
+        try {
+            await page.waitForLoadState('networkidle', { timeout: 10000 })
+        } catch {
+            // Best-effort: proceed even if network doesn't go idle.
+        }
+
+        await page.pdf({
+            path: outputPath,
+            format: 'A4',
+            printBackground: true,
+            margin: {
+                top: '10mm',
+                bottom: '10mm',
+                left: '10mm',
+                right: '10mm'
+            },
+            displayHeaderFooter: true,
+            headerTemplate: '<div></div>',
+            footerTemplate: `
+                <style>
+                    .pdf-footer {
+                        box-sizing: border-box;
+                        width: 100%;
+                        padding-right: 12mm;
+                        display: flex;
+                        justify-content: flex-end;
+                        font-size: 10pt;
+                        font-family: "Noto Sans CJK SC","Noto Sans SC","Source Han Sans SC","Microsoft YaHei","PingFang SC",sans-serif;
+                    }
+                </style>
+                <div class="pdf-footer">
+                    <span class="pageNumber"></span> / <span class="totalPages"></span>
+                </div>
+            `
+        })
+    }
+}
+
+await Promise.all(pagePool.map((page) => worker(page)))
 await browser.close()
 await new Promise((resolve) => server.close(resolve))

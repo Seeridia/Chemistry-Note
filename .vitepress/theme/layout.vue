@@ -17,37 +17,21 @@ const { Layout } = DefaultTheme;
 
     <!-- 评论区 -->
     <template #doc-after>
-      <CCWaline />
+      <ClientOnly>
+        <CCWaline />
+      </ClientOnly>
     </template>
 
     <!-- 浏览量 -->
     <template #aside-bottom>
-      <CCPageviews />
+      <ClientOnly>
+        <CCPageviews />
+      </ClientOnly>
     </template>
 
     <!-- 页脚信息 -->
     <template #doc-bottom>
       <CCFooter />
     </template>
-
-    <!-- PDF 下载按钮 -->
-    <!-- 只有在移动端显示该 PDF 下载按钮，桌面端的按钮在了导航栏里 -->
-    <template #nav-bar-content-before>
-      <div class="PdfDownloadButton">
-        <PdfDownloadButton />
-      </div>
-    </template>
   </Layout>
 </template>
-
-<style scoped>
-.PdfDownloadButton {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .PdfDownloadButton {
-    display: block;
-  }
-}
-</style>
