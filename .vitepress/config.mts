@@ -7,8 +7,25 @@ import mapShortUrl from "./theme/components/shortUrl/mapShortUrl";
 
 const configDir = path.dirname(fileURLToPath(import.meta.url));
 const contentRoot = path.resolve(configDir, "..");
+const siteUrl = "https://chemistry-note.seeridia.top";
 const navItems = buildNavItems(contentRoot);
 const sidebarItems = buildSidebarItems(contentRoot);
+
+function toPublicPath(relativePath: string): string {
+  if (relativePath === "index.md") return "/";
+  return `/${encodeURI(relativePath.replace(/\.md$/i, ".html"))}`;
+}
+
+function shouldNoIndex(relativePath: string): boolean {
+  const lowerPath = relativePath.toLowerCase();
+  return (
+    relativePath.startsWith("hidePage/") ||
+    relativePath === "s.md" ||
+    relativePath === "README.md" ||
+    relativePath === "404.md" ||
+    lowerPath.includes("thanksforfeedback")
+  );
+}
 
 export default defineConfig({
   title: "Anyayay's Chemistry Note",
@@ -25,7 +42,8 @@ export default defineConfig({
           "一个基于中国普通高中教科书的化学笔记项目🧪A chemistry note project based on Chinese high school textbooks",
       },
     ],
-    ["meta", { property: "og:image", content: "/images/Logo.png" }],
+    ["meta", { property: "og:image", content: `${siteUrl}/images/Logo.png` }],
+    ["meta", { property: "og:url", content: siteUrl }],
     [
       "script",
       {
@@ -63,9 +81,32 @@ export default defineConfig({
   rewrites: {
     "hidePage/shortUrl.md": "s.md",
   },
+  transformHead({ pageData }) {
+    const relativePath = pageData.relativePath;
+    const canonicalUrl = `${siteUrl}${toPublicPath(relativePath)}`;
+    const tags: [string, Record<string, string>][] = [
+      ["link", { rel: "canonical", href: canonicalUrl }],
+      ["meta", { property: "og:url", content: canonicalUrl }],
+    ];
+
+    if (shouldNoIndex(relativePath)) {
+      tags.push(["meta", { name: "robots", content: "noindex, nofollow" }]);
+    }
+
+    return tags;
+  },
   lastUpdated: true,
   sitemap: {
-    hostname: "https://chemistry-note.seeridia.top",
+    hostname: siteUrl,
+    transformItems(items) {
+      return items.filter((item) => {
+        const url = typeof item === "string" ? item : String(item.url ?? "");
+        if (url.includes("/hidePage/")) return false;
+        if (url.endsWith("/README.html")) return false;
+        if (url.endsWith("/s.html")) return false;
+        return true;
+      });
+    },
   },
 
   // 生成哈希 - 路径对应表
