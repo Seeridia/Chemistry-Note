@@ -1,14 +1,24 @@
-<script setup>
-import { Waline } from "@waline/client/component";
-import { useData } from "vitepress";
-import { useWalineBase } from "./useWalineBase";
+<script setup lang="ts">
+import { Waline } from '@waline/client/component';
+import { useData } from 'vitepress';
+import { useWalineBase } from './useWalineBase';
 
 const { isDark } = useData();
 const { serverURL, path } = useWalineBase();
+
+const walineConfig = {
+  serverURL,
+  path,
+  dark: isDark,
+  meta: ['nick', 'mail'],
+  locale: {
+    placeholder: '可以在这边评论也可以反馈问题。如果反馈问题希望能留下昵称，方便在首页展示',
+  },
+};
 </script>
 
 <template>
-  <Waline :serverURL="serverURL" :path="path" :key="path" :dark="isDark" />
+  <Waline v-bind="walineConfig" />
 </template>
 
 <style scoped>
