@@ -5,6 +5,9 @@ hero:
   name: "Anyayay's \nChemistry Note"
   text: "化学笔记"
   tagline: "覆盖原子结构、有机化学、化学实验等十大板块，持续更新中"
+  image:
+    src: /images/icon.svg
+    alt: Anyayay's Chemistry Note
   actions:
     - theme: brand
       text: 开始阅读
