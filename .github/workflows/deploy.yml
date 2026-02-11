@@ -90,7 +90,8 @@ jobs:
       - name: Install CJK fonts
         run: |
           sudo apt-get update
-          sudo apt-get install -y fonts-noto-cjk
+          sudo apt-get install -y fonts-noto-cjk fonts-noto-cjk-extra
+          sudo fc-cache -fv
 
       - name: Read changed pages info
         id: changed_pages
@@ -117,7 +118,7 @@ jobs:
           cores=$(nproc)
           concurrency=$(( cores * 2 ))
           [ "$concurrency" -gt 8 ] && concurrency=8
-          bun scripts/export-pdf.js --out-dir pdf-repo --concurrency "$concurrency"
+          PDF_USE_GOOGLE_FONT=1 bun scripts/export-pdf.js --out-dir pdf-repo --concurrency "$concurrency"
 
       - name: Export PDFs (changed)
         if: steps.changed_pages.outputs.export_all != 'true' && steps.changed_pages.outputs.changed_count != '0'
@@ -125,7 +126,7 @@ jobs:
           cores=$(nproc)
           concurrency=$(( cores * 2 ))
           [ "$concurrency" -gt 8 ] && concurrency=8
-          bun scripts/export-pdf.js --list .github/changed-pages/changed-pages.txt --out-dir pdf-repo --concurrency "$concurrency"
+          PDF_USE_GOOGLE_FONT=1 bun scripts/export-pdf.js --list .github/changed-pages/changed-pages.txt --out-dir pdf-repo --concurrency "$concurrency"
 
       - name: Remove deleted PDFs
         if: steps.changed_pages.outputs.deleted_count != '0'
