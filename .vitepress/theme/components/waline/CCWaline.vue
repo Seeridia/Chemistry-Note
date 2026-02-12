@@ -5,20 +5,19 @@ import { useWalineBase } from './useWalineBase';
 
 const { isDark } = useData();
 const { serverURL, path } = useWalineBase();
-
-const walineConfig = {
-  serverURL,
-  path,
-  dark: isDark,
-  meta: ['nick', 'mail'],
-  locale: {
-    placeholder: '可以在这边评论也可以反馈问题。如果反馈问题希望能留下昵称，方便在首页展示',
-  },
-};
 </script>
 
 <template>
-  <Waline v-bind="walineConfig" />
+  <Waline
+    :server-u-r-l="serverURL"
+    :path="path"
+    :dark="isDark"
+    :meta="['nick', 'mail']"
+    :locale="{
+      placeholder:
+        '可以在这边评论也可以反馈问题。如果反馈问题希望能留下昵称，方便在首页展示',
+    }"
+  />
 </template>
 
 <style scoped>
