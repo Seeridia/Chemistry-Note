@@ -3,52 +3,37 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildSidebarItems } from './siteData/sidebar';
 import { buildNavItems } from './siteData/nav';
+import { buildTransformHead } from './siteData/transformHead';
 import mapShortUrl from './theme/components/shortUrl/mapShortUrl';
 
 const configDir = path.dirname(fileURLToPath(import.meta.url));
 const contentRoot = path.resolve(configDir, '..');
 const siteUrl = 'https://chemistry-note.seeridia.top';
+const siteName = "Anyayay's Chemistry Note";
+const defaultDescription =
+  '免费高中化学笔记，覆盖原子结构、有机化学、元素化合物、化学实验等核心板块，适合课堂学习与高考复习。';
 const navItems = buildNavItems(contentRoot);
 const sidebarItems = buildSidebarItems(contentRoot);
 
-function toPublicPath(relativePath: string): string {
-  if (relativePath === 'index.md') return '/';
-  return `/${encodeURI(relativePath.replace(/\.md$/i, '.html'))}`;
-}
-
-function shouldNoIndex(relativePath: string): boolean {
-  const lowerPath = relativePath.toLowerCase();
-  return (
-    relativePath.startsWith('hidePage/') ||
-    relativePath === 's.md' ||
-    relativePath === 'README.md' ||
-    relativePath === '404.md' ||
-    lowerPath.includes('thanksforfeedback')
-  );
-}
-
 export default defineConfig({
-  title: "Anyayay's Chemistry Note",
-  description:
-    '一个基于中国普通高中教科书的化学笔记项目🧪A chemistry note project based on Chinese high school textbooks',
+  title: siteName,
+  description: defaultDescription,
   lang: 'zh-CN',
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/images/icon.svg' }],
-    ['meta', { property: 'og:title', content: "Anyayay's Chemistry Note" }],
-    [
-      'meta',
-      {
-        property: 'og:description',
-        content:
-          '一个基于中国普通高中教科书的化学笔记项目🧪A chemistry note project based on Chinese high school textbooks',
-      },
-    ],
+    ['meta', { name: 'author', content: 'Seeridia' }],
+    ['meta', { name: 'keywords', content: '高中化学,化学笔记,高考化学,有机化学,化学实验' }],
+    ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large' }],
+    ['meta', { property: 'og:site_name', content: siteName }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:locale', content: 'zh_CN' }],
     ['meta', { property: 'og:image', content: `${siteUrl}/images/og-image.png` }],
     ['meta', { property: 'og:image:width', content: '1200' }],
     ['meta', { property: 'og:image:height', content: '630' }],
-    ['meta', { property: 'og:url', content: siteUrl }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:image', content: `${siteUrl}/images/og-image.png` }],
+    ['meta', { name: 'twitter:title', content: siteName }],
+    ['meta', { name: 'twitter:description', content: defaultDescription }],
     [
       'script',
       {
@@ -88,20 +73,7 @@ export default defineConfig({
   rewrites: {
     'hidePage/shortUrl.md': 's.md',
   },
-  transformHead({ pageData }) {
-    const relativePath = pageData.relativePath;
-    const canonicalUrl = `${siteUrl}${toPublicPath(relativePath)}`;
-    const tags: [string, Record<string, string>][] = [
-      ['link', { rel: 'canonical', href: canonicalUrl }],
-      ['meta', { property: 'og:url', content: canonicalUrl }],
-    ];
-
-    if (shouldNoIndex(relativePath)) {
-      tags.push(['meta', { name: 'robots', content: 'noindex, nofollow' }]);
-    }
-
-    return tags;
-  },
+  transformHead: buildTransformHead(siteUrl, siteName, defaultDescription),
   lastUpdated: true,
   sitemap: {
     hostname: siteUrl,
