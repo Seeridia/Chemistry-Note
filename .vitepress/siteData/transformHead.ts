@@ -5,17 +5,6 @@ function toPublicPath(relativePath: string): string {
   return `/${encodeURI(relativePath.replace(/\.md$/i, '.html'))}`;
 }
 
-function shouldNoIndex(relativePath: string): boolean {
-  const lowerPath = relativePath.toLowerCase();
-  return (
-    relativePath.startsWith('hidePage/') ||
-    relativePath === 's.md' ||
-    relativePath === 'README.md' ||
-    relativePath === '404.md' ||
-    lowerPath.includes('thanksforfeedback')
-  );
-}
-
 function normalizeDescription(input?: string): string | undefined {
   if (!input) return undefined;
   const text = input.replace(/\s+/g, ' ').trim();
@@ -40,11 +29,6 @@ export function buildTransformHead(siteUrl: string, siteName: string, defaultDes
       ['meta', { name: 'twitter:title', content: pageTitle }],
       ['meta', { name: 'twitter:description', content: pageDescription }],
     ];
-
-    if (shouldNoIndex(relativePath)) {
-      tags.push(['meta', { name: 'robots', content: 'noindex, nofollow' }]);
-    }
-
     return tags;
   };
 }

@@ -77,15 +77,6 @@ export default defineConfig({
   lastUpdated: true,
   sitemap: {
     hostname: siteUrl,
-    transformItems(items) {
-      return items.filter((item) => {
-        const url = typeof item === 'string' ? item : String(item.url ?? '');
-        if (url.includes('/hidePage/')) return false;
-        if (url.endsWith('/README.html')) return false;
-        if (url.endsWith('/s.html')) return false;
-        return true;
-      });
-    },
   },
 
   // 生成哈希 - 路径对应表

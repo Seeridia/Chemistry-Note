@@ -1,5 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /hidePage/
-Disallow: /s.html
 Sitemap: https://chemistry-note.seeridia.top/sitemap.xml
