@@ -46,15 +46,16 @@ export const buildSidebarItems = (
     );
 
     const items: DefaultTheme.SidebarItem[] = files.map((filename) => {
-      const name = filename.slice(0, -3);
-      return {
-        text: name,
-        link: encodeLink(`/${sectionName}/${name}`),
-      };
-    });
+        const name = filename.slice(0, -3);
+        return {
+          text: name,
+          link: encodeLink(`/${sectionName}/${name}`),
+        };
+      });
 
     return {
       text: sectionName,
+      link: encodeLink(`/${sectionName}/index`),
       items,
       collapsed: true,
     };

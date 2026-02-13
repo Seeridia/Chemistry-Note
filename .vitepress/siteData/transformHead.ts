@@ -5,6 +5,17 @@ function toPublicPath(relativePath: string): string {
   return `/${encodeURI(relativePath.replace(/\.md$/i, '.html'))}`;
 }
 
+function isChapterIndexPath(relativePath: string): boolean {
+  return /^\d{2}\s[^/]+\/index\.md$/i.test(relativePath);
+}
+
+function toBreadcrumbItemPath(pathParts: string[], index: number): string {
+  if (index === 0) {
+    return `/${pathParts[0]}/index.html`;
+  }
+  return `/${pathParts.slice(0, index + 1).join('/')}`;
+}
+
 function toBreadcrumbName(input: string): string {
   return input.replace(/^\d+\s*/, '').trim();
 }
@@ -18,6 +29,7 @@ function normalizeDescription(input?: string): string | undefined {
 
 function toIsoDate(input: unknown): string | undefined {
   if (typeof input === 'number') {
+    if (input <= 0) return undefined;
     const d = new Date(input);
     return Number.isNaN(d.getTime()) ? undefined : d.toISOString();
   }
@@ -43,6 +55,7 @@ export function buildTransformHead(siteUrl: string, siteName: string, defaultDes
     const pageTitle = pageData.title ? `${pageData.title} | ${siteName}` : siteName;
     const isHomePage = relativePath === 'index.md';
     const is404Page = relativePath === '404.md';
+    const isChapterIndex = isChapterIndexPath(relativePath);
     const publishedTime = toIsoDate((pageData.frontmatter as Record<string, unknown>)?.date);
     const modifiedTime =
       toIsoDate((pageData as { lastUpdated?: unknown }).lastUpdated) ||
@@ -81,15 +94,25 @@ export function buildTransformHead(siteUrl: string, siteName: string, defaultDes
       .replace(/^\/|\/$/g, '')
       .split('/')
       .filter(Boolean);
-    const breadcrumbItems = pathParts.map((part, index) => {
-      const itemPath = `/${pathParts.slice(0, index + 1).join('/')}`;
-      return {
+    const breadcrumbItems = [
+      {
         '@type': 'ListItem',
-        position: index + 1,
-        name: toBreadcrumbName(decodeURIComponent(part).replace(/\.html$/i, '')),
-        item: `${siteUrl}${itemPath}`,
-      };
-    });
+        position: 1,
+        name: '首页',
+        item: `${siteUrl}/`,
+      },
+      ...pathParts
+        .map((part, index) => {
+          const itemPath = toBreadcrumbItemPath(pathParts, index);
+          return {
+            '@type': 'ListItem',
+            position: index + 2,
+            name: toBreadcrumbName(decodeURIComponent(part).replace(/\.html$/i, '')),
+            item: `${siteUrl}${itemPath}`,
+          };
+        })
+        .filter((item) => item.name.toLowerCase() !== 'index'),
+    ];
 
     const tags: HeadConfig[] = [
       ['link', { rel: 'canonical', href: canonicalUrl }],
@@ -117,10 +140,44 @@ export function buildTransformHead(siteUrl: string, siteName: string, defaultDes
       ]);
     }
 
-    if (!isHomePage && !is404Page) {
-      const techArticleJsonLd: Record<string, unknown> = {
+    if (!isHomePage && !is404Page && isChapterIndex) {
+      const collectionJsonLd: Record<string, unknown> = {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'CollectionPage',
+        name: pageTitle,
+        url: canonicalUrl,
+        description: pageDescription,
+        inLanguage: 'zh-CN',
+        isPartOf: {
+          '@type': 'WebSite',
+          name: siteName,
+          url: `${siteUrl}/`,
+        },
+      };
+
+      if (publishedTime) {
+        collectionJsonLd.datePublished = publishedTime;
+      }
+      if (modifiedTime) {
+        collectionJsonLd.dateModified = modifiedTime;
+      }
+
+      tags.push([
+        'script',
+        { type: 'application/ld+json' },
+        JSON.stringify(collectionJsonLd),
+      ]);
+    }
+
+    if (!isHomePage && !is404Page && !isChapterIndex) {
+      const isLearningResource =
+        /^\d{2}\s/.test(relativePath) ||
+        ['考点', '复习', '实验', '基础', '概念'].some((keyword) =>
+          (pageData.title || '').includes(keyword),
+        );
+      const articleJsonLd: Record<string, unknown> = {
+        '@context': 'https://schema.org',
+        '@type': isLearningResource ? 'LearningResource' : 'Article',
         headline: pageData.title || siteName,
         description: pageDescription,
         url: canonicalUrl,
@@ -141,16 +198,20 @@ export function buildTransformHead(siteUrl: string, siteName: string, defaultDes
       };
 
       if (publishedTime) {
-        techArticleJsonLd.datePublished = publishedTime;
+        articleJsonLd.datePublished = publishedTime;
       }
       if (modifiedTime) {
-        techArticleJsonLd.dateModified = modifiedTime;
+        articleJsonLd.dateModified = modifiedTime;
+      }
+      if (isLearningResource) {
+        articleJsonLd.learningResourceType = 'StudyGuide';
+        articleJsonLd.educationalLevel = 'High school';
       }
 
       tags.push([
         'script',
         { type: 'application/ld+json' },
-        JSON.stringify(techArticleJsonLd),
+        JSON.stringify(articleJsonLd),
       ]);
     }
 
