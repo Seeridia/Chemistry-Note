@@ -1,4 +1,17 @@
 import type { HeadConfig, TransformContext } from 'vitepress';
+import type {
+  Article,
+  BreadcrumbList,
+  CollectionPage,
+  LearningResource,
+  ListItem,
+  Thing,
+  WebPage,
+  WebSite,
+  WithContext,
+} from 'schema-dts';
+
+type JsonLd<T extends Thing> = WithContext<T>;
 
 function toPublicPath(relativePath: string): string {
   if (relativePath === 'index.md') return '/';
@@ -47,6 +60,9 @@ export function buildTransformHead(siteUrl: string, siteName: string, defaultDes
   return function transformHead({ pageData }: TransformContext): HeadConfig[] {
     const relativePath = pageData.relativePath;
     const canonicalUrl = `${siteUrl}${toPublicPath(relativePath)}`;
+    const websiteId = `${siteUrl}/#website`;
+    const webPageId = `${canonicalUrl}#webpage`;
+    const defaultImageUrl = `${siteUrl}/images/og-image.png`;
     const pagePath = toPublicPath(relativePath);
     const pageDescription =
       normalizeDescription(pageData.description) ||
@@ -55,63 +71,64 @@ export function buildTransformHead(siteUrl: string, siteName: string, defaultDes
     const pageTitle = pageData.title ? `${pageData.title} | ${siteName}` : siteName;
     const isHomePage = relativePath === 'index.md';
     const is404Page = relativePath === '404.md';
+    const isHiddenUtilityPage = /^hidePage\//i.test(relativePath);
     const isChapterIndex = isChapterIndexPath(relativePath);
     const publishedTime = toIsoDate((pageData.frontmatter as Record<string, unknown>)?.date);
     const modifiedTime =
       toIsoDate((pageData as { lastUpdated?: unknown }).lastUpdated) ||
       toIsoDate((pageData.frontmatter as Record<string, unknown>)?.lastUpdated);
 
-    const websiteJsonLd = {
+    const websiteJsonLd: JsonLd<WebSite> = {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
+      '@id': websiteId,
       name: siteName,
       url: `${siteUrl}/`,
       inLanguage: 'zh-CN',
       description: defaultDescription,
     };
 
-    const webPageJsonLd = {
+    const webPageJsonLd: JsonLd<WebPage> = {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
+      '@id': webPageId,
       name: pageTitle,
       url: canonicalUrl,
       description: pageDescription,
+      image: defaultImageUrl,
       isPartOf: {
         '@type': 'WebSite',
+        '@id': websiteId,
         name: siteName,
         url: `${siteUrl}/`,
       },
       inLanguage: 'zh-CN',
+      ...(publishedTime ? { datePublished: publishedTime } : {}),
+      ...(modifiedTime ? { dateModified: modifiedTime } : {}),
     };
-    if (publishedTime) {
-      Object.assign(webPageJsonLd, { datePublished: publishedTime });
-    }
-    if (modifiedTime) {
-      Object.assign(webPageJsonLd, { dateModified: modifiedTime });
-    }
 
     const pathParts = pagePath
       .replace(/^\/|\/$/g, '')
       .split('/')
       .filter(Boolean);
-    const breadcrumbItems = [
+    const breadcrumbItems: ListItem[] = [
       {
-        '@type': 'ListItem',
+        '@type': 'ListItem' as const,
         position: 1,
         name: '首页',
         item: `${siteUrl}/`,
       },
       ...pathParts
-        .map((part, index) => {
+        .map((part, index): ListItem => {
           const itemPath = toBreadcrumbItemPath(pathParts, index);
           return {
-            '@type': 'ListItem',
+            '@type': 'ListItem' as const,
             position: index + 2,
             name: toBreadcrumbName(decodeURIComponent(part).replace(/\.html$/i, '')),
             item: `${siteUrl}${itemPath}`,
           };
         })
-        .filter((item) => item.name.toLowerCase() !== 'index'),
+        .filter((item) => typeof item.name === 'string' && item.name.toLowerCase() !== 'index'),
     ];
 
     const tags: HeadConfig[] = [
@@ -121,46 +138,53 @@ export function buildTransformHead(siteUrl: string, siteName: string, defaultDes
       ['meta', { property: 'og:description', content: pageDescription }],
       ['meta', { name: 'twitter:title', content: pageTitle }],
       ['meta', { name: 'twitter:description', content: pageDescription }],
-      ['script', { type: 'application/ld+json' }, JSON.stringify(webPageJsonLd)],
     ];
+    if (isHiddenUtilityPage) {
+      tags.push(['meta', { name: 'robots', content: 'noindex, nofollow, noarchive' }]);
+      tags.push(['meta', { name: 'googlebot', content: 'noindex, nofollow, noarchive' }]);
+    }
+    if (!is404Page && !isHiddenUtilityPage) {
+      tags.push(['script', { type: 'application/ld+json' }, JSON.stringify(webPageJsonLd)]);
+    }
 
-    if (isHomePage) {
+    if (isHomePage && !isHiddenUtilityPage) {
       tags.push(['script', { type: 'application/ld+json' }, JSON.stringify(websiteJsonLd)]);
     }
 
-    if (breadcrumbItems.length > 1) {
+    if (!is404Page && !isHiddenUtilityPage && breadcrumbItems.length > 1) {
+      const breadcrumbJsonLd: JsonLd<BreadcrumbList> = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        '@id': `${canonicalUrl}#breadcrumb`,
+        name: `${pageData.title || siteName} 导航`,
+        itemListElement: breadcrumbItems,
+      };
       tags.push([
         'script',
         { type: 'application/ld+json' },
-        JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'BreadcrumbList',
-          itemListElement: breadcrumbItems,
-        }),
+        JSON.stringify(breadcrumbJsonLd),
       ]);
     }
 
-    if (!isHomePage && !is404Page && isChapterIndex) {
-      const collectionJsonLd: Record<string, unknown> = {
+    if (!isHomePage && !is404Page && !isHiddenUtilityPage && isChapterIndex) {
+      const collectionJsonLd: JsonLd<CollectionPage> = {
         '@context': 'https://schema.org',
         '@type': 'CollectionPage',
+        '@id': `${canonicalUrl}#collectionpage`,
         name: pageTitle,
         url: canonicalUrl,
         description: pageDescription,
+        image: defaultImageUrl,
         inLanguage: 'zh-CN',
         isPartOf: {
           '@type': 'WebSite',
+          '@id': websiteId,
           name: siteName,
           url: `${siteUrl}/`,
         },
+        ...(publishedTime ? { datePublished: publishedTime } : {}),
+        ...(modifiedTime ? { dateModified: modifiedTime } : {}),
       };
-
-      if (publishedTime) {
-        collectionJsonLd.datePublished = publishedTime;
-      }
-      if (modifiedTime) {
-        collectionJsonLd.dateModified = modifiedTime;
-      }
 
       tags.push([
         'script',
@@ -169,49 +193,62 @@ export function buildTransformHead(siteUrl: string, siteName: string, defaultDes
       ]);
     }
 
-    if (!isHomePage && !is404Page && !isChapterIndex) {
+    if (!isHomePage && !is404Page && !isHiddenUtilityPage && !isChapterIndex) {
       const isLearningResource =
         /^\d{2}\s/.test(relativePath) ||
         ['考点', '复习', '实验', '基础', '概念'].some((keyword) =>
           (pageData.title || '').includes(keyword),
         );
-      const articleJsonLd: Record<string, unknown> = {
-        '@context': 'https://schema.org',
-        '@type': isLearningResource ? 'LearningResource' : 'Article',
+      const sharedArticleFields = {
+        '@context': 'https://schema.org' as const,
+        '@id': `${canonicalUrl}#article`,
+        name: pageData.title || siteName,
         headline: pageData.title || siteName,
         description: pageDescription,
         url: canonicalUrl,
+        image: defaultImageUrl,
         inLanguage: 'zh-CN',
-        mainEntityOfPage: canonicalUrl,
+        mainEntityOfPage: {
+          '@type': 'WebPage' as const,
+          '@id': webPageId,
+          name: pageTitle,
+          url: canonicalUrl,
+        },
         author: {
-          '@type': 'Person',
+          '@type': 'Person' as const,
           name: 'Seeridia',
         },
         publisher: {
-          '@type': 'Organization',
+          '@type': 'Organization' as const,
+          '@id': `${siteUrl}/#organization`,
           name: siteName,
           logo: {
-            '@type': 'ImageObject',
+            '@type': 'ImageObject' as const,
             url: `${siteUrl}/images/icon.svg`,
           },
         },
+        ...(publishedTime ? { datePublished: publishedTime } : {}),
+        ...(modifiedTime ? { dateModified: modifiedTime } : {}),
       };
-
-      if (publishedTime) {
-        articleJsonLd.datePublished = publishedTime;
-      }
-      if (modifiedTime) {
-        articleJsonLd.dateModified = modifiedTime;
-      }
-      if (isLearningResource) {
-        articleJsonLd.learningResourceType = 'StudyGuide';
-        articleJsonLd.educationalLevel = 'High school';
-      }
 
       tags.push([
         'script',
         { type: 'application/ld+json' },
-        JSON.stringify(articleJsonLd),
+        JSON.stringify(
+          isLearningResource
+            ? ({
+                ...sharedArticleFields,
+                '@type': 'LearningResource',
+                learningResourceType: 'StudyGuide',
+                educationalLevel: 'High school',
+                educationalUse: 'SelfStudy',
+                teaches: pageData.title || pageDescription,
+              } satisfies JsonLd<LearningResource>)
+            : ({
+                ...sharedArticleFields,
+                '@type': 'Article',
+              } satisfies JsonLd<Article>),
+        ),
       ]);
     }
 
