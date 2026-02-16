@@ -8,6 +8,24 @@
     filter: none !important;
 }
 
+/* 页面切换时正文上滑动画 */
+.vp-doc>div,
+.VPHome {
+    animation: page-slide-up 0.3s ease-out;
+}
+
+@keyframes page-slide-up {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 /* 打印适配 */
 @media print {
 
