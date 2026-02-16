@@ -69,6 +69,17 @@
                     "link": "https://github.com/MeowCata"
                 }
             ]
+        },
+        {
+            "avatar": "https://github.com/malphax404-dotcom.png",
+            "name": "MalphaX",
+            "title": "Collaborator",
+            "links": [
+                {
+                    "icon": "github",
+                    "link": "https://github.com/malphax404-dotcom"
+                }
+            ]
         }
     ]
 }
