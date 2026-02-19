@@ -80,6 +80,17 @@
                     "link": "https://github.com/malphax404-dotcom"
                 }
             ]
+        },
+        {
+            "avatar": "https://cdn.luogu.com.cn/upload/image_hosting/ahyk4cxy.png",
+            "name": "Wzmois",
+            "title": "Collaborator",
+            "links": [
+                {
+                    "icon": "github",
+                    "link": "https://github.com/Wzmois"
+                }
+            ]
         }
     ]
 }
