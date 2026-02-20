@@ -13,6 +13,7 @@ const { serverURL, path } = useWalineBase();
     :path="path"
     :dark="isDark"
     :meta="['nick', 'mail']"
+    :no-rss="true"
     :locale="{
       placeholder:
         '可以在这边评论也可以反馈问题。如果反馈问题希望能留下昵称，方便在首页展示',
