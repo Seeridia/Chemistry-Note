@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@waline/client": "^3.8.0",
+    "@waline/client": "^3.12.2",
     "axios": "^1.13.4",
     "blueimp-md5": "^2.19.0",
     "qrcode.vue": "^3.8.0"
