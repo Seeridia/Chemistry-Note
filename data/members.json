@@ -91,6 +91,17 @@
                     "link": "https://github.com/Wzmois"
                 }
             ]
+        },
+        {            
+            "avatar": "https://www.github.com/zspro.png",            
+            "name": "知识pro",
+            "title": "Collaborator",            
+            "links": [
+                {
+                    "icon": "github",
+                    "link": "https://github.com/zspro"
+                }
+            ]        
         }
     ]
 }
