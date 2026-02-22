@@ -22,16 +22,31 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/images/icon.svg' }],
     ['meta', { name: 'author', content: 'Seeridia' }],
-    ['meta', { name: 'keywords', content: '高中化学,化学笔记,高考化学,有机化学,化学实验' }],
-    ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large' }],
+    [
+      'meta',
+      {
+        name: 'keywords',
+        content: '高中化学,化学笔记,高考化学,有机化学,化学实验',
+      },
+    ],
+    [
+      'meta',
+      { name: 'robots', content: 'index, follow, max-image-preview:large' },
+    ],
     ['meta', { property: 'og:site_name', content: siteName }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:locale', content: 'zh_CN' }],
-    ['meta', { property: 'og:image', content: `${siteUrl}/images/og-image.png` }],
+    [
+      'meta',
+      { property: 'og:image', content: `${siteUrl}/images/og-image.png` },
+    ],
     ['meta', { property: 'og:image:width', content: '1200' }],
     ['meta', { property: 'og:image:height', content: '630' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:image', content: `${siteUrl}/images/og-image.png` }],
+    [
+      'meta',
+      { name: 'twitter:image', content: `${siteUrl}/images/og-image.png` },
+    ],
     ['meta', { name: 'twitter:title', content: siteName }],
     ['meta', { name: 'twitter:description', content: defaultDescription }],
     [
@@ -65,6 +80,10 @@ export default defineConfig({
     editLink: {
       pattern: 'https://github.com/Seeridia/Chemistry-Note/edit/master/:path',
       text: '在 GitHub 上查看此页',
+    },
+    footer: {
+      message: '闽ICP备2025099091号',
+      copyright: 'Copyright © 2026 Seeridia',
     },
   },
   markdown: {
