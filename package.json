@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@waline/client": "^3.8.0",
+    "@waline/client": "^3.12.2",
     "axios": "^1.13.4",
     "blueimp-md5": "^2.19.0",
     "qrcode.vue": "^3.8.0"
@@ -10,6 +10,7 @@
     "fast-glob": "^3.3.3",
     "markdown-it-mathjax3": "^4",
     "playwright": "^1.57.0",
+    "schema-dts": "^1.1.5",
     "vitepress": "2.0.0-alpha.16"
   },
   "scripts": {

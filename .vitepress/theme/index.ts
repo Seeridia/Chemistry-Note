@@ -6,6 +6,7 @@ import "@waline/client/style";
 
 import CCPdfDownloadButton from "./components/CCPdfDownloadButton.vue";
 import CCShare from "./components/shortUrl/CCShare.vue";
+import CCChapterOverview from "./components/CCChapterOverview.vue";
 
 export default {
   extends: DefaultTheme,
@@ -13,5 +14,6 @@ export default {
   enhanceApp({ app }: { app: App }) {
     app.component("CCPdfDownloadButton", CCPdfDownloadButton);
     app.component("CCShare", CCShare);
+    app.component("CCChapterOverview", CCChapterOverview);
   },
 };

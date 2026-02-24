@@ -69,6 +69,39 @@
                     "link": "https://github.com/MeowCata"
                 }
             ]
+        },
+        {
+            "avatar": "https://github.com/malphax404-dotcom.png",
+            "name": "MalphaX",
+            "title": "Collaborator",
+            "links": [
+                {
+                    "icon": "github",
+                    "link": "https://github.com/malphax404-dotcom"
+                }
+            ]
+        },
+        {
+            "avatar": "https://cdn.luogu.com.cn/upload/image_hosting/ahyk4cxy.png",
+            "name": "Wzmois",
+            "title": "Collaborator",
+            "links": [
+                {
+                    "icon": "github",
+                    "link": "https://github.com/Wzmois"
+                }
+            ]
+        },
+        {            
+            "avatar": "https://www.github.com/zspro.png",            
+            "name": "知识pro",
+            "title": "Collaborator",            
+            "links": [
+                {
+                    "icon": "github",
+                    "link": "https://github.com/zspro"
+                }
+            ]        
         }
     ]
 }

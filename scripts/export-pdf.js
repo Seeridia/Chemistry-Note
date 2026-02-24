@@ -32,6 +32,10 @@ const outDir = outDirArg
     ? path.resolve(process.cwd(), outDirArg)
     : path.resolve(__dirname, '../pdf')
 const concurrency = Math.max(1, Math.min(8, concurrencyArg ?? 2))
+const debugPdfFonts = process.env.DEBUG_PDF_FONTS === '1'
+const useGoogleFont = process.env.PDF_USE_GOOGLE_FONT === '1'
+const googleFontUrl =
+    'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap'
 
 fs.mkdirSync(outDir, { recursive: true })
 
@@ -116,12 +120,29 @@ const serverPort = await new Promise((resolve) => {
 
 const browser = await chromium.launch()
 const pagePool = []
+const pdfBaseStyle = `
+    :root {
+        --vp-font-family-base: "Noto Sans SC","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","PingFang SC",sans-serif;
+    }
+
+    html,
+    body {
+        font-family: var(--vp-font-family-base) !important;
+    }
+
+    body {
+        /* VitePress base uses font-synthesis: style, which may disable faux bold on CI fonts */
+        font-synthesis: weight style !important;
+    }
+
+    strong,
+    b {
+        font-family: var(--vp-font-family-base) !important;
+        font-weight: 700 !important;
+    }
+`
 for (let i = 0; i < concurrency; i += 1) {
     const page = await browser.newPage()
-    await page.addStyleTag({
-        content:
-            'html, body { font-family: "Noto Sans CJK SC","Noto Sans SC","Source Han Sans SC","Microsoft YaHei","PingFang SC",sans-serif !important; }'
-    })
     pagePool.push(page)
 }
 
@@ -144,7 +165,64 @@ const worker = async (page) => {
         console.log('Exporting:', file)
 
         await page.goto(fileUrl, { waitUntil: 'load', timeout: 120000 })
-        await page.evaluate(() => (document.fonts ? document.fonts.ready : null))
+        await page.evaluate(
+            ({ styleText, enableGoogleFont, googleFontHref }) => {
+                if (enableGoogleFont && !document.getElementById('pdf-google-font')) {
+                    const link = document.createElement('link')
+                    link.id = 'pdf-google-font'
+                    link.rel = 'stylesheet'
+                    link.href = googleFontHref
+                    document.head.appendChild(link)
+                }
+
+                const existingStyle = document.getElementById('pdf-font-override')
+                if (existingStyle) {
+                    existingStyle.textContent = styleText
+                    return
+                }
+
+                const style = document.createElement('style')
+                style.id = 'pdf-font-override'
+                style.textContent = styleText
+                document.head.appendChild(style)
+            },
+            {
+                styleText: pdfBaseStyle,
+                enableGoogleFont: useGoogleFont,
+                googleFontHref: googleFontUrl
+            }
+        )
+        await page.evaluate(async () => {
+            if (!document.fonts) return
+            await Promise.allSettled([
+                document.fonts.load('400 16px "Noto Sans SC"'),
+                document.fonts.load('700 16px "Noto Sans SC"')
+            ])
+            await document.fonts.ready
+        })
+        if (debugPdfFonts) {
+            const fontDebug = await page.evaluate(() => {
+                const sample = document.createElement('strong')
+                sample.textContent = '加粗测试Abc123'
+                document.body.appendChild(sample)
+
+                const computed = window.getComputedStyle(sample)
+                const result = {
+                    googleFontLink: !!document.getElementById('pdf-google-font'),
+                    boldCheck: document.fonts?.check(
+                        '700 16px "Noto Sans SC"'
+                    ),
+                    normalCheck: document.fonts?.check(
+                        '400 16px "Noto Sans SC"'
+                    ),
+                    computedFontFamily: computed.fontFamily,
+                    computedFontWeight: computed.fontWeight
+                }
+                sample.remove()
+                return result
+            })
+            console.log('Font debug:', file, JSON.stringify(fontDebug))
+        }
         try {
             await page.waitForLoadState('networkidle', { timeout: 10000 })
         } catch {

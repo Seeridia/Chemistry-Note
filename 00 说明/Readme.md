@@ -1,3 +1,6 @@
+---
+description: "Anyayay's Chemistry Note 的使用说明，包括如何浏览、搜索、下载PDF，以及错误反馈方式。"
+---
 # Readme
 
 ![Anyayay's Chemistry Note](/images/Logo.png)
@@ -108,6 +111,7 @@ const appreciatePayments = [
 
 > [!NOTE]
 > 如果您选择赞赏，希望能在备注中留下您的名字或昵称，也可以带上一句话，以便我们在项目的感谢名单中提及您！谢谢您的支持！😊
+> 由于赞赏方式是人工统计的，如果您已经赞赏了，但没有出现在名单中，请及时与我联系（QQ: 1528926919），我会补充上去的！
 
 感谢下面这些朋友对本项目的赞赏支持：
 

@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://chemistry-note.seeridia.top/sitemap.xml
