@@ -59,7 +59,7 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: ".vitepress/dist/*"
+          source: '.vitepress/dist/*'
           target: ${{ secrets.TARGET_DIR }}
           strip_components: 2
 
@@ -137,12 +137,19 @@ jobs:
             rm -f "pdf-repo/$pdf"
           done < .github/changed-pages/deleted-pages.txt
 
+      - name: Merge all PDFs into one
+        if: steps.changed_pages.outputs.export_all == 'true' || steps.changed_pages.outputs.changed_count != '0' || steps.changed_pages.outputs.deleted_count != '0'
+        run: bun scripts/merge-pdf.js --dir pdf-repo
+
       - name: Push PDF updates
         if: steps.changed_pages.outputs.export_all == 'true' || steps.changed_pages.outputs.changed_count != '0' || steps.changed_pages.outputs.deleted_count != '0'
         run: |
           cd pdf-repo
+          rm -f index.pdf s.pdf README.pdf
+          rm -rf hidePage/
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config http.postBuffer 524288000
           if [ -z "$(git status --porcelain)" ]; then
             echo "No PDF changes to push."
             exit 0
@@ -151,4 +158,4 @@ jobs:
           git add -A
           git commit -m "Sync PDFs from ${{ github.sha }}"
           git branch -M main
-          git push --force origin main
+          git push --force --progress origin main
