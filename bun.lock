@@ -4,7 +4,7 @@
   "workspaces": {
     "": {
       "dependencies": {
-        "@waline/client": "^3.12.2",
+        "@waline/client": "^3.13.0",
         "axios": "^1.13.4",
         "blueimp-md5": "^2.19.0",
         "qrcode.vue": "^3.8.0",
@@ -214,9 +214,9 @@
 
     "@vueuse/shared": ["@vueuse/shared@14.1.0", "", { "peerDependencies": { "vue": "^3.5.0" } }, "sha512-EcKxtYvn6gx1F8z9J5/rsg3+lTQnvOruQd8fUecW99DCK04BkWD7z5KQ/wTAx+DazyoEE9dJt/zV8OIEQbM6kw=="],
 
-    "@waline/api": ["@waline/api@1.0.0", "", {}, "sha512-o0lWjt+/oZH1/4q3DJxTf5kdkgNbSmoLRXIiGznW225A6hq9/9IkOO1DiAijIsxGYJS6psFC+58+IzkD1EerBA=="],
+    "@waline/api": ["@waline/api@1.1.0", "", {}, "sha512-mLBwZ6iicZHx1VUzthO+pk+2uD6byPRHjK+OI0pLH7PP+Qx3Gtx9xuiKL6Xxi58WrcAi8CIN2HyGVJbkNESwnA=="],
 
-    "@waline/client": ["@waline/client@3.12.2", "", { "dependencies": { "@vueuse/core": "^14.2.1", "@waline/api": "1.0.0", "autosize": "^6.0.1", "marked": "^17.0.2", "marked-highlight": "^2.2.3", "recaptcha-v3": "^1.11.3", "vue": "^3.5.28" } }, "sha512-BI7wBZ9sF5wwSlnpk6WMXDS6i9UUubAxd3Q77BaLYdOnYtv28A3Y87JbzL+0Z6jVOnoRMdVBq+CpvgAp6kjFGw=="],
+    "@waline/client": ["@waline/client@3.13.0", "", { "dependencies": { "@vueuse/core": "^14.2.1", "@waline/api": "1.1.0", "autosize": "^6.0.1", "marked": "^17.0.2", "marked-highlight": "^2.2.3", "recaptcha-v3": "^1.11.3", "vue": "^3.5.28" } }, "sha512-iBVAjf1j4wgxNB8zF3/IPprJvC6cD+OlCwfuoRZWoe6x6dc/NiPXe8LrtZLL0foLiD7Unsc71JvQJASg2vlWfw=="],
 
     "@xmldom/xmldom": ["@xmldom/xmldom@0.9.8", "", {}, "sha512-p96FSY54r+WJ50FIOsCOjyj/wavs8921hG5+kVMmZgKcvIKxMXHTrjNJvRgWa/zuX3B6t2lijLNFaOyuxUH+2A=="],
 

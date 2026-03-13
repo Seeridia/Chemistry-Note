@@ -1,7 +1,7 @@
 import { computed } from "vue";
 import { useRoute } from "vitepress";
 
-const serverURL = "https://waline.seeridia.top";
+const serverURL = "https://comment-chemistry-note.seeridia.top";
 
 export const useWalineBase = () => {
   const route = useRoute();

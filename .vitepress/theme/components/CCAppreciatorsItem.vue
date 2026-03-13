@@ -32,7 +32,9 @@ defineProps<{
   height: 100%;
   background-color: var(--vp-c-bg-soft);
   border: 1px solid transparent;
-  transition: border-color 0.25s, background-color 0.25s;
+  transition:
+    border-color 0.25s,
+    background-color 0.25s;
 }
 
 .CCAppreciatorsItem:hover {
@@ -42,15 +44,16 @@ defineProps<{
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
+  align-items: flex-start;
+  margin-bottom: 14px;
 }
 
 .name {
-  margin: 0;
+  flex: 1;
   font-weight: 600;
   font-size: 16px;
   color: var(--vp-c-text-1);
+  line-height: normal;
 }
 
 .amount {

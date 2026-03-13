@@ -53,8 +53,8 @@ export default defineConfig({
       'script',
       {
         defer: '',
-        src: 'https://cloud.umami.is/script.js',
-        'data-website-id': '8da19a41-3612-4a93-b54e-c53af8df497b',
+        src: 'https://umami.seeridia.top/script.js',
+        'data-website-id': '6e0dca50-3236-4b50-86f1-39d18cc9fc54',
       },
     ],
   ],
