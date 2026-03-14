@@ -62,6 +62,9 @@ import appreciators from '/data/appreciators.json'
 const membersList = members.members
 const feedbackersList = feedbackers.feedbackers
 const appreciatorsList = appreciators.appreciators
+const totalAppreciation = appreciatorsList
+  .reduce((sum, item) => sum + Number.parseFloat(item.amount), 0)
+  .toFixed(2)
 </script>
 
 ## 共建与支持
@@ -80,6 +83,10 @@ const appreciatorsList = appreciators.appreciators
   <a href="/00%20说明/Readme#以及" class="home-community__stat">
     <span class="label">赞助者 Appreciators</span>
     <strong>{{ appreciatorsList.length }}</strong>
+  </a>
+  <a href="/00%20说明/Readme#以及" class="home-community__stat">
+    <span class="label">已筹集 Total Raised</span>
+    <strong>{{ totalAppreciation }} CNY</strong>
   </a>
 </div>
 
@@ -115,7 +122,7 @@ const appreciatorsList = appreciators.appreciators
 <style>
 .home-community__stats {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
   margin-top: 16px;
 }
