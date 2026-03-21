@@ -98,6 +98,10 @@ if (listPath) {
             (line) =>
                 line &&
                 line !== '404.html' &&
+                line !== 's.html' &&
+                line !== 'README.html' &&
+                !line.endsWith('/index.html') &&
+                line !== 'index.html' &&
                 !line.startsWith('hidePage/')
         )
     files = Array.from(new Set(files))
@@ -105,7 +109,7 @@ if (listPath) {
 } else {
     files = await fg('**/*.html', {
         cwd: distDir,
-        ignore: ['404.html', 'hidePage/**']
+        ignore: ['404.html', '**/index.html', 's.html', 'README.html', 'hidePage/**']
     })
 }
 
