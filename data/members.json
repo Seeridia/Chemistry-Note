@@ -102,6 +102,17 @@
                     "link": "https://github.com/zspro"
                 }
             ]        
+        },
+        {
+            "avatar": "https://www.github.com/OuyangLeon.png",
+            "name": "欧阳狮子",
+            "title": "Collaborator",
+            "links": [
+                {
+                    "icon": "github",
+                    "link": "https://github.com/OuyangLeon"
+                }
+            ]
         }
     ]
 }
