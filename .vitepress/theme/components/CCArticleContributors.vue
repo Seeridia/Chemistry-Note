@@ -116,7 +116,7 @@ watch(pagePath, loadContributors);
         <img
           class="cc-article-contributors__avatar"
           :src="contributor.avatar"
-          :alt="contributor.name"
+          :alt="`&keep-color ${contributor.name}`"
         />
         <div class="cc-article-contributors__info">
           <span class="cc-article-contributors__name">{{
