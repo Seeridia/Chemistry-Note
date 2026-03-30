@@ -9,6 +9,7 @@
     "@types/blueimp-md5": "^2.18.2",
     "fast-glob": "^3.3.3",
     "markdown-it-mathjax3": "^4",
+    "pdf-lib": "^1.17.1",
     "playwright": "^1.57.0",
     "schema-dts": "^1.1.5",
     "vitepress": "2.0.0-alpha.16"
