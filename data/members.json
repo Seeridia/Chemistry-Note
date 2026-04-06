@@ -113,6 +113,17 @@
                     "link": "https://github.com/OuyangLeon"
                 }
             ]
+        },
+                {
+            "avatar": "https://www.github.com/charlieymx.png",
+            "name": “LIABOC_CEG",
+            "title": "Collaborator",
+            "links": [
+                {
+                    "icon": "github",
+                    "link": "https://github.com/charlieymx"
+                }
+            ]
         }
     ]
 }
