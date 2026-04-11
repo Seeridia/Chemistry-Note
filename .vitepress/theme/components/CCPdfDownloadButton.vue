@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import { computed } from "vue";
-import { useData } from "vitepress";
+import { computed } from 'vue';
+import { useData } from 'vitepress';
 
 const { page } = useData();
 
 const PDF_BASE_URL =
-  "https://cnb.cool/Seeridia/Chemistry-Note-File/-/git/raw/main/";
+  'https://cnb.cool/Seeridia/Chemistry-Note-File/-/git/raw/main/';
 
 const pdfUrl = computed(() => {
-  const filePath = page.value.filePath ?? "";
-  if (!filePath.endsWith(".md")) return "";
-  const pdfPath = filePath.replace(/\.md$/i, ".pdf");
+  const filePath = page.value.filePath ?? '';
+  if (!filePath.endsWith('.md')) return '';
+  const pdfPath = filePath.replace(/\.md$/i, '.pdf');
   return `${PDF_BASE_URL}${encodeURI(pdfPath)}?download=true`;
 });
 
 // 只有在文档页面才显示下载 PDF 按钮
 const isDocPage = computed(
-  () => (page.value.frontmatter?.layout ?? "doc") === "doc",
+  () => (page.value.frontmatter?.layout ?? 'doc') === 'doc',
 );
 const shouldShow = computed(() => isDocPage.value && pdfUrl.value);
 </script>
@@ -34,12 +34,12 @@ const shouldShow = computed(() => isDocPage.value && pdfUrl.value);
     </a>
     <a
       class="CCPdfDownloadButtonBtn"
-      href="https://www.alipan.com/s/aU66F4xRH2w"
+      href="https://umami.seeridia.top/q/e8e52FUHV"
       target="_blank"
       rel="noopener"
     >
       <span class="CCPdfDownloadButtonBtnLabel">下载全部</span>
-      <span class="CCPdfDownloadButtonBtnHint">网盘</span>
+      <span class="CCPdfDownloadButtonBtnHint">PDF</span>
     </a>
   </div>
 </template>
