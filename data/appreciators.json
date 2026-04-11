@@ -123,6 +123,12 @@
             "amount": "2.00 CNY",
             "name": "*毅",
             "date": "2026-04-10"
+        },
+        {
+            "amount": "8.88 CNY",
+            "name": "高二物化生",
+            "date": "2026-04-12",
+            "message": "感谢 Seeridia"
         }
     ]
 }
