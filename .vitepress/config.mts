@@ -55,6 +55,7 @@ export default defineConfig({
         defer: '',
         src: 'https://umami.seeridia.top/script.js',
         'data-website-id': '6e0dca50-3236-4b50-86f1-39d18cc9fc54',
+        'data-performance': 'true',
       },
     ],
     [
