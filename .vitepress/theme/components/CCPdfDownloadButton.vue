@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useData } from 'vitepress';
+import { trackUmamiEvent } from '../utils/umami';
 
 const { page } = useData();
 
@@ -19,6 +20,17 @@ const isDocPage = computed(
   () => (page.value.frontmatter?.layout ?? 'doc') === 'doc',
 );
 const shouldShow = computed(() => isDocPage.value && pdfUrl.value);
+
+const trackPdfDownload = (kind: 'page' | 'all') => {
+  trackUmamiEvent(
+    kind === 'page' ? 'pdf_download_page' : 'pdf_download_all',
+    {
+      page_path: page.value.relativePath || page.value.filePath || '',
+      page_title: page.value.title || '',
+      source: 'nav_download',
+    },
+  );
+};
 </script>
 
 <template>
@@ -29,6 +41,7 @@ const shouldShow = computed(() => isDocPage.value && pdfUrl.value);
       :href="pdfUrl"
       target="_blank"
       rel="noopener"
+      @click="trackPdfDownload('page')"
     >
       <span class="CCPdfDownloadButtonBtnLabel">下载本页</span>
       <span class="CCPdfDownloadButtonBtnHint">PDF</span>
@@ -38,6 +51,7 @@ const shouldShow = computed(() => isDocPage.value && pdfUrl.value);
       href="https://umami.seeridia.top/q/e8e52FUHV"
       target="_blank"
       rel="noopener"
+      @click="trackPdfDownload('all')"
     >
       <span class="CCPdfDownloadButtonBtnLabel">下载全部</span>
       <span class="CCPdfDownloadButtonBtnHint">PDF</span>
