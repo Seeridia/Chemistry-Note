@@ -124,6 +124,17 @@
                     "link": "https://github.com/charlieymx"
                 }
             ]
+        },
+        {
+            "avatar": "https://github.com/ks-kbl.png",
+            "name": "ks-kbl",
+            "title": "Collaborator",
+            "links": [
+                {
+                    "icon": "github",
+                    "link": "https://github.com/ks-kbl"
+                }
+            ]
         }
     ]
 }
