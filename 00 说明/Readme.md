@@ -44,7 +44,7 @@ import { VPTeamMembers } from 'vitepress/theme'
 import { CCAppreciators, CCAppreciatePayments, CCFeedbackers } from '/.vitepress/theme/components'
 
 import appreciators from "/data/appreciators.json"
-import members from '/data/members.json'
+import members from '/data/members'
 import feedbackers from '/data/feedbackers.json'
 
 const appreciatorsList = appreciators.appreciators

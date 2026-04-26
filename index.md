@@ -55,7 +55,7 @@ features:
 import { VPTeamMembers } from 'vitepress/theme'
 import { CCAppreciators, CCFeedbackers } from '/.vitepress/theme/components'
 
-import members from '/data/members.json'
+import members from '/data/members'
 import feedbackers from '/data/feedbackers.json'
 import appreciators from '/data/appreciators.json'
 
