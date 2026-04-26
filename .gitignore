@@ -10,3 +10,5 @@ output/
 .vitepress/cache
 *.pdf
 .github/changed-pages/
+data/generated/
+public/images/members/
