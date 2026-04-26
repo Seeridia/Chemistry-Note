@@ -15,6 +15,8 @@
     "vitepress": "2.0.0-alpha.17"
   },
   "scripts": {
+    "predocs:build": "node scripts/download-member-avatars.mjs",
+    "docs:prebuild": "node scripts/download-member-avatars.mjs",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
