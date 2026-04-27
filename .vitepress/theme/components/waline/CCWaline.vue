@@ -69,6 +69,16 @@ const { serverURL, path } = useWalineBase();
     .wl-editor {
       padding: 0.75em;
     }
+
+    .wl-footer {
+      .wl-actions {
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
   }
 }
 
